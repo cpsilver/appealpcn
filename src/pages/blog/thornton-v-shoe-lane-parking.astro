@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Thornton v Shoe Lane Parking: Why Late-Notified Charges Are Unenforceable | AppealAirportPCN";
+const description = "A 1971 Court of Appeal case established that a charge not communicated before a contract is formed cannot be part of that contract. It applies directly to airport drop-off PCNs.";
+const canonical = "https://appealairportpcn.co.uk/blog/thornton-v-shoe-lane-parking/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Thornton v Shoe Lane Parking: why late-notified charges are unenforceable",
+  "description": description,
+  "author": { "@type": "Organization", "name": "AppealAirportPCN" },
+  "publisher": { "@type": "Organization", "name": "AppealAirportPCN.co.uk" },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
+  <nav class="breadcrumb">
+    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Guides</a><span>›</span><a href="/blog/thornton-v-shoe-lane-parking/">Thornton v Shoe Lane Parking</a></div>
+  </nav>
+  <main>
+    <div class="wrap">
+      <article class="blog-post">
+        <h1>Thornton v Shoe Lane Parking: why late-notified charges are unenforceable</h1>
+        <p class="post-meta">Legal guide · AppealAirportPCN.co.uk</p>
+
+        <p>One of the legal grounds included in our airport PCN appeal templates references a Court of Appeal case from 1971: <strong>Thornton v Shoe Lane Parking Ltd [1971] 2 QB 163</strong>. Despite being over fifty years old, it remains good law and directly applicable to modern airport parking disputes. Here's what it decided, and why it matters for your appeal.</p>
+
+        <h2>Background to the case</h2>
+        <p>Mr Thornton drove into the Shoe Lane multi-storey car park in London. He received a ticket from an automatic machine at the entrance. The ticket contained — or referred to — conditions that excluded the car park operator's liability for personal injury. Mr Thornton was later injured on the premises due to the operator's negligence, and the operator sought to rely on its exclusion clause.</p>
+        <p>The Court of Appeal held that the exclusion clause was not incorporated into the contract because it was not communicated to Mr Thornton before the contract was formed. The contract came into existence at the moment he received the ticket at the entrance — after that point, any conditions on or referred to by the ticket were introduced too late to form part of the agreement.</p>
+
+        <h2>The principle it established</h2>
+        <p>Lord Denning MR set out the key principle clearly: where a condition is <strong>particularly onerous or unusual</strong>, the party seeking to rely on it must ensure it is brought to the other party's attention <strong>before the contract is made</strong>. Terms introduced after the moment of contracting cannot bind the other party.</p>
+        <p>This is a fundamental principle of English contract law, and courts have applied it consistently ever since.</p>
+
+        <h2>How it applies to airport parking charges</h2>
+        <p>At airport drop-off zones, the practical sequence of events is typically this:</p>
+        <ol>
+          <li>The driver turns onto the airport approach road, committing to the route to the terminal</li>
+          <li>The ANPR camera records the vehicle entering the charge zone</li>
+          <li>The driver drops off the passenger and departs</li>
+          <li>Days or weeks later, a Parking Charge Notice arrives in the post</li>
+        </ol>
+        <p>The charge — and often the full details of the charging terms — is not communicated to the driver until step 4, long after the "contract" (if one exists at all) was allegedly entered into at step 2. Under the <em>Thornton</em> principle, a charge not communicated before the contract is formed cannot be part of that contract.</p>
+
+        <div class="callout">
+          <strong>In plain English:</strong> If you didn't see a clear, readable sign telling you exactly how much you would be charged before you drove into the zone, the charge was not validly notified — and under established case law, it cannot bind you.
+        </div>
+
+        <h2>Combining Thornton with signage non-compliance</h2>
+        <p>The <em>Thornton</em> argument and the BPA signage non-compliance argument are closely related and mutually reinforcing. If the signs at the entrance to the charge zone were not prominent, legible, or present before the point of commitment — as required by BPA paragraph 18 — then the charging terms were not communicated before the contract was formed, engaging both the BPA Code breach and the <em>Thornton</em> principle simultaneously.</p>
+        <p>Both grounds are included in our appeal templates as separate numbered points, because each is independently sufficient to require cancellation.</p>
+
+        <h2>Does this argument really work?</h2>
+        <p>Yes. POPLA adjudicators are familiar with <em>Thornton v Shoe Lane Parking</em> and routinely apply it in airport parking cases. Operators struggle to counter it because the factual circumstances at most airport drop-off zones — approach roads that commit drivers before clear signage is encountered — map almost exactly onto the facts of <em>Thornton</em> itself.</p>
+        <p>You do not need to understand the full legal detail to use this argument. Our templates include it in plain language, pre-drafted and ready to copy.</p>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This article is for information only and does not constitute legal advice. For complex cases, consult a solicitor or Citizens Advice.
+        </div>
+      </article>
+    </div>
+  </main>
+</BaseLayout>

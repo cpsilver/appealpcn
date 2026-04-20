@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "What is POPLA and How Do I Use It? | AppealAirportPCN";
+const description = "POPLA is the free, independent appeals service for private parking charges issued by BPA-member operators. If your first appeal fails, here's exactly how to escalate — and why operators lose most airport cases there.";
+const canonical = "https://appealairportpcn.co.uk/blog/what-is-popla/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What is POPLA and how do I use it?",
+  "description": description,
+  "author": { "@type": "Organization", "name": "AppealAirportPCN" },
+  "publisher": { "@type": "Organization", "name": "AppealAirportPCN.co.uk" },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
+  <nav class="breadcrumb">
+    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Guides</a><span>›</span><a href="/blog/what-is-popla/">What is POPLA?</a></div>
+  </nav>
+  <main>
+    <div class="wrap">
+      <article class="blog-post">
+        <h1>What is POPLA and how do I use it?</h1>
+        <p class="post-meta">Legal guide · AppealAirportPCN.co.uk</p>
+
+        <p>If your first-stage appeal to the parking operator is rejected, do not pay. You have a second, independent appeal route available — and it is completely free. It's called <strong>POPLA</strong>, and for airport drop-off charges, it is where most cases are decided in the driver's favour.</p>
+
+        <h2>What is POPLA?</h2>
+        <p>POPLA stands for <strong>Parking on Private Land Appeals</strong>. It is an independent appeals service, funded by the parking industry but entirely independent of individual operators. POPLA adjudicators review evidence submitted by both the driver and the operator and make a binding decision.</p>
+        <p>"Binding" is the key word: if POPLA rules in your favour, the operator must cancel the charge. They cannot refuse or continue to pursue you.</p>
+
+        <h2>Who can use POPLA?</h2>
+        <p>POPLA is available if the operator is a member of the <strong>British Parking Association (BPA)</strong>. Most major airport parking operators — including APCOA (Heathrow, Stansted) and NCP (Gatwick) — are BPA members. You can check your PCN or the BPA website to confirm.</p>
+        <p>If the operator is a member of the <strong>International Parking Community (IPC)</strong> rather than the BPA, the equivalent service is the <strong>IAS (Independent Appeals Service)</strong>, which works in a similar way.</p>
+
+        <h2>How do I get a POPLA code?</h2>
+        <p>When a BPA-member operator rejects your informal appeal, they are required by the BPA Code of Practice to provide you with a <strong>POPLA verification code</strong> in their rejection letter. This code is your ticket to the POPLA process. If they fail to include it, you can contact them and demand it — they are obligated to provide it.</p>
+
+        <h2>How do I submit a POPLA appeal?</h2>
+        <ol>
+          <li>Go to <strong>popla.co.uk</strong></li>
+          <li>Enter your POPLA verification code</li>
+          <li>Complete the online form — you'll be asked to describe your grounds of appeal and upload any supporting evidence</li>
+          <li>Submit — the process is entirely online and free of charge</li>
+        </ol>
+        <p>You have <strong>28 days</strong> from the date the operator rejects your appeal to submit to POPLA. Don't let this deadline lapse.</p>
+
+        <h2>What should I include in my POPLA submission?</h2>
+        <p>For an airport drop-off charge, your strongest grounds are:</p>
+        <ul>
+          <li>The land is not "relevant land" under POFA Schedule 4 (airport statutory control exclusion)</li>
+          <li>Signage non-compliance with BPA Code of Practice paragraph 18</li>
+          <li>The vehicle was present for no more than 5 minutes (within the mandatory consideration period)</li>
+          <li>The charge was not notified before the contract was entered into (<em>Thornton v Shoe Lane Parking</em>)</li>
+          <li>The charge is not a genuine pre-estimate of loss and is an unenforceable penalty</li>
+        </ul>
+        <p>Include any evidence you have — screenshots of the area, photographs of signage, a map showing the approach road layout, or a boarding pass confirming the passenger's flight.</p>
+
+        <h2>How long does POPLA take?</h2>
+        <p>POPLA adjudications typically take <strong>6 to 8 weeks</strong> from submission. You will receive a written decision by email. During the process, no enforcement action should be taken by the operator.</p>
+
+        <h2>What if POPLA rules against me?</h2>
+        <p>If POPLA rules in the operator's favour — which is uncommon on airport grounds — you will need to pay the charge or consider whether you have further legal options. At that stage, it may be worth seeking advice from a solicitor or Citizens Advice, particularly if the amount is significant.</p>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This article is for information only and does not constitute legal advice. For complex cases, consult a solicitor or Citizens Advice.
+        </div>
+      </article>
+    </div>
+  </main>
+</BaseLayout>

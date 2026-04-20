@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "What is POFA and Why Does It Matter for Parking Appeals? | AppealAirportPCN";
+const description = "The Protection of Freedoms Act 2012 (POFA) sets strict rules on when a private parking operator can pursue a registered keeper. Airport drop-off zones almost always fall outside it.";
+const canonical = "https://appealairportpcn.co.uk/blog/what-is-pofa-and-why-it-matters/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What is POFA and Why Does It Matter for Parking Appeals?",
+  "description": description,
+  "author": { "@type": "Organization", "name": "AppealAirportPCN" },
+  "publisher": { "@type": "Organization", "name": "AppealAirportPCN.co.uk" },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
+  <nav class="breadcrumb">
+    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Guides</a><span>›</span><a href="/blog/what-is-pofa-and-why-it-matters/">What is POFA?</a></div>
+  </nav>
+  <main>
+    <div class="wrap">
+      <article class="blog-post">
+        <h1>What is POFA and why does it matter for parking appeals?</h1>
+        <p class="post-meta">Legal guide · AppealAirportPCN.co.uk</p>
+
+        <p>If you've received a parking charge notice from an airport and looked into appealing it, you'll likely have come across the abbreviation "POFA". It stands for the <strong>Protection of Freedoms Act 2012</strong>, and it is the single most important piece of legislation for anyone challenging a private airport parking charge.</p>
+
+        <h2>What does POFA do?</h2>
+        <p>Before POFA, private parking operators had almost no legal mechanism to recover unpaid charges from anyone other than the driver of the vehicle at the time of the alleged contravention. If they couldn't identify who was driving, they were largely stuck.</p>
+        <p>POFA changed this by creating a process — set out in Schedule 4 — through which operators can transfer liability to the registered keeper of a vehicle, even if they don't know who was driving. However, this transfer of liability comes with strict conditions, and crucially, it only applies to certain types of land.</p>
+
+        <h2>The "relevant land" requirement</h2>
+        <p>Schedule 4 of POFA only applies to what the Act calls <strong>"relevant land"</strong>. This is defined as land on which vehicles may be parked, with the important exclusion of land on which the parking of vehicles is subject to statutory control — for example, land governed by Airport Byelaws or other public regulation.</p>
+        <p>This exclusion is the reason why airport drop-off charge appeals are so frequently successful. Major UK airports — including Heathrow, Gatwick, Stansted, and Luton — operate under statutory frameworks. Their land is not "relevant land" as defined by POFA, and operators like APCOA and NCP therefore cannot use Schedule 4 to pursue the registered keeper.</p>
+
+        <div class="callout">
+          <strong>In plain English:</strong> If you were not the driver, the operator cannot legally come after you as the registered keeper at an airport — because the law that would allow them to do so simply does not apply to airport land.
+        </div>
+
+        <h2>Why operators send notices anyway</h2>
+        <p>Despite this well-established legal position, parking operators continue to issue Notices to Keeper at airports. This is because the majority of recipients simply pay without questioning the legal basis. Operators know this, and the economics of issuing large volumes of unenforceable notices remain profitable as long as most people don't appeal.</p>
+        <p>The moment you formally appeal — citing the POFA "relevant land" exclusion — the operator's position becomes very difficult to defend, both at the informal stage and at POPLA.</p>
+
+        <h2>What POFA does require (when it applies)</h2>
+        <p>In situations where POFA does apply — on private car parks, retail car parks, and similar land — Schedule 4 imposes strict procedural requirements on operators:</p>
+        <ul>
+          <li>A Notice to Driver must be issued at the time of the alleged contravention, or a Notice to Keeper must be sent within 14 days</li>
+          <li>The notice must contain specific information prescribed by the Act</li>
+          <li>The operator must give the keeper a reasonable opportunity to identify the driver</li>
+          <li>All timescales must be strictly observed</li>
+        </ul>
+        <p>Failure to comply with any of these requirements means keeper liability cannot be established, even on relevant land. These procedural grounds are worth checking regardless of whether the airport exclusion applies.</p>
+
+        <h2>Using POFA in your appeal</h2>
+        <p>Our appeal templates for each airport already include the POFA "relevant land" argument as ground 1. You don't need to become a legal expert — the argument is pre-drafted and ready to copy. But understanding why it works gives you confidence when using it, and helps you respond if the operator tries to push back.</p>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This article is for information only and does not constitute legal advice. For complex cases, consult a solicitor or Citizens Advice.
+        </div>
+      </article>
+    </div>
+  </main>
+</BaseLayout>

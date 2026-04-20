@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Airport PCN Appeal Guides | Know Your Rights | AppealAirportPCN";
+const description = "Plain-English guides on POFA, POPLA, BPA signage rules, the 5-minute grace period, and the key legal cases that mean airport drop-off charges are almost always cancellable.";
+const canonical = "https://appealairportpcn.co.uk/blog/";
+
+const posts = [
+  { href: '/blog/what-is-pofa-and-why-it-matters/', title: "What is POFA and why does it matter for parking appeals?", desc: "The Protection of Freedoms Act 2012 is the key piece of legislation that limits when a parking operator can pursue a registered keeper — and why airport PCNs usually fail under it." },
+  { href: '/blog/relevant-land-airport-pcns/', title: "Why airport drop-off zones are not 'relevant land' under POFA", desc: "Airport land is subject to statutory control. This single legal fact is why operators like APCOA and NCP almost always fail when they try to pursue a keeper." },
+  { href: '/blog/bpa-code-of-practice-signage/', title: "BPA Code of Practice: the signage rules operators must follow", desc: "The BPA's own rules require clear, prominent signage before a driver commits to entering a charge zone. Most airport signs fail this test — and that invalidates the contract." },
+  { href: '/blog/five-minute-consideration-period/', title: "The 5-minute consideration period: what it means for your appeal", desc: "BPA-accredited operators must allow drivers a 5-minute grace period. Drop-offs are almost always within it. Here's how this ground works in practice." },
+  { href: '/blog/what-is-popla/', title: "What is POPLA and how do I use it?", desc: "POPLA is the free, independent adjudication service for private parking charges. If your first appeal is rejected, this is your next step — and operators lose the vast majority of cases here on airport grounds." },
+  { href: '/blog/thornton-v-shoe-lane-parking/', title: "Thornton v Shoe Lane Parking: why late-notified charges are unenforceable", desc: "A landmark 1971 Court of Appeal ruling established that a charge not communicated before a contract is formed cannot be part of that contract. It applies directly to airport drop-off charges." },
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+
+  <nav class="breadcrumb">
+    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Know Your Rights</a></div>
+  </nav>
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="hero-tag">Guides &amp; Legal Explainers</p>
+      <h1>Know Your Rights</h1>
+      <p class="hero-sub">Plain-English explainers on the law, the rules, and the cases that mean airport drop-off charges are almost always cancellable.</p>
+    </div>
+  </section>
+
+  <main>
+    <div class="wrap" style="padding: 2rem 1.5rem 3rem">
+      <div class="blog-grid">
+        {posts.map(({ href, title, desc }) => (
+          <a href={href} class="blog-card">
+            <h3>{title}</h3>
+            <p>{desc}</p>
+            <span class="airport-card-arrow">Read more →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </main>
+
+</BaseLayout>

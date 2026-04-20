@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "BPA Code of Practice: Signage Rules Operators Must Follow | AppealAirportPCN";
+const description = "The BPA Code of Practice requires parking operators to display prominent, legible signage before a driver commits to entering a charge zone. Most airport drop-off signs fail this test.";
+const canonical = "https://appealairportpcn.co.uk/blog/bpa-code-of-practice-signage/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "BPA Code of Practice: the signage rules operators must follow",
+  "description": description,
+  "author": { "@type": "Organization", "name": "AppealAirportPCN" },
+  "publisher": { "@type": "Organization", "name": "AppealAirportPCN.co.uk" },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
+  <nav class="breadcrumb">
+    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Guides</a><span>›</span><a href="/blog/bpa-code-of-practice-signage/">BPA signage rules</a></div>
+  </nav>
+  <main>
+    <div class="wrap">
+      <article class="blog-post">
+        <h1>BPA Code of Practice: the signage rules operators must follow</h1>
+        <p class="post-meta">Legal guide · AppealAirportPCN.co.uk</p>
+
+        <p>Private parking operators who are members of the British Parking Association (BPA) — which includes APCOA, NCP, and most operators at major UK airports — must follow the <strong>BPA Code of Practice</strong>. One of its most important provisions concerns signage, and it is a ground on which airport PCN appeals regularly succeed.</p>
+
+        <h2>What the BPA Code requires</h2>
+        <p>Paragraph 18 of the BPA Code of Practice sets out the signage standards that operators must meet. The key requirements are:</p>
+        <ul>
+          <li>Signs must be <strong>prominent</strong> — clearly visible and not obscured</li>
+          <li>Signs must be <strong>legible</strong> — readable at a normal driving speed</li>
+          <li>Signs must be present <strong>at the entrance</strong> to the car park or charge zone, before a driver commits to entering</li>
+          <li>The <strong>charging terms</strong> — including the amount payable — must be clearly stated</li>
+          <li>Signs must be present in sufficient numbers throughout the site</li>
+        </ul>
+        <p>The logic behind these requirements is straightforward: a parking charge is a contractual claim. For a contract to exist, both parties must have agreed to its terms. A driver cannot be said to have accepted terms they were not shown before they entered the land.</p>
+
+        <h2>Why airport signs frequently fail this test</h2>
+        <p>Airport drop-off zones present a particular challenge for operators trying to meet the BPA's signage standard, for several reasons:</p>
+
+        <h2>Approach roads that commit drivers before signs are visible</h2>
+        <p>At Stansted and Luton in particular, the road layout means drivers are effectively committed to the terminal approach — and thus to the charge zone — before they encounter clear signage explaining that a charge applies. By the time the first sign is readable, turning around is impractical or impossible. This means no valid offer of terms was made before the driver entered, and no contract was formed.</p>
+
+        <h2>Signs that are too small or poorly lit</h2>
+        <p>BPA paragraph 18 requires signs to be legible. At several airports, drivers have successfully argued at POPLA that the font size, contrast, or lighting of charge zone entry signs did not meet a reasonable standard for legibility at the speed traffic approaches the zone.</p>
+
+        <h2>Charge amounts buried in small print</h2>
+        <p>The specific charge amount must be clearly stated on entry signs. Notices where the amount appears in fine print below a larger headline, or where it is only discoverable via a QR code or website link, have been found non-compliant by POPLA adjudicators.</p>
+
+        <div class="callout">
+          <strong>Using this in your appeal:</strong> You don't need to prove the signs were non-compliant to the standard required in court — you simply need to raise the argument credibly. The burden then shifts to the operator to demonstrate compliance. Many cannot, or choose not to try.
+        </div>
+
+        <h2>What happens when signage is found non-compliant</h2>
+        <p>If an adjudicator or court finds that the signage did not meet BPA requirements, the consequence is that <strong>no valid contract was formed</strong>. Without a contract, there is no basis for the charge. The PCN must be cancelled.</p>
+        <p>This is why signage non-compliance is one of the most frequently upheld grounds at POPLA — and why our appeal templates include it as a numbered ground alongside the POFA "relevant land" argument.</p>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This article is for information only and does not constitute legal advice. For complex cases, consult a solicitor or Citizens Advice.
+        </div>
+      </article>
+    </div>
+  </main>
+</BaseLayout>

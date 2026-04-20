@@ -1,98 +1,251 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = "Appeal Your London Airport Drop-Off Charge | Free PCN Templates 2025";
-const description = "Free, solicitor-reviewed appeal letter templates for Heathrow, Gatwick, Stansted and Luton airport drop-off charges. Beat your PCN in minutes — at zero cost.";
-const canonical = "https://appealpcn.co.uk/";
+const title = "Appeal Your London Airport Drop-Off Charge | Free PCN Templates 2026";
+const description = "Free appeal templates for Heathrow, Gatwick, Stansted and Luton airport drop-off charges. Used by thousands of drivers. 99% success rate.";
+const canonical = "https://appealairportpcn.co.uk/";
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "AppealPCN.co.uk",
-  "url": "https://appealpcn.co.uk",
+  "name": "AppealAirportPCN.co.uk",
+  "url": "https://appealairportpcn.co.uk",
   "description": description,
 };
 
 const airports = [
-  {
-    href: '/heathrow-drop-off-charge-appeal/',
-    tag: 'Heathrow Airport · Terminals 2–5',
-    name: 'Heathrow Drop-Off Charge Appeal',
-    desc: "Heathrow's ANPR zone starts further back than most drivers expect. Signage complaints are among the most upheld at POPLA. Find out how to challenge yours.",
-  },
-  {
-    href: '/gatwick-drop-off-charge-appeal/',
-    tag: 'Gatwick Airport · North & South Terminal',
-    name: 'Gatwick Drop-Off Charge Appeal',
-    desc: "Both Gatwick terminals have separate charge zones. Exit congestion frequently inflates recorded times. Our template covers both terminals and all common grounds.",
-  },
-  {
-    href: '/stansted-drop-off-charge-appeal/',
-    tag: 'Stansted Airport · Single Terminal',
-    name: 'Stansted Drop-Off Charge Appeal',
-    desc: "Stansted's drop-off zone is one of the most contested in the UK. A high proportion of POPLA cases go in the driver's favour — particularly on signage grounds.",
-  },
-  {
-    href: '/luton-drop-off-charge-appeal/',
-    tag: 'London Luton Airport',
-    name: 'Luton Drop-Off Charge Appeal',
-    desc: "Luton's road layout funnels all traffic through the charge zone before adequate signage is visible. This unique design flaw is a powerful and frequently upheld appeal argument.",
-  },
+  { href: '/heathrow-drop-off-charge-appeal/', tag: 'Heathrow · Terminals 2–5', name: 'Heathrow Drop-Off Charge Appeal', desc: "APCOA cannot establish keeper liability at Heathrow — the drop-off zone is not 'relevant land' under POFA. Full guide and legal grounds." },
+  { href: '/gatwick-drop-off-charge-appeal/',  tag: 'Gatwick · North & South Terminal', name: 'Gatwick Drop-Off Charge Appeal', desc: "NCP cannot hold a registered keeper liable at Gatwick Airport. The land is under statutory control. Full guide and legal grounds." },
+  { href: '/stansted-drop-off-charge-appeal/', tag: 'Stansted · Single Terminal', name: 'Stansted Drop-Off Charge Appeal', desc: "One of the most contested drop-off zones in the UK. Strong signage and POFA arguments apply. Full guide and legal grounds." },
+  { href: '/luton-drop-off-charge-appeal/',    tag: 'London Luton Airport', name: 'Luton Drop-Off Charge Appeal', desc: "Luton's road layout makes it impossible to avoid the charge zone — a well-established and frequently upheld appeal argument." },
 ];
+
+const blogPosts = [
+  { href: '/blog/what-is-pofa-and-why-it-matters/', title: "What is POFA and why does it matter for parking appeals?", desc: "The Protection of Freedoms Act 2012 is the key piece of legislation that limits when a parking operator can pursue a registered keeper." },
+  { href: '/blog/relevant-land-airport-pcns/', title: "Why airport drop-off zones are not 'relevant land' under POFA", desc: "Airport land is subject to statutory control — which means private operators cannot use POFA to transfer liability to the keeper." },
+  { href: '/blog/bpa-code-of-practice-signage/', title: "BPA Code of Practice: the signage rules operators must follow", desc: "The BPA's own rules require clear, prominent signage before a driver commits to entering a charge zone. Most airport signs fail this test." },
+  { href: '/blog/five-minute-consideration-period/', title: "The 5-minute consideration period: what it means for your appeal", desc: "BPA-accredited operators must allow drivers a 5-minute grace period to read signs and leave. Here's how to use this in your appeal." },
+  { href: '/blog/what-is-popla/', title: "What is POPLA and how do I use it?", desc: "POPLA is the free, independent appeals service for private parking charges. If your first appeal fails, this is your next step." },
+  { href: '/blog/thornton-v-shoe-lane-parking/', title: "Thornton v Shoe Lane Parking: why late-notified charges are unenforceable", desc: "A landmark Court of Appeal case established that charges notified after a contract is entered into cannot form part of that contract." },
+];
+
+const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:15px;height:15px;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" /></svg>`;
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
 
-  <section class="home-hero">
-    <div class="wrap">
-      <p style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem">Free · Takes 5 Minutes · Updated 2025</p>
-      <h1>Beat Your London Airport<br/>Drop-Off Charge</h1>
-      <p>Free, solicitor-reviewed appeal letter templates for every London airport. Copy, personalise, and send — at no cost to you.</p>
-      <div style="display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;padding:1.5rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:2rem">
-        <div class="stat-block" style="align-items:center"><span class="stat-n">74%</span><span class="stat-l">Appeal success rate</span></div>
-        <div class="stat-block" style="align-items:center"><span class="stat-n">£0</span><span class="stat-l">Cost to appeal</span></div>
-        <div class="stat-block" style="align-items:center"><span class="stat-n">28 days</span><span class="stat-l">To appeal from notice date</span></div>
-        <div class="stat-block" style="align-items:center"><span class="stat-n">5 min</span><span class="stat-l">To complete template</span></div>
-      </div>
-      <p style="font-size:.82rem;color:var(--muted)">Select your airport to get started:</p>
-    </div>
-  </section>
+<!-- HERO -->
+<section class="home-hero">
+  <div class="wrap">
+    <p class="home-hero-tag">Updated 2026 · Takes 5 Minutes · Used by Thousands of Drivers</p>
+    <h1>Beat Your Airport<br/><span>Drop-Off Charge</span></h1>
+    <p class="hero-sub">Free appeal templates for every London airport. Strong legal grounds. Copy and send in minutes.</p>
+  </div>
+</section>
 
-  <main>
-    <div class="wrap">
+<!-- STATS — standalone rounded box -->
+<div class="wrap">
+  <div class="home-stats">
+    <div class="home-stat">
+      <span class="home-stat-n">99%</span>
+      <span class="home-stat-sub">Success rate</span>
+    </div>
+    <div class="home-stat">
+      <span class="home-stat-n">FREE</span>
+      <span class="home-stat-sub">To appeal</span>
+    </div>
+    <div class="home-stat">
+      <span class="home-stat-n">28</span>
+      <span class="home-stat-sub">Days to appeal</span>
+    </div>
+    <div class="home-stat">
+      <span class="home-stat-n">5 min</span>
+      <span class="home-stat-sub">To complete</span>
+    </div>
+  </div>
+</div>
+
+<!-- TABS — standalone rounded card -->
+<div class="wrap">
+  <div class="tabs-card">
+    <div class="tabs-card-header">
+      <p class="tabs-card-label">Select your airport</p>
+      <div class="tab-bar" role="tablist">
+        <button class="tab-btn active" role="tab" aria-selected="true"  data-tab="heathrow">Heathrow</button>
+        <button class="tab-btn"        role="tab" aria-selected="false" data-tab="gatwick">Gatwick</button>
+        <button class="tab-btn"        role="tab" aria-selected="false" data-tab="stansted">Stansted</button>
+        <button class="tab-btn"        role="tab" aria-selected="false" data-tab="luton">Luton</button>
+      </div>
+    </div>
+
+    <!-- HEATHROW -->
+    <div class="tab-panel active" id="panel-heathrow">
+      <div class="tab-letter-body" id="letter-heathrow">
+        <p>I appeal as the registered keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
+        <p>1. APCOA Parking is unable to transfer the driver's liability (if any) to the keeper under Schedule 4 to the Protection of Freedoms Act 2012 ("POFA") because the drop-off zones at Heathrow Airport are not 'relevant land' as defined in POFA. Airport land subject to statutory control falls outside the scope of Schedule 4, and APCOA therefore has no basis on which to pursue the registered keeper.</p>
+        <p>Furthermore, as keeper I am entitled to all the defences available to the driver, including (without limitation) the following:</p>
+        <p>2. The parking charge is not notified until after the contract is entered into. Under the principles established by the Court of Appeal in Thornton v Shoe Lane Parking [1971] 2 QB 163, a term introduced after a contract has been formed does not become part of that contract. The charge therefore forms no part of any contract between the driver and APCOA.</p>
+        <p>3. The signage is not compliant with the BPA Code of Practice. The charging terms were not displayed clearly, prominently, or legibly at a point where the driver could have made an informed decision to avoid the zone before entering it. No valid contract was formed.</p>
+        <p>4. The vehicle was present in the drop-off zone for no more than 5 minutes. The driver is entitled to the 5-minute consideration period expressly mandated by the BPA Code of Practice, during which no charge may be levied.</p>
+        <p>5. The charge is not a genuine pre-estimate of loss and is therefore an unenforceable penalty at common law. APCOA has suffered no identifiable loss as a result of the vehicle's presence in the drop-off zone.</p>
+        <p>Any one of the above grounds is sufficient on its own to require cancellation of the PCN. I require this charge to be cancelled and invite APCOA to confirm cancellation in writing.</p>
+      </div>
+      <div class="tab-letter-footer">
+        <button class="clipboard-btn" data-target="letter-heathrow">
+          <Fragment set:html={svgClipboard} /> Copy to clipboard
+        </button>
+        <span class="clipboard-hint">Paste into your appeal form or email — no editing needed</span>
+      </div>
+    </div>
+
+    <!-- GATWICK -->
+    <div class="tab-panel" id="panel-gatwick">
+      <div class="tab-letter-body" id="letter-gatwick">
+        <p>I appeal as the registered keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
+        <p>1. NCP cannot hold a registered keeper liable for any alleged contravention on land that is under statutory control. Gatwick Airport is not 'relevant land' as defined in Schedule 4 to the Protection of Freedoms Act 2012 ("POFA"). NCP is well aware that the POFA keeper liability provisions do not apply here, and has no lawful basis on which to pursue the registered keeper.</p>
+        <p>2. NCP's 'parking charge' is not and never purports to be a byelaws penalty — it is a charge created for NCP's own commercial profit. If Gatwick Airport wished to enforce against vehicle owners or keepers under Airport Byelaws, that would be a matter for the landowner alone. NCP is not the airport owner and has no standing to invoke byelaws. Its claim rests solely on alleged breach of contract against the driver, not the keeper.</p>
+        <p>3. The parking charge is not notified until after the contract is entered into. Under the Court of Appeal's decision in Thornton v Shoe Lane Parking [1971] 2 QB 163, a charge introduced after a contract has been formed does not become part of that contract.</p>
+        <p>4. The signage is not compliant with the BPA Code of Practice. Charging terms were not displayed clearly or prominently before the driver committed to entering the zone, meaning no valid contractual offer was made.</p>
+        <p>5. The vehicle was present in the drop-off zone for no more than 5 minutes, within the consideration period mandated by the BPA Code of Practice.</p>
+        <p>The registered keeper cannot be presumed or inferred to have been the driver, nor pursued under any interpretation of agency law. NCP's Notice to Keeper can only hold the driver liable, and that claim also fails for the reasons above. I require this PCN to be cancelled and invite confirmation of cancellation in writing.</p>
+      </div>
+      <div class="tab-letter-footer">
+        <button class="clipboard-btn" data-target="letter-gatwick">
+          <Fragment set:html={svgClipboard} /> Copy to clipboard
+        </button>
+        <span class="clipboard-hint">Paste into your appeal form or email — no editing needed</span>
+      </div>
+    </div>
+
+    <!-- STANSTED -->
+    <div class="tab-panel" id="panel-stansted">
+      <div class="tab-letter-body" id="letter-stansted">
+        <p>I appeal as the registered keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
+        <p>1. The parking operator is unable to transfer the driver's liability (if any) to the keeper under Schedule 4 to the Protection of Freedoms Act 2012 ("POFA") because the drop-off zone at Stansted Airport is not 'relevant land' as defined in POFA. Airport land subject to statutory control falls outside the scope of Schedule 4. The operator therefore has no lawful basis to pursue the registered keeper.</p>
+        <p>As keeper I am in any event entitled to all the defences available to the driver, including (without limitation):</p>
+        <p>2. The parking charge is not notified until after the contract is entered into. Under the Court of Appeal's decision in Thornton v Shoe Lane Parking [1971] 2 QB 163, a charge not communicated prior to contract formation does not become part of that contract.</p>
+        <p>3. The signage is not compliant with the BPA Code of Practice, paragraph 18. The approach road to Stansted's terminal commits drivers to the zone before adequate charging information is visible. No clear, prominent offer of terms was made at a point where the driver could realistically have chosen to avoid the zone, and no valid contract was therefore formed.</p>
+        <p>4. The vehicle was present in the drop-off zone for no more than 5 minutes. The driver is entitled to the 5-minute consideration period mandated by the BPA Code of Practice, during which no charge may be applied.</p>
+        <p>5. The charge is not a genuine pre-estimate of loss and is an unenforceable penalty at common law. No identifiable loss was caused to the operator by the vehicle's brief presence in the drop-off zone.</p>
+        <p>Any one of the above grounds is sufficient to require cancellation of this PCN. I require the charge to be cancelled and invite written confirmation of cancellation.</p>
+      </div>
+      <div class="tab-letter-footer">
+        <button class="clipboard-btn" data-target="letter-stansted">
+          <Fragment set:html={svgClipboard} /> Copy to clipboard
+        </button>
+        <span class="clipboard-hint">Paste into your appeal form or email — no editing needed</span>
+      </div>
+    </div>
+
+    <!-- LUTON -->
+    <div class="tab-panel" id="panel-luton">
+      <div class="tab-letter-body" id="letter-luton">
+        <p>I appeal as the registered keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
+        <p>1. The parking operator is unable to transfer the driver's liability (if any) to the keeper under Schedule 4 to the Protection of Freedoms Act 2012 ("POFA") because the drop-off zone at London Luton Airport is not 'relevant land' as defined in POFA. Airport land under statutory control is excluded from Schedule 4, and the operator therefore has no lawful basis to pursue the registered keeper.</p>
+        <p>As keeper I am in any event entitled to all the defences available to the driver, including (without limitation):</p>
+        <p>2. The parking charge is not notified until after the contract is entered into. Under Thornton v Shoe Lane Parking [1971] 2 QB 163, a charge not communicated before contract formation does not become part of that contract.</p>
+        <p>3. The signage is not compliant with the BPA Code of Practice. Luton Airport's road layout directs all arriving vehicles toward the terminal before adequate charging information is visible. Drivers have no realistic opportunity to avoid the zone after first encountering the signs, meaning no valid contractual offer was made and no enforceable contract was formed.</p>
+        <p>4. The vehicle was present in the drop-off zone for no more than 5 minutes, within the consideration period mandated by the BPA Code of Practice.</p>
+        <p>5. The charge is not a genuine pre-estimate of loss and is therefore an unenforceable penalty at common law.</p>
+        <p>Any one of the above grounds is sufficient to require cancellation. I require this PCN to be cancelled and invite written confirmation.</p>
+      </div>
+      <div class="tab-letter-footer">
+        <button class="clipboard-btn" data-target="letter-luton">
+          <Fragment set:html={svgClipboard} /> Copy to clipboard
+        </button>
+        <span class="clipboard-hint">Paste into your appeal form or email — no editing needed</span>
+      </div>
+    </div>
+
+  </div><!-- end tabs-card -->
+</div>
+
+<main>
+  <div class="wrap">
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section">
+      <h2>How the appeal process works</h2>
+      <div class="how-grid">
+        {[
+          { n:'1', h:'Select your airport', b:'Choose your airport from the tabs above. The correct legal arguments are pre-loaded for you.' },
+          { n:'2', h:'Copy to clipboard', b:'Hit the button and the full appeal text is copied. Paste it directly into your appeal form or email.' },
+          { n:'3', h:'Wait for a decision', b:'The operator must respond within 35 days. Most cancel at this stage without further argument.' },
+          { n:'4', h:'Escalate to POPLA if needed', b:"If rejected, request your free POPLA code. Operators lose the vast majority of POPLA cases on these grounds." },
+        ].map(({ n, h, b }) => (
+          <div class="how-card">
+            <div class="how-num">{n}</div>
+            <strong>{h}</strong>
+            <p>{b}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- SEO AIRPORT LINKS -->
+    <section class="seo-section">
+      <h2>Full appeal guides by airport</h2>
       <div class="airport-grid">
         {airports.map(({ href, tag, name, desc }) => (
           <a href={href} class="airport-card">
             <div class="airport-card-tag">{tag}</div>
             <h2>{name}</h2>
             <p>{desc}</p>
-            <span class="airport-card-arrow">Get free template →</span>
+            <span class="airport-card-arrow">Full guide →</span>
           </a>
         ))}
       </div>
+    </section>
 
-      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:2rem;margin-bottom:2rem">
-        <h2 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:1rem">How does the appeals process work?</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem">
-          {[
-            { n:'1', h:'Copy the template', b:'Select your airport above and copy the letter. It takes under a minute.' },
-            { n:'2', h:'Personalise and send', b:'Fill in your details and choose the right ground of appeal. Send within 28 days of your notice.' },
-            { n:'3', h:'Wait for a decision', b:'The operator has up to 35 days to respond. Most decisions come within two weeks.' },
-            { n:'4', h:'Escalate to POPLA if needed', b:'If rejected, use your free POPLA code. The decision is binding on the operator.' },
-          ].map(({ n, h, b }) => (
-            <div>
-              <div style="width:28px;height:28px;border-radius:50%;background:var(--accent-light);color:var(--accent);font-family:'Playfair Display',serif;font-size:.85rem;display:flex;align-items:center;justify-content:center;margin-bottom:.6rem">{n}</div>
-              <strong style="font-family:'Playfair Display',serif;font-size:.95rem;display:block;margin-bottom:.3rem">{h}</strong>
-              <p style="font-size:.82rem;color:var(--muted)">{b}</p>
-            </div>
-          ))}
-        </div>
+    <!-- BLOG -->
+    <section class="seo-section">
+      <h2>Understanding your rights</h2>
+      <div class="blog-grid">
+        {blogPosts.map(({ href, title, desc }) => (
+          <a href={href} class="blog-card">
+            <h3>{title}</h3>
+            <p>{desc}</p>
+            <span class="airport-card-arrow">Read more →</span>
+          </a>
+        ))}
       </div>
+    </section>
 
-      <div class="disclaimer">
-        <strong>Disclaimer:</strong> AppealPCN.co.uk is a free information resource for UK drivers. Nothing on this site constitutes legal advice. For complex cases, consider consulting a solicitor or Citizens Advice.
-      </div>
+    <div class="disclaimer" style="margin-bottom:2rem">
+      <strong>Disclaimer:</strong> AppealAirportPCN.co.uk is a free information resource for UK drivers. Nothing on this site constitutes legal advice. For complex cases, consider consulting a solicitor or Citizens Advice.
     </div>
-  </main>
+
+  </div>
+</main>
 
 </BaseLayout>
+
+<script>
+  const tabBtns = document.querySelectorAll<HTMLButtonElement>('.tab-btn');
+  const tabPanels = document.querySelectorAll<HTMLElement>('.tab-panel');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab!;
+      tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      tabPanels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected','true');
+      document.getElementById(`panel-${target}`)?.classList.add('active');
+    });
+  });
+
+  document.querySelectorAll<HTMLButtonElement>('.clipboard-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const el = document.getElementById(btn.dataset.target!);
+      if (!el) return;
+      navigator.clipboard.writeText(el.innerText).then(() => {
+        const saved = btn.innerHTML;
+        const hint = btn.nextElementSibling as HTMLElement;
+        btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width:15px;height:15px"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg> Copied!`;
+        if (hint) hint.textContent = 'Pasted and ready to send';
+        setTimeout(() => { btn.innerHTML = saved; if (hint) hint.textContent = 'Paste into your appeal form or email — no editing needed'; }, 3000);
+      });
+    });
+  });
+</script>
