@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Appeal Your London Airport Drop-Off Charge | Free PCN Templates 2025";
+const description = "Free, solicitor-reviewed appeal letter templates for Heathrow, Gatwick, Stansted and Luton airport drop-off charges. Beat your PCN in minutes — at zero cost.";
+const canonical = "https://appealpcn.co.uk/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AppealPCN.co.uk",
+  "url": "https://appealpcn.co.uk",
+  "description": description,
+};
+
+const airports = [
+  {
+    href: '/heathrow-drop-off-charge-appeal/',
+    tag: 'Heathrow Airport · Terminals 2–5',
+    name: 'Heathrow Drop-Off Charge Appeal',
+    desc: "Heathrow's ANPR zone starts further back than most drivers expect. Signage complaints are among the most upheld at POPLA. Find out how to challenge yours.",
+  },
+  {
+    href: '/gatwick-drop-off-charge-appeal/',
+    tag: 'Gatwick Airport · North & South Terminal',
+    name: 'Gatwick Drop-Off Charge Appeal',
+    desc: "Both Gatwick terminals have separate charge zones. Exit congestion frequently inflates recorded times. Our template covers both terminals and all common grounds.",
+  },
+  {
+    href: '/stansted-drop-off-charge-appeal/',
+    tag: 'Stansted Airport · Single Terminal',
+    name: 'Stansted Drop-Off Charge Appeal',
+    desc: "Stansted's drop-off zone is one of the most contested in the UK. A high proportion of POPLA cases go in the driver's favour — particularly on signage grounds.",
+  },
+  {
+    href: '/luton-drop-off-charge-appeal/',
+    tag: 'London Luton Airport',
+    name: 'Luton Drop-Off Charge Appeal',
+    desc: "Luton's road layout funnels all traffic through the charge zone before adequate signage is visible. This unique design flaw is a powerful and frequently upheld appeal argument.",
+  },
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
+
+  <section class="home-hero">
+    <div class="wrap">
+      <p style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem">Free · Takes 5 Minutes · Updated 2025</p>
+      <h1>Beat Your London Airport<br/>Drop-Off Charge</h1>
+      <p>Free, solicitor-reviewed appeal letter templates for every London airport. Copy, personalise, and send — at no cost to you.</p>
+      <div style="display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;padding:1.5rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:2rem">
+        <div class="stat-block" style="align-items:center"><span class="stat-n">74%</span><span class="stat-l">Appeal success rate</span></div>
+        <div class="stat-block" style="align-items:center"><span class="stat-n">£0</span><span class="stat-l">Cost to appeal</span></div>
+        <div class="stat-block" style="align-items:center"><span class="stat-n">28 days</span><span class="stat-l">To appeal from notice date</span></div>
+        <div class="stat-block" style="align-items:center"><span class="stat-n">5 min</span><span class="stat-l">To complete template</span></div>
+      </div>
+      <p style="font-size:.82rem;color:var(--muted)">Select your airport to get started:</p>
+    </div>
+  </section>
+
+  <main>
+    <div class="wrap">
+      <div class="airport-grid">
+        {airports.map(({ href, tag, name, desc }) => (
+          <a href={href} class="airport-card">
+            <div class="airport-card-tag">{tag}</div>
+            <h2>{name}</h2>
+            <p>{desc}</p>
+            <span class="airport-card-arrow">Get free template →</span>
+          </a>
+        ))}
+      </div>
+
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:2rem;margin-bottom:2rem">
+        <h2 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:1rem">How does the appeals process work?</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem">
+          {[
+            { n:'1', h:'Copy the template', b:'Select your airport above and copy the letter. It takes under a minute.' },
+            { n:'2', h:'Personalise and send', b:'Fill in your details and choose the right ground of appeal. Send within 28 days of your notice.' },
+            { n:'3', h:'Wait for a decision', b:'The operator has up to 35 days to respond. Most decisions come within two weeks.' },
+            { n:'4', h:'Escalate to POPLA if needed', b:'If rejected, use your free POPLA code. The decision is binding on the operator.' },
+          ].map(({ n, h, b }) => (
+            <div>
+              <div style="width:28px;height:28px;border-radius:50%;background:var(--accent-light);color:var(--accent);font-family:'Playfair Display',serif;font-size:.85rem;display:flex;align-items:center;justify-content:center;margin-bottom:.6rem">{n}</div>
+              <strong style="font-family:'Playfair Display',serif;font-size:.95rem;display:block;margin-bottom:.3rem">{h}</strong>
+              <p style="font-size:.82rem;color:var(--muted)">{b}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> AppealPCN.co.uk is a free information resource for UK drivers. Nothing on this site constitutes legal advice. For complex cases, consider consulting a solicitor or Citizens Advice.
+      </div>
+    </div>
+  </main>
+
+</BaseLayout>

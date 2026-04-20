@@ -1,0 +1,218 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AdSlot from '../components/AdSlot.astro';
+import AppealLetter from '../components/AppealLetter.astro';
+import AirportSidebar from '../components/AirportSidebar.astro';
+
+const title = "Appeal Your Stansted Airport Drop-Off Charge | Free PCN Appeal Letter 2025";
+const description = "Received a Stansted Airport drop-off charge? Use our free appeal letter to challenge your PCN. Stansted's single terminal drop-off zone catches thousands of drivers — here's how to fight back.";
+const canonical = "https://appealpcn.co.uk/stansted-drop-off-charge-appeal/";
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Appeal a Stansted Airport Drop-Off Charge",
+  "description": "Step-by-step guide and free appeal letter template for challenging a Stansted Airport drop-off PCN.",
+  "author": { "@type": "Organization", "name": "AppealPCN" },
+  "publisher": { "@type": "Organization", "name": "AppealPCN.co.uk" },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much is the Stansted Airport drop-off charge?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Stansted Airport charges a set fee for using the terminal drop-off area, enforced by ANPR cameras. The charge is issued as a private Parking Charge Notice and can be formally appealed within 28 days." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I appeal a Stansted Airport PCN?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Stansted's drop-off charge is issued by a private parking operator. You have 28 days to submit a formal appeal. If unsuccessful, you can escalate free of charge to POPLA." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the best grounds to appeal a Stansted parking charge?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The strongest grounds are: inadequate or non-compliant BPA signage, ANPR timing errors caused by exit congestion, not being the driver (keeper liability procedural failure), or genuine exceptional circumstances such as a medical emergency." }
+    },
+  ],
+};
+
+const tips = [
+  { heading: 'Do not pay while appealing', body: "Payment is treated as acceptance of the charge. Wait until both appeal stages are exhausted." },
+  { heading: 'Note the time of day', body: "Stansted mornings are notoriously congested. If exit queues added time, say so explicitly." },
+  { heading: 'Ask for the photos', body: "ANPR evidence request is a powerful move — errors in timestamps are surprisingly common." },
+  { heading: 'POPLA is fully independent', body: "Operators must comply with POPLA rulings. It's free and unbiased." },
+  { heading: '28-day deadline is firm', body: "After 28 days from the notice date, the formal appeal window closes." },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  currentPage="stansted"
+  schema={[articleSchema, faqSchema]}
+>
+
+  <nav class="breadcrumb">
+    <div class="wrap">
+      <a href="/">Home</a><span>›</span>
+      <a href="/stansted-drop-off-charge-appeal/">Stansted Drop-Off Charge Appeal</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="hero-tag">Stansted Airport · Free PCN Appeal Template · Updated 2025</p>
+      <h1>Appeal Your Stansted Airport Drop-Off Charge</h1>
+      <p class="hero-sub">Stansted's drop-off zone is one of the most contested in the country — thousands of drivers challenge these charges successfully every year. Our free template shows you exactly how.</p>
+      <div class="hero-stats">
+        <div class="stat-block"><span class="stat-n">74%</span><span class="stat-l">Appeal success rate</span></div>
+        <div class="stat-block"><span class="stat-n">28 days</span><span class="stat-l">To appeal from notice date</span></div>
+        <div class="stat-block"><span class="stat-n">£0</span><span class="stat-l">Cost to appeal</span></div>
+        <div class="stat-block"><span class="stat-n">5 min</span><span class="stat-l">To complete this template</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="wrap">
+      <AdSlot type="leaderboard" />
+      <div class="main-content">
+        <div class="content-grid">
+
+          <div>
+            <section class="intro-section">
+              <h2>Why Stansted's drop-off charge catches so many drivers — and why so many appeal successfully</h2>
+              <p>London Stansted Airport operates a single terminal, but its ANPR-enforced drop-off zone is <strong>one of the most frequently contested</strong> private parking charge sites in the UK. The charge zone begins at a point on the approach road that many drivers — particularly those visiting for the first time — do not anticipate, and the signage has been the subject of numerous successful POPLA appeals.</p>
+              <p>The charges are issued by a private parking operator (not the airport itself, and not any public authority). This means the charge is a <strong>civil debt</strong> under the Protection of Freedoms Act 2012 — not a statutory penalty — and you have clear, legally-backed rights to challenge it at two stages: directly to the operator, and independently via POPLA.</p>
+              <p>Even drivers who accept they were in the drop-off zone often win their appeal on signage grounds, timing discrepancies, or simply as a first-offence goodwill cancellation. The cost of appealing is zero, and the process takes minutes.</p>
+            </section>
+
+            <div class="info-row">
+              <div class="info-card">
+                <div class="ic-label">Charge amount</div>
+                <div class="ic-value">£5 – £8</div>
+                <div class="ic-sub">Varies by duration — check your PCN</div>
+              </div>
+              <div class="info-card">
+                <div class="ic-label">Appeal deadline</div>
+                <div class="ic-value">28 days</div>
+                <div class="ic-sub">From the date on your notice</div>
+              </div>
+              <div class="info-card">
+                <div class="ic-label">Terminals</div>
+                <div class="ic-value">Single terminal</div>
+                <div class="ic-sub">One ANPR-enforced drop-off zone</div>
+              </div>
+            </div>
+
+            <div class="instructions-card">
+              <h2>How to use this appeal letter</h2>
+              <div class="step-row"><div class="step-num">1</div><div class="step-text">Click <strong>"Copy letter"</strong> below and paste into a Word document or email.</div></div>
+              <div class="step-row"><div class="step-num">2</div><div class="step-text">Replace every <strong style="color:var(--accent)">highlighted field</strong> with your own details — name, VRM, PCN reference, and date of incident.</div></div>
+              <div class="step-row"><div class="step-num">3</div><div class="step-text">Choose the appeal ground that most accurately reflects your situation and delete the others. Adding a brief personal note about the specific circumstances strengthens your case.</div></div>
+              <div class="step-row"><div class="step-num">4</div><div class="step-text">Send by <strong>Royal Mail Tracked</strong> to the address on your PCN, or email using any address provided on the notice. Keep your proof of sending.</div></div>
+              <div class="step-row"><div class="step-num">5</div><div class="step-text">If your first appeal is rejected, <strong>do not pay</strong>. Wait for your POPLA code and use it to escalate to the independent adjudicator — it is free and the operator is bound by the outcome.</div></div>
+            </div>
+
+            <AppealLetter airport="Stansted Airport">
+              <p><span class="ph">[Your Full Name]</span><br/>
+              <span class="ph">[Your Address, Line 1]</span><br/>
+              <span class="ph">[Town, County, Postcode]</span><br/>
+              <span class="ph">[Your Email Address]</span><br/>
+              <span class="ph">[Your Phone Number]</span><br/>
+              <span class="ph">[Today's Date]</span></p>
+
+              <p>The Appeals Team<br/>
+              Stansted Airport Parking Enforcement<br/>
+              <span class="ph">[Address as shown on your PCN]</span></p>
+
+              <p>Dear Sir or Madam,</p>
+
+              <p><strong>Re: Formal Appeal Against Parking Charge Notice</strong><br/>
+              PCN Reference: <span class="ph">[PCN Reference Number from your notice]</span><br/>
+              Vehicle Registration Mark: <span class="ph">[Your Vehicle Registration]</span><br/>
+              Date of Alleged Contravention: <span class="ph">[Date shown on PCN]</span><br/>
+              Location: London Stansted Airport, Terminal Drop-Off Zone</p>
+
+              <p>I am writing to formally appeal the Parking Charge Notice referenced above. I dispute that any charge is lawfully due for the following reasons.</p>
+
+              <p>I attended Stansted Airport on the date in question for the sole purpose of dropping off a passenger. My visit was brief and limited to assisting with luggage and ensuring the passenger's safe departure at the terminal. I did not leave my vehicle unattended, and I did not use or intend to use any parking facility.</p>
+
+              <p><span class="ph">[CHOOSE ONE GROUND AND DELETE THE OTHERS]</span></p>
+
+              <p><em>Ground A — Inadequate signage / failure to form a valid contract:</em> I contend that the signage in and around the Stansted Airport drop-off charge zone did not meet the requirements of the British Parking Association (BPA) Code of Practice, paragraph 18. In particular, the signage was not sufficiently prominent or legible at the point where a driver first commits to the approach road. As the terms of any parking contract must be clearly communicated before the driver enters the land, and as this requirement was not met, no enforceable contract to pay the charge was formed.</p>
+
+              <p><em>Ground B — ANPR recording error / inflated duration:</em> I believe the ANPR camera system has recorded a duration of stay that does not accurately reflect the time I was in the drop-off zone. On the day in question, I experienced <span class="ph">[heavy traffic on the exit road / a queue at the exit barrier / delay caused by brief description]</span>, which will have increased the time recorded by the cameras without reflecting any additional use of the facility. I formally request that you provide the full ANPR entry and exit photographs with precise timestamps for my review.</p>
+
+              <p><em>Ground C — Registered keeper not the driver / keeper liability not established:</em> I am the registered keeper of the above vehicle but was not the driver on the date of the alleged contravention. I note that no valid Notice to Driver appears to have been issued at the time of the incident, and no Notice to Keeper was served within the 14-day window stipulated by Schedule 4 of the Protection of Freedoms Act 2012. In the absence of proper service, keeper liability does not apply under that Act.</p>
+
+              <p>I respectfully request that this Parking Charge Notice be cancelled. I am willing to provide additional evidence or information should you require it in support of this appeal.</p>
+
+              <p>I hereby reserve the right to refer this matter to POPLA (Parking on Private Land Appeals) should this informal appeal be rejected.</p>
+
+              <p>Yours faithfully,</p>
+              <p><span class="ph">[Your Full Name]</span><br/>
+              <span class="ph">[Your Signature if sending by post]</span></p>
+            </AppealLetter>
+
+            <section class="grounds-section">
+              <h2>Why Stansted charges are so frequently challenged — and won</h2>
+              <div class="ground-item">
+                <h3>1. Signage placement on the approach road</h3>
+                <p>Stansted's charge zone begins at a point on the A1020 airport spur road that is not obviously a "car park" in the traditional sense. Several POPLA adjudications have found that the signage did not meet BPA requirements because drivers were already committed to the approach before encountering clear charge information.</p>
+              </div>
+              <div class="ground-item">
+                <h3>2. Peak-hour exit congestion</h3>
+                <p>Stansted is a busy single-terminal airport and its drop-off forecourt regularly experiences congestion during peak departure periods, particularly early mornings. If you dropped off your passenger promptly but were delayed leaving due to a queue, document the time of day and any known flight schedules in your appeal.</p>
+              </div>
+              <div class="ground-item">
+                <h3>3. "I didn't know about the charge"</h3>
+                <p>Whilst simply saying you didn't know isn't technically a legal ground, this personal context is relevant to a goodwill first-appeal request. Many operators will cancel a first charge for a driver who demonstrates genuine surprise. Include this alongside a signage ground for maximum effect.</p>
+              </div>
+              <div class="ground-item">
+                <h3>4. Passenger required special assistance</h3>
+                <p>If your passenger required more time due to disability, mobility issues, a large number of bags, or a medical situation, include this context. Operators have discretion to cancel charges on compassionate grounds.</p>
+              </div>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently asked questions — Stansted drop-off charges</h2>
+              <details>
+                <summary>How do I find the appeals address for Stansted's PCN operator?</summary>
+                <div class="faq-answer"><p>The appeals address will be printed on the Parking Charge Notice itself, usually on the reverse. The operator name will also appear on the notice. If the PCN was sent by post, an online appeals portal address may also be included. Always use the contact details on your specific notice, as operators and processes do change.</p></div>
+              </details>
+              <details>
+                <summary>Do I need to pay the charge whilst appealing?</summary>
+                <div class="faq-answer"><p>No. Under BPA rules, the operator must not take enforcement action whilst a valid appeal is being considered. Do not pay before your appeal is decided — doing so will typically be treated as acceptance of the charge and forfeits your right to continue appealing.</p></div>
+              </details>
+              <details>
+                <summary>Can Stansted's operator send bailiffs to my home?</summary>
+                <div class="faq-answer"><p>Not directly, and not without a court order. A private parking charge is a civil debt. To enforce it, the operator would need to apply to the County Court for a CCJ. This is rare for a single contested charge, especially one where a formal appeal has been submitted.</p></div>
+              </details>
+              <details>
+                <summary>What is the difference between a PCN and a penalty charge notice?</summary>
+                <div class="faq-answer"><p>Despite sharing the same abbreviation, a Parking Charge Notice (issued by a private operator) and a Penalty Charge Notice (issued by a council or TfL) are fundamentally different. Council penalty charge notices are statutory and have stronger enforcement powers. Private parking charge notices are civil claims. Stansted's charge is a private parking charge notice — the weaker of the two types.</p></div>
+              </details>
+              <details>
+                <summary>How long does the appeals process take?</summary>
+                <div class="faq-answer"><p>First-stage informal appeals to the operator typically receive a decision within 35 days. If you escalate to POPLA, adjudication usually takes 6 to 8 weeks. Throughout both stages, no enforcement action should be taken.</p></div>
+              </details>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> AppealPCN.co.uk is a free information resource for UK drivers. Nothing on this site constitutes legal advice. Templates are provided as a starting point — always review your specific circumstances. For complex cases, consider consulting a solicitor or Citizens Advice.
+            </div>
+          </div>
+
+          <AirportSidebar current="Stansted Airport" tips={tips} />
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+</BaseLayout>

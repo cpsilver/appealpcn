@@ -1,0 +1,41 @@
+---
+interface Props {
+  airport: string; // Display name e.g. "Heathrow Airport"
+  letterId?: string;
+}
+const { airport, letterId = 'letter-text' } = Astro.props;
+---
+
+<div class="letter-card">
+  <div class="letter-card-header">
+    <h2>Free Appeal Letter Template — {airport}</h2>
+    <span class="airport-pill">{airport}</span>
+  </div>
+  <div class="letter-body" id={letterId}>
+    <slot />
+  </div>
+  <div class="letter-footer">
+    <button class="copy-btn" data-letter-id={letterId}>Copy letter</button>
+    <span class="copy-hint">Paste into Word, then replace all highlighted fields</span>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.letterId!;
+      const el = document.getElementById(id);
+      if (!el) return;
+      navigator.clipboard.writeText(el.innerText).then(() => {
+        const hint = btn.nextElementSibling as HTMLElement;
+        const original = btn.textContent!;
+        btn.textContent = 'Copied!';
+        if (hint) hint.textContent = 'Now paste into Word and fill in every highlighted field';
+        setTimeout(() => {
+          btn.textContent = original;
+          if (hint) hint.textContent = 'Paste into Word, then replace all highlighted fields';
+        }, 3000);
+      });
+    });
+  });
+</script>

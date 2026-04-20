@@ -1,0 +1,85 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  currentPage?: string;
+  schema?: object | object[];
+}
+
+const { title, description, canonical, currentPage, schema } = Astro.props;
+
+const nav = [
+  { href: '/heathrow-drop-off-charge-appeal/', label: 'Heathrow' },
+  { href: '/gatwick-drop-off-charge-appeal/',  label: 'Gatwick'  },
+  { href: '/stansted-drop-off-charge-appeal/', label: 'Stansted' },
+  { href: '/luton-drop-off-charge-appeal/',    label: 'Luton'    },
+];
+
+// Normalise schema to an array for easy iteration
+const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content={canonical} />
+
+  <!-- JSON-LD structured data -->
+  {schemas.map(s => (
+    <script type="application/ld+json" set:html={JSON.stringify(s)} />
+  ))}
+
+  <!--
+    Google AdSense — uncomment and add your publisher ID once approved:
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/">Appeal<em>PCN</em>.co.uk</a>
+      <nav class="header-nav">
+        {nav.map(({ href, label }) => (
+          <a href={href} class={currentPage === label.toLowerCase() ? 'active' : ''}>{label}</a>
+        ))}
+        <a
+          href="https://ko-fi.com/"
+          class="donate-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >☕ Buy me a coffee</a>
+      </nav>
+    </div>
+  </header>
+
+  <slot />
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© {new Date().getFullYear()} AppealPCN.co.uk — Free parking appeal templates for UK drivers</p>
+      <p style="margin-top:.5rem">
+        <a href="/privacy/">Privacy policy</a>
+        <a href="/contact/">Contact</a>
+        <a href="/popla-guide/">POPLA guide</a>
+        <a href="https://ko-fi.com/" target="_blank" rel="noopener noreferrer">Support this site</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

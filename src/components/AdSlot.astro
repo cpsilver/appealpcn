@@ -1,0 +1,37 @@
+---
+interface Props {
+  type: 'leaderboard' | 'rectangle';
+  slot?: string; // AdSense data-ad-slot value — add when you have your publisher ID
+}
+const { type, slot } = Astro.props;
+---
+
+{type === 'leaderboard' ? (
+  <div class="ad-leaderboard">
+    <!--
+      Replace this div's contents with your AdSense leaderboard unit (728×90).
+      Example:
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot={slot}></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+    Advertisement
+  </div>
+) : (
+  <div class="ad-rectangle">
+    <!--
+      Replace with your AdSense rectangle unit (300×250).
+      Example:
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot={slot}
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+    Advertisement
+  </div>
+)}

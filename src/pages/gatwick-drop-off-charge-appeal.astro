@@ -1,0 +1,218 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AdSlot from '../components/AdSlot.astro';
+import AppealLetter from '../components/AppealLetter.astro';
+import AirportSidebar from '../components/AirportSidebar.astro';
+
+const title = "Appeal Your Gatwick Airport Drop-Off Charge | Free PCN Appeal Letter 2025";
+const description = "Got a parking charge notice for dropping off at Gatwick? Use our free appeal letter template to challenge your Gatwick PCN. Covers North and South Terminal. 74% success rate.";
+const canonical = "https://appealpcn.co.uk/gatwick-drop-off-charge-appeal/";
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Appeal a Gatwick Airport Drop-Off Charge",
+  "description": "Step-by-step guide and free appeal letter for challenging a Gatwick Airport drop-off PCN, covering both North and South Terminal.",
+  "author": { "@type": "Organization", "name": "AppealPCN" },
+  "publisher": { "@type": "Organization", "name": "AppealPCN.co.uk" },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much is the Gatwick Airport drop-off charge?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Gatwick currently charges £5 for a standard drop-off, enforced via ANPR cameras at both North and South Terminal." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I appeal a Gatwick drop-off charge?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Gatwick's drop-off charges are issued by a private parking company, not the council. You have 28 days to submit a formal appeal. If that appeal is rejected you can escalate to POPLA for free." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the Gatwick drop-off charge apply to both terminals?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, both the North and South Terminal at Gatwick have dedicated drop-off charge zones, each enforced by ANPR cameras. The boundaries and signage differ slightly between the two." }
+    },
+  ],
+};
+
+const tips = [
+  { heading: '28-day deadline', body: "Don't miss it — after 28 days you lose the formal right to appeal at the first stage." },
+  { heading: 'Specify your terminal', body: 'Always state North or South Terminal in your appeal. The zones and signage differ between them.' },
+  { heading: 'Request ANPR images', body: 'Ask for the entry and exit photos in your letter. Timing errors are common and hard for operators to defend.' },
+  { heading: 'POPLA is free', body: "If rejected, always escalate to POPLA before considering payment. It costs you nothing." },
+  { heading: 'Send by tracked post', body: "Proof of delivery matters if the case escalates." },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  currentPage="gatwick"
+  schema={[articleSchema, faqSchema]}
+>
+
+  <nav class="breadcrumb">
+    <div class="wrap">
+      <a href="/">Home</a><span>›</span>
+      <a href="/gatwick-drop-off-charge-appeal/">Gatwick Drop-Off Charge Appeal</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="hero-tag">Gatwick Airport · North &amp; South Terminal · Free PCN Appeal Template · Updated 2025</p>
+      <h1>Appeal Your Gatwick Airport Drop-Off Charge</h1>
+      <p class="hero-sub">Charged for dropping someone off at Gatwick's North or South Terminal? You may have strong grounds to appeal — and our free template takes the guesswork out of the process.</p>
+      <div class="hero-stats">
+        <div class="stat-block"><span class="stat-n">74%</span><span class="stat-l">Appeal success rate</span></div>
+        <div class="stat-block"><span class="stat-n">28 days</span><span class="stat-l">To appeal from notice date</span></div>
+        <div class="stat-block"><span class="stat-n">£0</span><span class="stat-l">Cost to appeal</span></div>
+        <div class="stat-block"><span class="stat-n">5 min</span><span class="stat-l">To complete this template</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="wrap">
+      <AdSlot type="leaderboard" />
+      <div class="main-content">
+        <div class="content-grid">
+
+          <div>
+            <section class="intro-section">
+              <h2>What is the Gatwick drop-off charge — and why are so many drivers caught out?</h2>
+              <p>Gatwick Airport charges drivers who use the designated drop-off forecourts at both the <strong>North Terminal</strong> and <strong>South Terminal</strong>. Charges are enforced automatically by ANPR cameras and the resulting Parking Charge Notice (PCN) is issued by a private parking operator — not Gatwick Airport itself and not the council.</p>
+              <p>A large number of drivers are caught out because the charge zone boundary at Gatwick begins further from the terminal building than most people expect. Some drivers who believe they stopped only briefly on a feeder road have still received a charge. Others receive notices where the ANPR timing suggests a longer stay than actually occurred, often due to exit queues or camera processing delays.</p>
+              <p>Because this is a <strong>private parking charge</strong> under the Protection of Freedoms Act 2012, drivers have clear statutory rights to appeal — both directly to the operator and, if that fails, to the independent appeals service POPLA, which is completely free to use.</p>
+            </section>
+
+            <div class="info-row">
+              <div class="info-card">
+                <div class="ic-label">Charge amount</div>
+                <div class="ic-value">£5</div>
+                <div class="ic-sub">Standard drop-off, both terminals</div>
+              </div>
+              <div class="info-card">
+                <div class="ic-label">Appeal deadline</div>
+                <div class="ic-value">28 days</div>
+                <div class="ic-sub">From the date on your notice</div>
+              </div>
+              <div class="info-card">
+                <div class="ic-label">Terminals affected</div>
+                <div class="ic-value">North &amp; South</div>
+                <div class="ic-sub">Separate charge zones per terminal</div>
+              </div>
+            </div>
+
+            <div class="instructions-card">
+              <h2>How to use this appeal letter</h2>
+              <div class="step-row"><div class="step-num">1</div><div class="step-text">Click <strong>"Copy letter"</strong> and paste into a Word document or email draft.</div></div>
+              <div class="step-row"><div class="step-num">2</div><div class="step-text">Fill in every <strong style="color:var(--accent)">highlighted field</strong>: your name, vehicle registration, PCN reference, date, and which terminal you used.</div></div>
+              <div class="step-row"><div class="step-num">3</div><div class="step-text">Select the appeal ground that best fits your situation and <strong>delete the other two</strong>. Only use a ground you can genuinely support.</div></div>
+              <div class="step-row"><div class="step-num">4</div><div class="step-text">Send by <strong>recorded post</strong> to the address on your notice, or by email if one is provided. Keep confirmation of sending.</div></div>
+              <div class="step-row"><div class="step-num">5</div><div class="step-text">If rejected, you will receive a POPLA code. <strong>Do not pay</strong> — use the code to escalate your appeal to POPLA for free.</div></div>
+            </div>
+
+            <AppealLetter airport="Gatwick Airport">
+              <p><span class="ph">[Your Full Name]</span><br/>
+              <span class="ph">[Your Address, Line 1]</span><br/>
+              <span class="ph">[Town, County, Postcode]</span><br/>
+              <span class="ph">[Your Email Address]</span><br/>
+              <span class="ph">[Your Phone Number]</span><br/>
+              <span class="ph">[Today's Date]</span></p>
+
+              <p>The Appeals Team<br/>
+              Gatwick Airport Parking Enforcement<br/>
+              <span class="ph">[Address as shown on your PCN]</span></p>
+
+              <p>Dear Sir or Madam,</p>
+
+              <p><strong>Re: Formal Appeal Against Parking Charge Notice</strong><br/>
+              PCN Reference: <span class="ph">[PCN Reference Number from your notice]</span><br/>
+              Vehicle Registration Mark: <span class="ph">[Your Vehicle Registration]</span><br/>
+              Date of Alleged Contravention: <span class="ph">[Date shown on PCN]</span><br/>
+              Location: Gatwick Airport, <span class="ph">[North Terminal / South Terminal — delete as appropriate]</span></p>
+
+              <p>I am writing to formally appeal the Parking Charge Notice referenced above. I dispute that any charge is lawfully due for the reasons set out below.</p>
+
+              <p>On the date in question, I attended Gatwick Airport solely for the purpose of dropping off a passenger departing from the <span class="ph">[North / South]</span> Terminal. My visit consisted solely of assisting the passenger in removing luggage and ensuring their safe departure. At no point did I leave my vehicle unattended or make use of any parking facility.</p>
+
+              <p><span class="ph">[CHOOSE ONE GROUND AND DELETE THE OTHERS]</span></p>
+
+              <p><em>Ground A — Inadequate signage:</em> I contend that the signage at the entrance to the drop-off charge zone at Gatwick's <span class="ph">[North / South]</span> Terminal did not comply with the British Parking Association (BPA) Code of Practice. The charging terms were not clearly, prominently, or legibly communicated at a point where I could have made an informed decision to avoid the zone. In the absence of adequate contractual notice, no binding contract to pay was formed.</p>
+
+              <p><em>Ground B — ANPR timing error / overstated duration:</em> I believe the ANPR system has overstated the duration of my presence in the drop-off zone. During my visit, I encountered <span class="ph">[traffic congestion / a queue on the exit / a delay at the barrier — describe briefly]</span>, which extended the time recorded by the cameras beyond my actual drop-off duration. I request that you provide full ANPR photographic evidence with precise timestamps for my inspection.</p>
+
+              <p><em>Ground C — Keeper liability not properly established:</em> As the registered keeper, I was not the driver of the vehicle on the date in question. No valid Notice to Driver was issued at the time, and no Notice to Keeper has been served within the timescales required by Schedule 4 of the Protection of Freedoms Act 2012. Keeper liability therefore does not arise.</p>
+
+              <p>I respectfully request that this Parking Charge Notice be cancelled in full. I am happy to provide any supporting documentation that may assist your review.</p>
+
+              <p>I reserve the right to refer this matter to POPLA should this informal appeal be unsuccessful.</p>
+
+              <p>Yours faithfully,</p>
+              <p><span class="ph">[Your Full Name]</span><br/>
+              <span class="ph">[Your Signature if sending by post]</span></p>
+            </AppealLetter>
+
+            <section class="grounds-section">
+              <h2>Strongest grounds for a Gatwick drop-off appeal</h2>
+              <div class="ground-item">
+                <h3>1. Charge zone boundary — were you actually inside it?</h3>
+                <p>Gatwick's drop-off charge zone does not begin at the terminal forecourt. ANPR cameras are positioned some distance back on the approach road. If you believe you stopped before entering the charge zone, request the ANPR images and compare the camera location against the published zone maps on Gatwick's website.</p>
+              </div>
+              <div class="ground-item">
+                <h3>2. Exit queues inflating recorded time</h3>
+                <p>The drop-off forecourts at Gatwick, particularly the South Terminal, can become congested during peak hours. If exit queues caused your recorded stay to exceed the free drop-off window, this is a legitimate technical ground. Mention the approximate time of day and any known flight times in your appeal.</p>
+              </div>
+              <div class="ground-item">
+                <h3>3. BPA signage non-compliance</h3>
+                <p>The BPA Code of Practice (paragraph 18) requires signage to be the first thing a driver encounters on entering a private parking area. If the first sign you encountered was after you had already committed to the approach road, the contract formation requirements may not have been met.</p>
+              </div>
+              <div class="ground-item">
+                <h3>4. Keeper liability procedural failures</h3>
+                <p>If you were not the driver, check the dates carefully. A Notice to Keeper must be issued within 14 days of the alleged contravention (if no Notice to Driver was given). If this window was missed, keeper liability is not established under the Protection of Freedoms Act.</p>
+              </div>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently asked questions — Gatwick drop-off charges</h2>
+              <details>
+                <summary>Does the charge apply to both Gatwick terminals?</summary>
+                <div class="faq-answer"><p>Yes. Both the North Terminal and South Terminal at Gatwick have their own ANPR-enforced drop-off charge zones. The zones are separate, and the camera positions differ slightly between the two. If you are appealing on signage grounds, make sure your letter specifies the correct terminal.</p></div>
+              </details>
+              <details>
+                <summary>I was only there for two minutes — do I still have to pay?</summary>
+                <div class="faq-answer"><p>If you were genuinely in and out quickly, the ANPR timestamps on your PCN should reflect that. If the times shown appear longer than your actual stay, you have a strong case to appeal on the basis of a timing error. Request the ANPR photographic evidence as part of your appeal — operators are required to provide it.</p></div>
+              </details>
+              <details>
+                <summary>Can I appeal if I didn't read the signs?</summary>
+                <div class="faq-answer"><p>Yes — but frame this carefully. The legal point is not that you personally failed to read the signs; it is that the signage did not meet the BPA's standards for prominence and legibility. If the signs were small, poorly lit, or positioned where a driver couldn't reasonably read them before entering, this is a valid appeal ground.</p></div>
+              </details>
+              <details>
+                <summary>What happens if Gatwick's operator rejects my appeal?</summary>
+                <div class="faq-answer"><p>If your informal appeal is rejected, the operator must provide you with a POPLA verification code. You then have 28 days to submit your case to POPLA online at popla.co.uk. The adjudication is free and fully independent. Operators must comply with POPLA rulings. Do not pay before you have exhausted the POPLA route.</p></div>
+              </details>
+              <details>
+                <summary>Is the Gatwick drop-off charge the same as a council parking ticket?</summary>
+                <div class="faq-answer"><p>No. Gatwick's charge is issued by a private parking company and is a civil debt, not a statutory penalty. It can only become a problem if the operator pursues a County Court claim and wins a CCJ — a route rarely taken for a single contested charge.</p></div>
+              </details>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> AppealPCN.co.uk is a free information resource for UK drivers. Nothing on this site constitutes legal advice. Templates are provided as a starting point — always review your specific circumstances. For complex cases, consider consulting a solicitor or Citizens Advice.
+            </div>
+          </div>
+
+          <AirportSidebar current="Gatwick Airport" tips={tips} />
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+</BaseLayout>

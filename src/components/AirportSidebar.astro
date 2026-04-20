@@ -1,0 +1,42 @@
+---
+import AdSlot from './AdSlot.astro';
+
+interface Props {
+  current: string;
+  tips: { heading: string; body: string }[];
+}
+
+const { current, tips } = Astro.props;
+
+const airports = [
+  { label: 'Heathrow Airport', href: '/heathrow-drop-off-charge-appeal/' },
+  { label: 'Gatwick Airport',  href: '/gatwick-drop-off-charge-appeal/'  },
+  { label: 'Stansted Airport', href: '/stansted-drop-off-charge-appeal/' },
+  { label: 'Luton Airport',    href: '/luton-drop-off-charge-appeal/'    },
+];
+---
+
+<aside class="sidebar">
+  <AdSlot type="rectangle" />
+
+  <div class="tips-card">
+    <h3>Quick tips</h3>
+    {tips.map(({ heading, body }) => (
+      <div class="tip-item">
+        <strong>{heading}</strong>
+        <span>{body}</span>
+      </div>
+    ))}
+  </div>
+
+  <div class="airports-card">
+    <h3>Other airports</h3>
+    {airports.map(({ label, href }) => (
+      <a href={href} class={label === current ? 'current' : ''}>
+        {label === current ? '✦ ' : ''}{label}
+      </a>
+    ))}
+  </div>
+
+  <AdSlot type="rectangle" />
+</aside>
