@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Contact Us | AppealAirportPCN";
+const description = "Get in touch with AppealAirportPCN.co.uk for questions about airport parking appeals or feedback on our free resources.";
+const canonical = "https://appealairportpcn.co.uk/contact/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact AppealAirportPCN.co.uk",
+  "description": description,
+  "url": canonical,
+  "publisher": { "@type": "Organization", "name": "AppealAirportPCN.co.uk" },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
+  <nav class="breadcrumb">
+    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/contact/">Contact</a></div>
+  </nav>
+  <main>
+    <div class="wrap">
+      <article class="blog-post">
+        <h1>Contact Us</h1>
+        <p class="post-meta">AppealAirportPCN.co.uk</p>
+
+        <p>Have questions about our appeal templates, need clarification on airport parking laws, or want to share feedback? We're here to help.</p>
+
+        <h2>Get in Touch</h2>
+        <p>Email us at: <a href="mailto:contact@appealairportpcn.co.uk">contact@appealairportpcn.co.uk</a></p>
+        <p>We aim to respond to all inquiries within 48 hours. Please include details about your specific situation for the most helpful response.</p>
+
+        <h2>What We Can Help With</h2>
+        <ul>
+          <li>Questions about appeal templates and guides</li>
+          <li>Clarification on legal grounds for airport PCNs</li>
+          <li>Suggestions for improving our resources</li>
+          <li>General feedback on the site</li>
+        </ul>
+
+        <p><em>Note: We provide general information based on UK parking law but are not legal advisors. For personalized advice, consult a qualified solicitor.</em></p>
+      </article>
+    </div>
+  </main>
+</BaseLayout></content>
+<parameter name="filePath">/Users/cadensilver/Documents/APPEAL PCN SITE/appealpcn/src/pages/contact.astro

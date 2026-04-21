@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://appealairportpcn.co.uk/sitemap-index.xml
+Host: https://appealairportpcn.co.uk

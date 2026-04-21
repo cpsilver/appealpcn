@@ -19,7 +19,15 @@ const airports = [
 ];
 
 const kofi = "https://ko-fi.com/appealairportpcn";
-const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+const defaultOrg = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AppealAirportPCN.co.uk",
+  "url": "https://appealairportpcn.co.uk",
+  "logo": "https://appealairportpcn.co.uk/android-chrome-512x512.png"
+};
+
+const schemas = schema ? (Array.isArray(schema) ? [...schema, defaultOrg] : [schema, defaultOrg]) : [defaultOrg];
 ---
 
 <!DOCTYPE html>
@@ -46,10 +54,8 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
   {schemas.map(s => (
     <script type="application/ld+json" set:html={JSON.stringify(s)} />
   ))}
-  <!--
-    Google AdSense — uncomment and replace with your publisher ID once approved:
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-  -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7045811210154369"
+     crossorigin="anonymous"></script>
 <link rel="icon" href="/favicon.ico" />
 
 </head>
@@ -73,6 +79,7 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
           </div>
         </div>
         <a href="/blog/" class={currentPage === 'blog' ? 'nav-link active' : 'nav-link'}>Blog</a>
+        <a href="/about/" class={currentPage === 'about' ? 'nav-link active' : 'nav-link'}>About</a>
         <a href={kofi} class="donate-btn" target="_blank" rel="noopener noreferrer">☕ Support us</a>
       </nav>
 
@@ -96,6 +103,7 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
       <!-- Blog + Support as a button row -->
       <div class="mobile-drawer-actions">
         <a href="/blog/" class="mobile-action-btn mobile-action-blog">Blog</a>
+        <a href="/about/" class="mobile-action-btn mobile-action-about">About</a>
         <a href={kofi} class="mobile-action-btn mobile-action-support" target="_blank" rel="noopener noreferrer">☕ Support us</a>
       </div>
     </div>
@@ -109,6 +117,7 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
       <p style="margin-top:.5rem">
         <a href="/privacy/">Privacy policy</a>
         <a href="/contact/">Contact</a>
+        <a href="/about/">About</a>
         <a href="/blog/">Blog</a>
         <a href={kofi} target="_blank" rel="noopener noreferrer">Support this site</a>
       </p>
