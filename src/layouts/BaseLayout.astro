@@ -35,6 +35,9 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
   <meta property="og:description" content={description} />
   <meta property="og:type" content="article" />
   <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={image} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://appealairportpcn.co.uk/preview.jpg" />
   {schemas.map(s => (
     <script type="application/ld+json" set:html={JSON.stringify(s)} />
   ))}
@@ -43,6 +46,7 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
   -->
 <link rel="icon" href="/favicon.ico" />
+
 </head>
 <body>
 
