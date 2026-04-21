@@ -11,7 +11,7 @@ interface Props {
 
 const { title, description, canonical, currentPage, schema } = Astro.props;
 
-const nav = [
+const airports = [
   { href: '/heathrow-drop-off-charge-appeal/', label: 'Heathrow', key: 'heathrow' },
   { href: '/gatwick-drop-off-charge-appeal/',  label: 'Gatwick',  key: 'gatwick'  },
   { href: '/stansted-drop-off-charge-appeal/', label: 'Stansted', key: 'stansted' },
@@ -45,19 +45,47 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
 <body>
 
   <header class="site-header">
-    <div class="wrap">
+    <div class="wrap header-wrap">
       <a class="logo" href="/">Appeal<em>AirportPCN</em>.co.uk</a>
-      <nav class="header-nav">
-        {nav.map(({ href, label, key }) => (
-          <a href={href} class={currentPage === key ? 'active' : ''}>{label}</a>
-        ))}
-        <a
-          href="https://ko-fi.com/"
-          class="donate-btn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >☕ Support us</a>
+
+      <!-- DESKTOP NAV -->
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <!-- Airports dropdown -->
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+            Airports
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            {airports.map(({ href, label, key }) => (
+              <a href={href} class={currentPage === key ? 'active' : ''}>{label}</a>
+            ))}
+          </div>
+        </div>
+        <a href="/blog/" class={currentPage === 'blog' ? 'nav-link active' : 'nav-link'}>Blog</a>
+        <a href="https://ko-fi.com/" class="donate-btn" target="_blank" rel="noopener noreferrer">☕ Support us</a>
       </nav>
+
+      <!-- MOBILE HAMBURGER -->
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true" id="icon-open">
+          <path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+        </svg>
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true" id="icon-close" style="display:none">
+          <path d="M5 5l12 12M17 5L5 17" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- MOBILE DRAWER -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <p class="mobile-drawer-label">Airports</p>
+      {airports.map(({ href, label }) => (
+        <a href={href} class="mobile-drawer-link">{label}</a>
+      ))}
+      <hr class="mobile-drawer-divider" />
+      <a href="/blog/" class="mobile-drawer-link">Blog</a>
+      <a href="https://ko-fi.com/" class="mobile-drawer-link donate-mobile" target="_blank" rel="noopener noreferrer">☕ Support us</a>
     </div>
   </header>
 
@@ -69,7 +97,7 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
       <p style="margin-top:.5rem">
         <a href="/privacy/">Privacy policy</a>
         <a href="/contact/">Contact</a>
-        <a href="/popla-guide/">POPLA guide</a>
+        <a href="/blog/">Blog</a>
         <a href="https://ko-fi.com/" target="_blank" rel="noopener noreferrer">Support this site</a>
       </p>
     </div>
@@ -77,3 +105,47 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
 
 </body>
 </html>
+
+<script>
+  // Mobile menu toggle
+  const btn = document.getElementById('mobile-menu-btn')!;
+  const drawer = document.getElementById('mobile-drawer')!;
+  const iconOpen = document.getElementById('icon-open')!;
+  const iconClose = document.getElementById('icon-close')!;
+
+  btn.addEventListener('click', () => {
+    const isOpen = drawer.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(isOpen));
+    drawer.setAttribute('aria-hidden', String(!isOpen));
+    iconOpen.style.display = isOpen ? 'none' : '';
+    iconClose.style.display = isOpen ? '' : 'none';
+  });
+
+  // Close drawer when a link is clicked
+  drawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
+      iconOpen.style.display = '';
+      iconClose.style.display = 'none';
+    });
+  });
+
+  // Desktop dropdown
+  const dropdownBtn = document.querySelector<HTMLButtonElement>('.nav-dropdown-btn');
+  const dropdownMenu = document.querySelector<HTMLElement>('.nav-dropdown-menu');
+  if (dropdownBtn && dropdownMenu) {
+    dropdownBtn.addEventListener('click', () => {
+      const open = dropdownMenu.classList.toggle('open');
+      dropdownBtn.setAttribute('aria-expanded', String(open));
+    });
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!dropdownBtn.contains(e.target as Node) && !dropdownMenu.contains(e.target as Node)) {
+        dropdownMenu.classList.remove('open');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+</script>
