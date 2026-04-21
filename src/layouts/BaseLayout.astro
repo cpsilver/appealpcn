@@ -18,6 +18,7 @@ const airports = [
   { href: '/luton-drop-off-charge-appeal/',    label: 'Luton',    key: 'luton'    },
 ];
 
+const kofi = "https://ko-fi.com/appealairportpcn";
 const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
 ---
 
@@ -48,30 +49,29 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
     <div class="wrap header-wrap">
       <a class="logo" href="/">Appeal<em>AirportPCN</em>.co.uk</a>
 
-      <!-- DESKTOP NAV -->
+      <!-- DESKTOP NAV: Airports hover dropdown, Blog link, Support button -->
       <nav class="desktop-nav" aria-label="Main navigation">
-        <!-- Airports dropdown -->
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+        <div class="nav-dropdown" id="nav-dropdown">
+          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" id="nav-dropdown-btn">
             Airports
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="nav-dropdown-menu">
+          <div class="nav-dropdown-menu" id="nav-dropdown-menu" role="menu">
             {airports.map(({ href, label, key }) => (
-              <a href={href} class={currentPage === key ? 'active' : ''}>{label}</a>
+              <a href={href} class={currentPage === key ? 'active' : ''} role="menuitem">{label}</a>
             ))}
           </div>
         </div>
         <a href="/blog/" class={currentPage === 'blog' ? 'nav-link active' : 'nav-link'}>Blog</a>
-        <a href="https://ko-fi.com/" class="donate-btn" target="_blank" rel="noopener noreferrer">☕ Support us</a>
+        <a href={kofi} class="donate-btn" target="_blank" rel="noopener noreferrer">☕ Support us</a>
       </nav>
 
       <!-- MOBILE HAMBURGER -->
       <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true" id="icon-open">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" id="icon-open">
           <path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
         </svg>
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true" id="icon-close" style="display:none">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" id="icon-close" style="display:none">
           <path d="M5 5l12 12M17 5L5 17" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
         </svg>
       </button>
@@ -83,9 +83,11 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
       {airports.map(({ href, label }) => (
         <a href={href} class="mobile-drawer-link">{label}</a>
       ))}
-      <hr class="mobile-drawer-divider" />
-      <a href="/blog/" class="mobile-drawer-link">Blog</a>
-      <a href="https://ko-fi.com/" class="mobile-drawer-link donate-mobile" target="_blank" rel="noopener noreferrer">☕ Support us</a>
+      <!-- Blog + Support as a button row -->
+      <div class="mobile-drawer-actions">
+        <a href="/blog/" class="mobile-action-btn mobile-action-blog">Blog</a>
+        <a href={kofi} class="mobile-action-btn mobile-action-support" target="_blank" rel="noopener noreferrer">☕ Support us</a>
+      </div>
     </div>
   </header>
 
@@ -98,7 +100,7 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
         <a href="/privacy/">Privacy policy</a>
         <a href="/contact/">Contact</a>
         <a href="/blog/">Blog</a>
-        <a href="https://ko-fi.com/" target="_blank" rel="noopener noreferrer">Support this site</a>
+        <a href={kofi} target="_blank" rel="noopener noreferrer">Support this site</a>
       </p>
     </div>
   </footer>
@@ -107,45 +109,62 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
 </html>
 
 <script>
-  // Mobile menu toggle
-  const btn = document.getElementById('mobile-menu-btn')!;
-  const drawer = document.getElementById('mobile-drawer')!;
-  const iconOpen = document.getElementById('icon-open')!;
+  // ── Mobile menu toggle ──
+  const menuBtn   = document.getElementById('mobile-menu-btn')!;
+  const drawer    = document.getElementById('mobile-drawer')!;
+  const iconOpen  = document.getElementById('icon-open')!;
   const iconClose = document.getElementById('icon-close')!;
 
-  btn.addEventListener('click', () => {
-    const isOpen = drawer.classList.toggle('open');
-    btn.setAttribute('aria-expanded', String(isOpen));
-    drawer.setAttribute('aria-hidden', String(!isOpen));
-    iconOpen.style.display = isOpen ? 'none' : '';
-    iconClose.style.display = isOpen ? '' : 'none';
-  });
-
-  // Close drawer when a link is clicked
-  drawer.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      drawer.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-      drawer.setAttribute('aria-hidden', 'true');
-      iconOpen.style.display = '';
-      iconClose.style.display = 'none';
-    });
-  });
-
-  // Desktop dropdown
-  const dropdownBtn = document.querySelector<HTMLButtonElement>('.nav-dropdown-btn');
-  const dropdownMenu = document.querySelector<HTMLElement>('.nav-dropdown-menu');
-  if (dropdownBtn && dropdownMenu) {
-    dropdownBtn.addEventListener('click', () => {
-      const open = dropdownMenu.classList.toggle('open');
-      dropdownBtn.setAttribute('aria-expanded', String(open));
-    });
-    // Close when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!dropdownBtn.contains(e.target as Node) && !dropdownMenu.contains(e.target as Node)) {
-        dropdownMenu.classList.remove('open');
-        dropdownBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+    iconOpen.style.display  = '';
+    iconClose.style.display = 'none';
   }
+
+  menuBtn.addEventListener('click', () => {
+    const isOpen = drawer.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+    drawer.setAttribute('aria-hidden', String(!isOpen));
+    iconOpen.style.display  = isOpen ? 'none' : '';
+    iconClose.style.display = isOpen ? ''     : 'none';
+  });
+
+  drawer.querySelectorAll('a').forEach(link => link.addEventListener('click', closeDrawer));
+
+  // ── Desktop dropdown — open on hover, keep open while cursor inside ──
+  const navDropdown     = document.getElementById('nav-dropdown')!;
+  const navDropdownBtn  = document.getElementById('nav-dropdown-btn')!;
+  const navDropdownMenu = document.getElementById('nav-dropdown-menu')!;
+  let hoverTimeout: ReturnType<typeof setTimeout>;
+
+  function openMenu()  {
+    clearTimeout(hoverTimeout);
+    navDropdownMenu.classList.add('open');
+    navDropdownBtn.setAttribute('aria-expanded', 'true');
+  }
+  function scheduleClose() {
+    hoverTimeout = setTimeout(() => {
+      navDropdownMenu.classList.remove('open');
+      navDropdownBtn.setAttribute('aria-expanded', 'false');
+    }, 120); // small delay so cursor can move from button into menu
+  }
+
+  navDropdown.addEventListener('mouseenter', openMenu);
+  navDropdown.addEventListener('mouseleave', scheduleClose);
+
+  // Also allow click/keyboard for accessibility
+  navDropdownBtn.addEventListener('click', () => {
+    const open = navDropdownMenu.classList.toggle('open');
+    navDropdownBtn.setAttribute('aria-expanded', String(open));
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!navDropdown.contains(e.target as Node)) {
+      navDropdownMenu.classList.remove('open');
+      navDropdownBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
 </script>
