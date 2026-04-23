@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const title = "Beat Your Airport Drop-Off Charge | Free PCN Appeals";
-const description = "Free appeal templates for London airport drop-off charges. Strong legal grounds, clear guidance, and copy-ready appeal templates you can use in minutes.";
+const description = "Free appeal templates for UK airport drop-off charges. Strong legal grounds, clear guidance, and copy-ready appeal templates you can use in minutes.";
 const canonical = "https://appealairportpcn.co.uk/";
 
 const schema = {
@@ -17,7 +17,9 @@ const airports = [
   { href: '/heathrow-drop-off-charge-appeal/', tag: 'Heathrow · Terminals 2–5', name: 'Heathrow Drop-Off Charge Appeal', desc: "APCOA cannot establish keeper liability at Heathrow — the drop-off zone is not 'relevant land' under POFA. Full guide and legal grounds." },
   { href: '/gatwick-drop-off-charge-appeal/',  tag: 'Gatwick · North & South Terminal', name: 'Gatwick Drop-Off Charge Appeal', desc: "NCP cannot hold a registered keeper liable at Gatwick Airport. The land is under statutory control. Full guide and legal grounds." },
   { href: '/stansted-drop-off-charge-appeal/', tag: 'Stansted · Single Terminal', name: 'Stansted Drop-Off Charge Appeal', desc: "One of the most contested drop-off zones in the UK. Strong signage and POFA arguments apply. Full guide and legal grounds." },
-  { href: '/luton-drop-off-charge-appeal/',    tag: 'London Luton Airport', name: 'Luton Drop-Off Charge Appeal', desc: "Luton's road layout makes it impossible to avoid the charge zone — a well-established and frequently upheld appeal argument." },
+  { href: '/luton-drop-off-charge-appeal/',    tag: 'Luton', name: 'Luton Drop-Off Charge Appeal', desc: "Luton's road layout makes it impossible to avoid the charge zone — a well-established and frequently upheld appeal argument." },
+  { href: '/manchester-drop-off-charge-appeal/', tag: 'Manchester · Single Terminal', name: 'Manchester Drop-Off Charge Appeal', desc: "One of the UK's busiest regional airports. Strong POFA and signage arguments apply. Full guide and legal grounds." },
+  { href: '/birmingham-drop-off-charge-appeal/', tag: 'Birmingham · Single Terminal', name: 'Birmingham Drop-Off Charge Appeal', desc: "West Midlands' major airport hub. POFA keeper liability rules apply. Full guide and legal grounds." },
 ];
 
 const blogPosts = [
@@ -39,7 +41,7 @@ const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
   <div class="wrap">
     <p class="home-hero-tag">Updated 2026 · Takes 5 Minutes · Used by Thousands of Drivers</p>
     <h1>Beat Your Airport<br/><span>Drop-Off Charge</span></h1>
-    <p class="hero-sub">Free appeal templates for every London airport. Strong legal grounds. Copy and send in minutes.</p>
+    <p class="hero-sub">Free appeal templates for UK airports. Strong legal grounds. Copy and send in minutes.</p>
   </div>
 </section>
 
@@ -71,6 +73,8 @@ const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
         <button class="tab-btn"        role="tab" aria-selected="false" data-tab="gatwick">Gatwick</button>
         <button class="tab-btn"        role="tab" aria-selected="false" data-tab="stansted">Stansted</button>
         <button class="tab-btn"        role="tab" aria-selected="false" data-tab="luton">Luton</button>
+        <button class="tab-btn"        role="tab" aria-selected="false" data-tab="manchester">Manchester</button>
+        <button class="tab-btn"        role="tab" aria-selected="false" data-tab="birmingham">Birmingham</button>
       </div>
     </div>
 
@@ -137,7 +141,7 @@ const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
     <div class="tab-panel" id="panel-luton">
       <div class="tab-letter-body" id="letter-luton">
         <p>I appeal as the keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
-        <p>1. The parking operator is unable to transfer the driver's liability (if any) to the keeper under Schedule 4 to the Protection of Freedoms Act 2012 ("POFA") because the drop-off zone at London Luton Airport is not 'relevant land' as defined in POFA. Airport land under statutory control is excluded from Schedule 4, and the operator therefore has no lawful basis to pursue the registered keeper.</p>
+        <p>1. The parking operator is unable to transfer the driver's liability (if any) to the keeper under Schedule 4 to the Protection of Freedoms Act 2012 ("POFA") because the drop-off zone at Luton Airport is not 'relevant land' as defined in POFA. Airport land under statutory control is excluded from Schedule 4, and the operator therefore has no lawful basis to pursue the registered keeper.</p>
         <p>As keeper I am in any event entitled to all the defences available to the driver, including (without limitation):</p>
         <p>2. The parking charge is not notified until after the contract is entered into. Under Thornton v Shoe Lane Parking [1971] 2 QB 163, a charge not communicated before contract formation does not become part of that contract.</p>
         <p>3. The signage is not compliant with the BPA Code of Practice. Luton Airport's road layout directs all arriving vehicles toward the terminal before adequate charging information is visible. Drivers have no realistic opportunity to avoid the zone after first encountering the signs, meaning no valid contractual offer was made and no enforceable contract was formed.</p>
@@ -147,6 +151,46 @@ const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
       </div>
       <div class="tab-letter-footer">
         <button class="clipboard-btn" data-target="letter-luton">
+          <Fragment set:html={svgClipboard} /> Copy to clipboard
+        </button>
+        <span class="clipboard-hint">Paste into your appeal form or email — no editing needed</span>
+      </div>
+    </div>
+
+    <!-- MANCHESTER -->
+    <div class="tab-panel" id="panel-manchester">
+      <div class="tab-letter-body" id="letter-manchester">
+        <p>I appeal as the keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
+        <p>1. The parking operator is unable to transfer the driver's liability (if any) to the keeper under Schedule 4 to the Protection of Freedoms Act 2012 ("POFA") because the drop-off zone at Manchester Airport is not 'relevant land' as defined in POFA. Airport land under statutory control is excluded from Schedule 4, and the operator therefore has no lawful basis to pursue the registered keeper.</p>
+        <p>As keeper I am in any event entitled to all the defences available to the driver, including (without limitation):</p>
+        <p>2. The parking charge is not notified until after the contract is entered into. Under Thornton v Shoe Lane Parking [1971] 2 QB 163, a charge not communicated before contract formation does not become part of that contract.</p>
+        <p>3. The signage is not compliant with the BPA Code of Practice. The charging terms were not displayed clearly or prominently before the driver committed to entering the zone, meaning no valid contractual offer was made.</p>
+        <p>4. The vehicle was present in the drop-off zone for no more than 5 minutes, within the consideration period mandated by the BPA Code of Practice.</p>
+        <p>5. The charge is not a genuine pre-estimate of loss and is therefore an unenforceable penalty at common law.</p>
+        <p>Any one of the above grounds is sufficient to require cancellation. I require this PCN to be cancelled and invite written confirmation.</p>
+      </div>
+      <div class="tab-letter-footer">
+        <button class="clipboard-btn" data-target="letter-manchester">
+          <Fragment set:html={svgClipboard} /> Copy to clipboard
+        </button>
+        <span class="clipboard-hint">Paste into your appeal form or email — no editing needed</span>
+      </div>
+    </div>
+
+    <!-- BIRMINGHAM -->
+    <div class="tab-panel" id="panel-birmingham">
+      <div class="tab-letter-body" id="letter-birmingham">
+        <p>I appeal as the keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
+        <p>1. The parking operator is unable to transfer the driver's liability (if any) to the keeper under Schedule 4 to the Protection of Freedoms Act 2012 ("POFA") because the drop-off zone at Birmingham Airport is not 'relevant land' as defined in POFA. Airport land under statutory control is excluded from Schedule 4, and the operator therefore has no lawful basis to pursue the registered keeper.</p>
+        <p>As keeper I am in any event entitled to all the defences available to the driver, including (without limitation):</p>
+        <p>2. The parking charge is not notified until after the contract is entered into. Under Thornton v Shoe Lane Parking [1971] 2 QB 163, a charge not communicated before contract formation does not become part of that contract.</p>
+        <p>3. The signage is not compliant with the BPA Code of Practice. The charging terms were not displayed clearly or prominently before the driver committed to entering the zone, meaning no valid contractual offer was made.</p>
+        <p>4. The vehicle was present in the drop-off zone for no more than 5 minutes, within the consideration period mandated by the BPA Code of Practice.</p>
+        <p>5. The charge is not a genuine pre-estimate of loss and is therefore an unenforceable penalty at common law.</p>
+        <p>Any one of the above grounds is sufficient to require cancellation. I require this PCN to be cancelled and invite written confirmation.</p>
+      </div>
+      <div class="tab-letter-footer">
+        <button class="clipboard-btn" data-target="letter-birmingham">
           <Fragment set:html={svgClipboard} /> Copy to clipboard
         </button>
         <span class="clipboard-hint">Paste into your appeal form or email — no editing needed</span>

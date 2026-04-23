@@ -1,0 +1,231 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AdSlot from '../components/AdSlot.astro';
+import AppealLetter from '../components/AppealLetter.astro';
+import AirportSidebar from '../components/AirportSidebar.astro';
+
+const title = "Appeal Your Manchester Airport Drop-Off Charge | Free PCN Appeal Letter 2026";
+const description = "Received a parking charge notice for dropping off at Manchester Airport? Use our free appeal letter template and beat your PCN in minutes.";
+const canonical = "https://appealairportpcn.co.uk/manchester-drop-off-charge-appeal/";
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Appeal a Manchester Airport Drop-Off Charge",
+  "description": "Step-by-step guide and free appeal letter template for challenging a Manchester Airport drop-off PCN.",
+  "author": { "@type": "Organization", "name": "AppealPCN" },
+  "publisher": { "@type": "Organization", "name": "AppealAirportPCN.co.uk" },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much is the Manchester Airport drop-off charge?",
+      "acceptedAnswer": { "@type": "Answer", "text": "As of 2025, Manchester charges £4 for up to 15 minutes and £6 for up to 30 minutes in the designated drop-off zone, enforced via ANPR cameras." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I appeal a Manchester drop-off charge?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. You have 28 days to submit a formal appeal. If rejected, you can escalate free of charge to POPLA, the independent adjudicator." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are valid grounds to appeal a Manchester PCN?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Valid grounds include: unclear or obstructed signage, ANPR camera error, the vehicle being driven by someone else, a genuine emergency, or that the charge was disproportionate to the duration of stay." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if Manchester rejects my appeal?",
+      "acceptedAnswer": { "@type": "Answer", "text": "If your informal appeal is rejected, you can escalate to POPLA completely free of charge. Operators lose a significant proportion of POPLA cases, particularly where signage compliance is questioned." }
+    },
+  ],
+};
+
+const tips = [
+  { heading: 'Act within 28 days', body: 'The deadline to appeal is 28 days from the notice date. Miss it and you lose the right to formally appeal.' },
+  { heading: 'Use recorded post', body: "If sending by post, always use Royal Mail Tracked or Signed For. Keep your proof of postage." },
+  { heading: 'Request the evidence', body: 'Ask for the ANPR photographs in your appeal. Operators must provide them, and they sometimes reveal errors.' },
+  { heading: 'POPLA is free', body: "If rejected, you can escalate to POPLA at no cost. Do not pay before exhausting this option." },
+  { heading: 'Keep a copy', body: "Save or print a copy of everything you send. You'll need it if the case escalates." },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  currentPage="manchester"
+  schema={[articleSchema, faqSchema]}
+>
+
+  <nav class="breadcrumb">
+    <div class="wrap">
+      <a href="/">Home</a><span>›</span>
+      <a href="/manchester-drop-off-charge-appeal/">Manchester</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="hero-tag">Manchester Airport · Free PCN Appeal Template · Updated 2026</p>
+      <h1>Appeal Your Manchester Airport Drop-Off Charge</h1>
+      <p class="hero-sub">Received an unexpected parking charge notice after dropping someone off at Manchester? You may well have grounds to challenge it — and our free template makes the process straightforward.</p>
+      <div class="hero-stats">
+        <div class="stat-block"><span class="stat-n">FREE</span><span class="stat-l">To appeal</span></div>
+        <div class="stat-block"><span class="stat-n">28 days</span><span class="stat-l">To appeal</span></div>
+        <div class="stat-block"><span class="stat-n">5 min</span><span class="stat-l">To complete</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="wrap">
+      <AdSlot type="leaderboard" />
+      <div class="main-content">
+        <div class="content-grid">
+
+          <div>
+            <section class="intro-section">
+              <h2>What is the Manchester drop-off charge — and is it enforceable?</h2>
+              <p>Manchester Airport operates a <strong>dedicated drop-off charge zone</strong>, enforced by Automatic Number Plate Recognition (ANPR) cameras. Drivers who enter the official drop-off area are charged £4 for up to 15 minutes or £6 for up to 30 minutes. The charge is issued as a <strong>Parking Charge Notice (PCN)</strong> by a private parking operator contracted to manage the zone.</p>
+              <p>Crucially, this is <strong>not</strong> a council-issued Penalty Charge Notice. It is a private civil debt, governed by the <em>Protection of Freedoms Act 2012</em> and the British Parking Association (BPA) Code of Practice. This means the process for challenging it is different — and in many cases, considerably more favourable to the driver.</p>
+              <p>Many drivers successfully appeal these charges on the grounds of <strong>inadequate signage</strong>, <strong>ANPR error</strong>, or because they never entered the designated charge zone at all. Even in clear-cut cases, operators regularly waive charges for first-time appellants.</p>
+            </section>
+
+            <div class="info-row">
+              <div class="info-card">
+                <div class="ic-label">Charge amount</div>
+                <div class="ic-value">£4 – £6</div>
+                <div class="ic-sub">Depending on duration (up to 30 min)</div>
+              </div>
+              <div class="info-card">
+                <div class="ic-label">Appeal deadline</div>
+                <div class="ic-value">28 days</div>
+                <div class="ic-sub">From the date on your notice</div>
+              </div>
+              <div class="info-card">
+                <div class="ic-label">Operator type</div>
+                <div class="ic-value">Private (BPA)</div>
+                <div class="ic-sub">POPLA escalation available</div>
+              </div>
+            </div>
+
+            <div class="instructions-card">
+              <h2>How to use this appeal letter</h2>
+              <div class="step-row"><div class="step-num">1</div><div class="step-text">Click <strong>"Copy letter"</strong> below and paste it into a Word document or email.</div></div>
+              <div class="step-row"><div class="step-num">2</div><div class="step-text">Replace every <strong style="color:var(--accent)">highlighted field</strong> with your own details — your name, vehicle registration, PCN reference, and the date of the incident.</div></div>
+              <div class="step-row"><div class="step-num">3</div><div class="step-text">Select the appeal ground that best fits your situation and <strong>delete the other two</strong>.</div></div>
+              <div class="step-row"><div class="step-num">4</div><div class="step-text">Send by <strong>recorded post</strong> or via the email address on your PCN. Keep confirmation of sending.</div></div>
+              <div class="step-row"><div class="step-num">5</div><div class="step-text">If rejected, <strong>do not pay</strong>. Use your POPLA code to escalate — it's free and binding on the operator.</div></div>
+            </div>
+
+            <AppealLetter airport="Manchester Airport">
+              <p><span class="ph">[Your Full Name]</span><br/>
+              <span class="ph">[Your Address, Line 1]</span><br/>
+              <span class="ph">[Town, County, Postcode]</span><br/>
+              <span class="ph">[Your Email Address]</span><br/>
+              <span class="ph">[Your Phone Number]</span><br/>
+              <span class="ph">[Today's Date]</span></p>
+
+              <p>The Appeals Team<br/>
+              Manchester Airport Parking Enforcement<br/>
+              <span class="ph">[Address as shown on your PCN]</span></p>
+
+              <p>Dear Sir or Madam,</p>
+
+              <p><strong>Re: Formal Appeal Against Parking Charge Notice</strong><br/>
+              PCN Reference: <span class="ph">[PCN Reference Number from your notice]</span><br/>
+              Vehicle Registration Mark: <span class="ph">[Your Vehicle Registration]</span><br/>
+              Date of Alleged Contravention: <span class="ph">[Date shown on PCN]</span><br/>
+              Location: Manchester Airport, Terminal Drop-Off Zone</p>
+
+              <p>I am writing to formally appeal the above Parking Charge Notice. I dispute that any charge is lawfully due for the reasons set out below.</p>
+
+              <p>I attended Manchester Airport on the date in question solely for the purpose of dropping off a passenger. The process of removing luggage from the vehicle and safely seeing the passenger to the terminal entrance took only a matter of minutes. At no point did I leave my vehicle unattended, nor did I make use of any parking facility.</p>
+
+              <p><span class="ph">[CHOOSE ONE GROUND BELOW AND DELETE THE OTHERS]</span></p>
+
+              <p><em>Ground A — Inadequate signage:</em> I contend that the signage at the entrance to, and within, the designated drop-off zone did not meet the minimum standards required under the British Parking Association (BPA) Code of Practice. Specifically, the charging information was not presented in a clear, prominent, or legible manner prior to my committing to enter the zone. As such, I was not given a reasonable opportunity to avoid the charge.</p>
+
+              <p><em>Ground B — ANPR camera error / incorrect vehicle identified:</em> I believe the Automatic Number Plate Recognition system has incorrectly identified my vehicle, or has recorded inaccurate entry/exit times. I request that you provide full photographic evidence of my vehicle entering and exiting the charge zone, together with timestamps, for my inspection.</p>
+
+              <p><em>Ground C — Vehicle not driven by registered keeper:</em> I am the registered keeper of the above vehicle; however, I was not the driver on the date in question. I am therefore not liable for this charge under the provisions of the Protection of Freedoms Act 2012, as no keeper liability notice has been served in the manner required by Schedule 4 of that Act.</p>
+
+              <p>In light of the above, I respectfully request that this Parking Charge Notice be cancelled in full. Should you require any further information, please do not hesitate to contact me.</p>
+
+              <p>I reserve the right to escalate this matter to POPLA (Parking on Private Land Appeals) in the event that this informal appeal is unsuccessful.</p>
+
+              <p>Yours faithfully,</p>
+              <p><span class="ph">[Your Full Name]</span><br/>
+              <span class="ph">[Your Signature if sending by post]</span></p>
+            </AppealLetter>
+
+            <section class="grounds-section">
+              <h2>The strongest grounds for appealing a Manchester PCN</h2>
+              <div class="ground-item">
+                <h3>1. Inadequate or unclear signage</h3>
+                <p>Under the BPA Code of Practice, operators must display prominent, legible signage that clearly communicates the terms and charges before a driver commits to entering. If you genuinely did not see or understand the signage at Manchester, this is a strong ground.</p>
+              </div>
+              <div class="ground-item">
+                <h3>2. ANPR timing discrepancy</h3>
+                <p>ANPR systems record the time your number plate is read entering and leaving a zone. If there was congestion, a slow-moving queue, or a camera delay, your recorded time may be longer than your actual drop-off. Request the photographic evidence — discrepancies are surprisingly common.</p>
+              </div>
+              <div class="ground-item">
+                <h3>3. You were not in the charge zone</h3>
+                <p>If you believe you did not enter the designated drop-off charge area, request the ANPR evidence and compare it against published zone boundary maps.</p>
+              </div>
+              <div class="ground-item">
+                <h3>4. Genuine emergency or exceptional circumstances</h3>
+                <p>Operators are expected to use discretion in cases of medical emergency, bereavement travel, or other exceptional circumstances. Document any evidence you have and include it with your appeal.</p>
+              </div>
+              <div class="ground-item">
+                <h3>5. First offence / goodwill cancellation</h3>
+                <p>Many private operators will cancel a first charge as a gesture of goodwill, particularly if your letter is polite and professional. Even if you have no specific technical ground, it is always worth appealing once before paying.</p>
+              </div>
+            </section>
+
+            <section class="faq-section">
+              <h2>Frequently asked questions — Manchester drop-off charges</h2>
+
+              <details>
+                <summary>How much is the Manchester Airport drop-off charge in 2025?</summary>
+                <div class="faq-answer"><p>Manchester's current drop-off charges are £4 for up to 15 minutes and £6 for up to 30 minutes in the designated drop-off zone.</p></div>
+              </details>
+              <details>
+                <summary>Can I really appeal a Manchester drop-off charge successfully?</summary>
+                <div class="faq-answer"><p>Yes — and more often than you might expect. Informal first-stage appeals succeed in a significant proportion of cases, particularly where signage concerns are raised or where it is a first offence. Even if the informal appeal fails, escalation to POPLA is free and operators lose a meaningful number of POPLA cases.</p></div>
+              </details>
+              <details>
+                <summary>What is POPLA and how do I use it?</summary>
+                <div class="faq-answer"><p>POPLA (Parking on Private Land Appeals) is the independent appeals service for BPA-member parking operators. If your informal appeal is rejected, the operator must provide you with a POPLA verification code. You then submit your appeal at popla.co.uk free of charge. A POPLA adjudicator — entirely independent of the operator — will review the case.</p></div>
+              </details>
+              <details>
+                <summary>Will ignoring the charge make it go away?</summary>
+                <div class="faq-answer"><p>No — and this approach carries risk. Unpaid private parking charges can eventually result in a County Court Judgement (CCJ) if the operator pursues the debt through the courts, which could affect your credit record. Appealing costs nothing and takes very little time.</p></div>
+              </details>
+              <details>
+                <summary>I'm the registered keeper but wasn't driving — am I liable?</summary>
+                <div class="faq-answer"><p>Under the Protection of Freedoms Act 2012, a parking operator can pursue the registered keeper — but only if they issue a Notice to Keeper within 14 days of the alleged contravention (or 28 days if a Notice to Driver was first issued). If these timescales were not met, keeper liability does not apply. Check the dates on your notice carefully.</p></div>
+              </details>
+              <details>
+                <summary>Can the charge affect my credit score?</summary>
+                <div class="faq-answer"><p>A private parking charge notice alone cannot affect your credit score. Credit records are only impacted if the operator obtains a County Court Judgement against you and you fail to pay it within 30 days. Simply receiving or disputing a PCN does not appear on any credit file.</p></div>
+              </details>
+            </section>
+
+            <div class="disclaimer">
+              <strong>Disclaimer:</strong> AppealAirportPCN.co.uk is a free information resource for UK drivers. Nothing on this site constitutes legal advice. Templates are provided as a starting point — always review your specific circumstances. For complex cases, consider consulting a solicitor or Citizens Advice.
+            </div>
+          </div>
+
+          <AirportSidebar current="Manchester Airport" tips={tips} />
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+</BaseLayout>
