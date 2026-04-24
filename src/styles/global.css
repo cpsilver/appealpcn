@@ -385,7 +385,60 @@ details[open] summary::after { content: '−'; }
 }
 .clipboard-btn:hover { background: #b91c1c; }
 .clipboard-hint { font-size: .73rem; color: var(--light); }
-
+/* Home insights — featured boxes */
+.home-insights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem auto 2rem;
+}
+@media (max-width: 700px) {
+  .home-insights {
+    grid-template-columns: 1fr;
+  }
+}
+.insight-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+}
+.insight-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(220,38,38,0.1);
+  transform: translateY(-2px);
+}
+.insight-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+.insight-card p {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+  flex-grow: 1;
+}
+.read-more {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.insight-card:hover .read-more {
+  color: #b91c1c;
+}
 /* How it works */
 .how-section { padding: 2.5rem 0; }
 .how-section h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 1.25rem; letter-spacing: -.02em; }

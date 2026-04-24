@@ -8,15 +8,15 @@ const { airport, letterId = 'letter-text' } = Astro.props;
 
 <div class="letter-card">
   <div class="letter-card-header">
-    <h2>Free Appeal Letter Template — {airport}</h2>
+    <h2>Free Appeal Template — {airport}</h2>
     <span class="airport-pill">{airport}</span>
   </div>
   <div class="letter-body" id={letterId}>
     <slot />
   </div>
   <div class="letter-footer">
-    <button class="copy-btn" data-letter-id={letterId}>Copy letter</button>
-    <span class="copy-hint">Paste into Word, then replace all highlighted fields</span>
+    <button class="copy-btn" data-letter-id={letterId}>Copy template</button>
+    <span class="copy-hint">Paste into the online appeal form, replacing all highlighted fields</span>
   </div>
 </div>
 
