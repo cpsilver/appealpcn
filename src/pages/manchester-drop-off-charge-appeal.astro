@@ -88,11 +88,30 @@ const tips = [
         <div class="content-grid">
 
           <div>
+            <div class="instructions-card">
+              <h2>How to use this appeal template</h2>
+              <div class="step-row"><div class="step-num">1</div><div class="step-text">Click <strong>"Copy template"</strong> below — the full appeal is copied to your clipboard.</div></div>
+              <div class="step-row"><div class="step-num">2</div><div class="step-text">Log into the operator's online appeal system (or open your PCN) and paste the template into the appeal text box.</div></div>
+              <div class="step-row"><div class="step-num">3</div><div class="step-text">Replace every <strong style="color:var(--accent)">highlighted field</strong> (in square brackets) with your details: name, vehicle registration, PCN reference, and incident date.</div></div>
+              <div class="step-row"><div class="step-num">4</div><div class="step-text">Submit and wait for a decision. The operator must respond within 35 days.</div></div>
+              <div class="step-row"><div class="step-num">5</div><div class="step-text">If rejected, request your POPLA code and escalate to the free, independent adjudicator — operators lose the vast majority of cases on these grounds.</div></div>
+            </div>
+
+            <AppealLetter airport="Manchester Airport">
+              <p>I appeal as the registered keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
+              <p>1. The parking charge is not notified until after the contract is entered into. Under the principles established by the Court of Appeal in Thornton v Shoe Lane Parking [1971] 2 QB 163, a term introduced after a contract has been formed does not become part of that contract. The charge therefore forms no part of any contract between the driver and the operator.</p>
+              <p>2. The signage is not compliant with the BPA Code of Practice. The charging terms were not displayed clearly, prominently, or legibly at a point where the driver could have made an informed decision to avoid the zone before entering it. No valid contract was formed.</p>
+              <p>3. The vehicle was present in the drop-off zone for no more than 5 minutes. The driver is entitled to the 5-minute consideration period expressly mandated by the BPA Code of Practice, during which no charge may be levied.</p>
+              <p>4. Under the Protection of Freedoms Act 2012, keeper liability cannot be transferred for breaches of the operator's own statutory duties or breaches of the Code of Practice. The operator has failed to comply with the requirement to display adequate signage and therefore cannot pursue the registered keeper.</p>
+              <p>5. The charge is not a genuine pre-estimate of loss and is therefore an unenforceable penalty at common law. The operator has suffered no identifiable loss as a result of the vehicle's presence in the drop-off zone.</p>
+              <p>Any one of the above grounds is sufficient on its own to require cancellation of the PCN. I require this charge to be cancelled and invite the operator to confirm cancellation in writing.</p>
+            </AppealLetter>
+
             <section class="intro-section">
-              <h2>What is the Manchester drop-off charge — and is it enforceable?</h2>
-              <p>Manchester Airport operates a <strong>dedicated drop-off charge zone</strong>, enforced by Automatic Number Plate Recognition (ANPR) cameras. Drivers who enter the official drop-off area are charged £4 for up to 15 minutes or £6 for up to 30 minutes. The charge is issued as a <strong>Parking Charge Notice (PCN)</strong> by a private parking operator contracted to manage the zone.</p>
-              <p>Crucially, this is <strong>not</strong> a council-issued Penalty Charge Notice. It is a private civil debt, governed by the <em>Protection of Freedoms Act 2012</em> and the British Parking Association (BPA) Code of Practice. This means the process for challenging it is different — and in many cases, considerably more favourable to the driver.</p>
-              <p>Many drivers successfully appeal these charges on the grounds of <strong>inadequate signage</strong>, <strong>ANPR error</strong>, or because they never entered the designated charge zone at all. Even in clear-cut cases, operators regularly waive charges for first-time appellants.</p>
+              <h2>How to appeal a Manchester Airport drop-off charge</h2>
+              <p>Manchester Airport operates <strong>ANPR-enforced drop-off charge zones</strong>. Drivers entering the zone are charged £4 for up to 15 minutes or £6 for up to 30 minutes, issued as a <strong>Parking Charge Notice (PCN)</strong> by a private parking operator.</p>
+              <p>The charge is <strong>not</strong> a council Penalty Charge Notice. It is a private civil debt governed by the <em>Protection of Freedoms Act 2012</em> and the BPA Code of Practice. This means the appeals process is considerably more driver-friendly than that for council-issued penalties.</p>
+              <p>Many drivers successfully appeal Manchester charges on the grounds of inadequate signage, ANPR timing errors, or on the basis of first-offence goodwill. The appeals process is entirely free and straightforward to navigate using this template.</p>
             </section>
 
             <div class="info-row">
@@ -112,25 +131,6 @@ const tips = [
                 <div class="ic-sub">POPLA escalation available</div>
               </div>
             </div>
-
-            <div class="instructions-card">
-              <h2>How to use this appeal template</h2>
-              <div class="step-row"><div class="step-num">1</div><div class="step-text">Click <strong>"Copy template"</strong> below — the full appeal is copied to your clipboard.</div></div>
-              <div class="step-row"><div class="step-num">2</div><div class="step-text">Log into the operator's online appeal system (or open your PCN) and paste the template into the appeal text box.</div></div>
-              <div class="step-row"><div class="step-num">3</div><div class="step-text">Replace every <strong style="color:var(--accent)">highlighted field</strong> (in square brackets) with your details: name, vehicle registration, PCN reference, and incident date.</div></div>
-              <div class="step-row"><div class="step-num">4</div><div class="step-text">Submit and wait for a decision. The operator must respond within 35 days.</div></div>
-              <div class="step-row"><div class="step-num">5</div><div class="step-text">If rejected, request your POPLA code and escalate to the free, independent adjudicator — operators lose the vast majority of cases on these grounds.</div></div>
-            </div>
-
-            <AppealLetter airport="Manchester Airport">
-              <p>I appeal as the registered keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
-              <p>1. The parking charge is not notified until after the contract is entered into. Under the principles established by the Court of Appeal in Thornton v Shoe Lane Parking [1971] 2 QB 163, a term introduced after a contract has been formed does not become part of that contract. The charge therefore forms no part of any contract between the driver and the operator.</p>
-              <p>2. The signage is not compliant with the BPA Code of Practice. The charging terms were not displayed clearly, prominently, or legibly at a point where the driver could have made an informed decision to avoid the zone before entering it. No valid contract was formed.</p>
-              <p>3. The vehicle was present in the drop-off zone for no more than 5 minutes. The driver is entitled to the 5-minute consideration period expressly mandated by the BPA Code of Practice, during which no charge may be levied.</p>
-              <p>4. Under the Protection of Freedoms Act 2012, keeper liability cannot be transferred for breaches of the operator's own statutory duties or breaches of the Code of Practice. The operator has failed to comply with the requirement to display adequate signage and therefore cannot pursue the registered keeper.</p>
-              <p>5. The charge is not a genuine pre-estimate of loss and is therefore an unenforceable penalty at common law. The operator has suffered no identifiable loss as a result of the vehicle's presence in the drop-off zone.</p>
-              <p>Any one of the above grounds is sufficient on its own to require cancellation of the PCN. I require this charge to be cancelled and invite the operator to confirm cancellation in writing.</p>
-            </AppealLetter>
 
             <section class="grounds-section">
               <h2>The strongest grounds for appealing a Manchester PCN</h2>
