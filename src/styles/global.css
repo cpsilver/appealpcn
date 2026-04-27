@@ -44,7 +44,7 @@ strong { font-weight: 600; }
 .nav-link { font-size: .78rem; font-weight: 500; text-decoration: none; color: var(--muted); transition: color .15s; }
 .nav-link:hover, .nav-link.active { color: var(--accent); }
 
-/* Airports dropdown — opens on hover */
+/* Airports dropdown, opens on hover */
 .nav-dropdown { position: relative; }
 .nav-dropdown-btn {
   display: flex; align-items: center; gap: .3rem;
@@ -293,7 +293,7 @@ details[open] summary::after { content: '−'; }
 .home-hero h1 span { color: var(--accent); }
 .home-hero .hero-sub { font-size: .97rem; color: var(--muted); max-width: 480px; margin: 0 auto; line-height: 1.6; }
 
-/* Stats bar — 3 items, centred, no wrapping */
+/* Stats bar, 3 items, centred, no wrapping */
 .home-stats {
   display: flex;
   margin: 1.5rem auto 0;
@@ -331,7 +331,7 @@ details[open] summary::after { content: '−'; }
 .tabs-card-header { padding: 1.1rem 1.5rem 0; border-bottom: 1px solid var(--border); }
 .tabs-card-label { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--light); margin-bottom: .65rem; display: block; }
 
-/* Scrollable tab bar — only the buttons scroll, touch-action restricts to x-axis */
+/* Scrollable tab bar, only the buttons scroll, touch-action restricts to x-axis */
 .tab-bar {
   display: flex; gap: 0;
   overflow-x: auto;
@@ -385,7 +385,7 @@ details[open] summary::after { content: '−'; }
 }
 .clipboard-btn:hover { background: #b91c1c; }
 .clipboard-hint { font-size: .73rem; color: var(--light); }
-/* Home insights — featured boxes */
+/* Home insights, featured boxes */
 .home-insights {
   display: grid;
   grid-template-columns: 1fr 1fr;

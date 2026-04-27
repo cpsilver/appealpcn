@@ -1,4 +1,4 @@
-# AppealPCN.co.uk — Astro Site
+# AppealPCN.co.uk, Astro Site
 
 Free PCN appeal letter templates for London airport drop-off charges.
 
@@ -92,4 +92,4 @@ Astro generates this automatically on every build.
 3. Update the letter body content and grounds sections
 4. Add the airport to the `nav` array in `BaseLayout.astro` and the `airports` array in `AirportSidebar.astro`
 
-That's it — the sitemap updates automatically.
+That's it, the sitemap updates automatically.
