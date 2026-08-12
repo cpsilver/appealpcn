@@ -39,7 +39,7 @@ const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
 <!-- HERO -->
 <section class="home-hero">
   <div class="wrap">
-    <p class="home-hero-tag">Updated 2026 · Takes 5 Minutes · Used by Thousands of Drivers</p>
+    <p class="home-hero-tag">Updated August 2026 · Takes 5 Minutes · Used by Thousands of Drivers</p>
     <h1>Beat Your Airport<br/><span>Drop-Off Charge</span></h1>
     <p class="hero-sub">Free appeal templates for UK airports. Strong legal grounds. Copy and send in minutes.</p>
   </div>
@@ -79,7 +79,7 @@ const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
     </div>
 
     <!-- HEATHROW -->
-    <div class="tab-panel active" id="panel-heathrow">
+      <div class="tab-panel active" id="panel-heathrow">
       <div class="tab-letter-body" id="letter-heathrow">
         <p>I appeal as the registered keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
         <p>1. APCOA Parking is unable to transfer the driver's liability (if any) to the keeper under Schedule 4 to the Protection of Freedoms Act 2012 ("POFA") because the drop-off zones at Heathrow Airport are not 'relevant land' as defined in POFA. Airport land subject to statutory control falls outside the scope of Schedule 4, and APCOA therefore has no basis on which to pursue the registered keeper.</p>
@@ -99,7 +99,7 @@ const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
     </div>
 
     <!-- GATWICK -->
-    <div class="tab-panel" id="panel-gatwick">
+      <div class="tab-panel" id="panel-gatwick">
       <div class="tab-letter-body" id="letter-gatwick">
         <p>I am the registered keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
         <p>1. NCP cannot hold a registered keeper liable for any alleged contravention on land that is under statutory control. Gatwick Airport is not 'relevant land' as defined in Schedule 4 to the Protection of Freedoms Act 2012 ("POFA"). NCP is well aware that the POFA keeper liability provisions do not apply here, and has no lawful basis on which to pursue the registered keeper.</p>
@@ -118,7 +118,7 @@ const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
     </div>
 
     <!-- STANSTED -->
-    <div class="tab-panel" id="panel-stansted">
+      <div class="tab-panel" id="panel-stansted">
       <div class="tab-letter-body" id="letter-stansted">
         <p>I appeal as the keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
         <p>1. The parking operator is unable to transfer the driver's liability (if any) to the keeper under Schedule 4 to the Protection of Freedoms Act 2012 ("POFA") because the drop-off zone at Stansted Airport is not 'relevant land' as defined in POFA. Airport land subject to statutory control falls outside the scope of Schedule 4. The operator therefore has no lawful basis to pursue the registered keeper.</p>
@@ -138,7 +138,7 @@ const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
     </div>
 
     <!-- LUTON -->
-    <div class="tab-panel" id="panel-luton">
+      <div class="tab-panel" id="panel-luton">
       <div class="tab-letter-body" id="letter-luton">
         <p>I appeal as the keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
         <p>1. The parking operator is unable to transfer the driver's liability (if any) to the keeper under Schedule 4 to the Protection of Freedoms Act 2012 ("POFA") because the drop-off zone at Luton Airport is not 'relevant land' as defined in POFA. Airport land under statutory control is excluded from Schedule 4, and the operator therefore has no lawful basis to pursue the registered keeper.</p>
@@ -158,7 +158,7 @@ const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
     </div>
 
     <!-- MANCHESTER -->
-    <div class="tab-panel" id="panel-manchester">
+      <div class="tab-panel" id="panel-manchester">
       <div class="tab-letter-body" id="letter-manchester">
         <p>I appeal as the keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
         <p>1. The parking operator is unable to transfer the driver's liability (if any) to the keeper under Schedule 4 to the Protection of Freedoms Act 2012 ("POFA") because the drop-off zone at Manchester Airport is not 'relevant land' as defined in POFA. Airport land under statutory control is excluded from Schedule 4, and the operator therefore has no lawful basis to pursue the registered keeper.</p>
@@ -178,7 +178,7 @@ const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
     </div>
 
     <!-- BIRMINGHAM -->
-    <div class="tab-panel" id="panel-birmingham">
+      <div class="tab-panel" id="panel-birmingham">
       <div class="tab-letter-body" id="letter-birmingham">
         <p>I appeal as the keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
         <p>1. The parking operator is unable to transfer the driver's liability (if any) to the keeper under Schedule 4 to the Protection of Freedoms Act 2012 ("POFA") because the drop-off zone at Birmingham Airport is not 'relevant land' as defined in POFA. Airport land under statutory control is excluded from Schedule 4, and the operator therefore has no lawful basis to pursue the registered keeper.</p>
@@ -287,7 +287,18 @@ const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
         const hint = btn.nextElementSibling as HTMLElement;
         btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width:15px;height:15px"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg> Copied!`;
         if (hint) hint.textContent = 'Pasted and ready to send';
-        setTimeout(() => { btn.innerHTML = saved; if (hint) hint.textContent = 'Paste into your appeal form or email, no editing needed'; }, 3000);
+        // ensure there is a single live region for accessibility
+        let live = document.getElementById('copy-live-region');
+        if (!live) {
+          live = document.createElement('div');
+          live.id = 'copy-live-region';
+          live.setAttribute('aria-live', 'polite');
+          live.style.position = 'absolute';
+          live.style.left = '-9999px';
+          document.body.appendChild(live);
+        }
+        (live as HTMLElement).textContent = 'Copied to clipboard';
+        setTimeout(() => { btn.innerHTML = saved; if (hint) hint.textContent = 'Paste into your appeal form or email, no editing needed'; (live as HTMLElement).textContent = ''; }, 3000);
       });
     });
   });

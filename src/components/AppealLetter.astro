@@ -18,6 +18,7 @@ const { airport, letterId = 'letter-text' } = Astro.props;
     <button class="copy-btn" data-letter-id={letterId}>Copy template</button>
     <span class="copy-hint">Paste into the online appeal form, replacing all highlighted fields</span>
   </div>
+  <span id={"copy-status-" + letterId} aria-live="polite" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;"> </span>
 </div>
 
 <script>
@@ -31,9 +32,12 @@ const { airport, letterId = 'letter-text' } = Astro.props;
         const original = btn.textContent!;
         btn.textContent = 'Copied!';
         if (hint) hint.textContent = 'Now paste into Word and fill in every highlighted field';
+        const statusEl = document.getElementById('copy-status-' + id) as HTMLElement | null;
+        if (statusEl) statusEl.textContent = 'Copied template to clipboard';
         setTimeout(() => {
           btn.textContent = original;
           if (hint) hint.textContent = 'Paste into Word, then replace all highlighted fields';
+          if (statusEl) statusEl.textContent = '';
         }, 3000);
       });
     });
