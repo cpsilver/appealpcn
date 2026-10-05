@@ -396,6 +396,8 @@ body:has(.rights-hero) main > .wrap.why-works-list { max-width: 780px; padding: 
 .blog-post li { font-size: 1.08rem; color: var(--muted); line-height: 1.75; margin-bottom: .5rem; }
 .blog-post .callout { background: var(--callout-bg); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; padding: .85rem 1.1rem; margin: 1.25rem 0; font-size: .88rem; color: var(--ink); line-height: 1.6; }
 .blog-post .callout strong { color: var(--accent); }
+body:has(.blog-page-banner) .blog-post a,
+.sources-section a { text-decoration: none; }
 
 .privacy-page {
   max-width: 780px;
