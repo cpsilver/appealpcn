@@ -21,16 +21,6 @@ const airports = [
 <aside class="sidebar">
   <AdSlot type="rectangle" />
 
-  <div class="tips-card">
-    <h3>Quick tips</h3>
-    {tips.map(({ heading, body }) => (
-      <div class="tip-item">
-        <strong>{heading}</strong>
-        <span>{body}</span>
-      </div>
-    ))}
-  </div>
-
   <div class="airports-card">
     <h3>Other airports</h3>
     {airports.map(({ label, href }) => (
