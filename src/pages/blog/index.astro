@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const title = "Airport PCN Appeal Guides | Know Your Rights | AppealAirportPCN";
+const title = "Airport PCN Appeal Guides | Why It Works | AppealAirportPCN";
 const description = "Plain-English guides on POFA, POPLA, BPA signage rules, the 5-minute grace period, and the key legal cases that mean airport drop-off charges are almost always cancellable.";
 const canonical = "https://appealairportpcn.co.uk/blog/";
 
 const posts = [
-  { href: '/keeper-liability/', title: "Why keeper liability is the most important issue", desc: "If the operator cannot lawfully pursue the registered keeper, the claim is much weaker. This is the key issue in airport PCN appeals." },
+  { href: '/blog/keeper-liability/', title: "Keeper liability: the issue that decides most airport PCNs", desc: "Understand when a parking company may pursue the registered keeper and why POFA's relevant-land rule matters for airport PCNs." },
   { href: '/blog/elliott-v-loake-why-it-doesnt-make-you-liable-as-the-keeper/', title: "Elliott v Loake: why it doesn't make you liable as the keeper", desc: "Parking operators often cite Elliott v Loake to frighten people into paying. But the case does not make the keeper automatically liable at an airport." },
   { href: '/blog/what-is-pofa-and-why-it-matters/', title: "What is POFA and why does it matter for parking appeals?", desc: "The Protection of Freedoms Act 2012 is the key piece of legislation that limits when a parking operator can pursue a registered keeper, and why airport PCNs usually fail under it." },
   { href: '/blog/relevant-land-airport-pcns/', title: "Why airport drop-off zones are not 'relevant land' under POFA", desc: "Airport land is subject to statutory control. This single legal fact is why operators like APCOA and NCP almost always fail when they try to pursue a keeper." },
@@ -20,20 +20,21 @@ const posts = [
 
 <BaseLayout title={title} description={description} canonical={canonical}>
 
+  <header class="page-banner">
   <nav class="breadcrumb">
-    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Know Your Rights</a></div>
+    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Why It Works</a></div>
   </nav>
 
-  <section class="hero">
+  <section class="rights-hero">
     <div class="wrap">
-      <p class="hero-tag">Guides &amp; Legal Explainers</p>
-      <h1>Know Your Rights</h1>
+      <h1>Why It Works</h1>
       <p class="hero-sub">Plain-English explainers on the law, the rules, and the cases that mean airport drop-off charges are almost always cancellable.</p>
     </div>
   </section>
+  </header>
 
   <main>
-    <div class="wrap" style="padding: 2rem 1.5rem 3rem">
+    <div class="wrap" style="padding: 1rem 1.5rem 3rem">
       <div class="blog-grid">
         {posts.map(({ href, title, desc }) => (
           <a href={href} class="blog-card">

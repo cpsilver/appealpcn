@@ -8,7 +8,7 @@ const { airport, letterId = 'letter-text' } = Astro.props;
 
 <div class="letter-card">
   <div class="letter-card-header">
-    <h2>Free Appeal Template, {airport}</h2>
+    <h2>Free Appeal Template</h2>
     <span class="airport-pill">{airport}</span>
   </div>
   <div class="letter-body" id={letterId}>
@@ -16,7 +16,7 @@ const { airport, letterId = 'letter-text' } = Astro.props;
   </div>
   <div class="letter-footer">
     <button class="copy-btn" data-letter-id={letterId}>Copy template</button>
-    <span class="copy-hint">Paste into the online appeal form, replacing all highlighted fields</span>
+    <span class="copy-hint">Paste into the online appeal form and fill in your case details</span>
   </div>
   <span id={"copy-status-" + letterId} aria-live="polite" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;"> </span>
 </div>
@@ -31,12 +31,12 @@ const { airport, letterId = 'letter-text' } = Astro.props;
         const hint = btn.nextElementSibling as HTMLElement;
         const original = btn.textContent!;
         btn.textContent = 'Copied!';
-        if (hint) hint.textContent = 'Now paste into Word and fill in every highlighted field';
+        if (hint) hint.textContent = 'Now paste it into your appeal and add your details';
         const statusEl = document.getElementById('copy-status-' + id) as HTMLElement | null;
         if (statusEl) statusEl.textContent = 'Copied template to clipboard';
         setTimeout(() => {
           btn.textContent = original;
-          if (hint) hint.textContent = 'Paste into Word, then replace all highlighted fields';
+          if (hint) hint.textContent = 'Paste into your appeal and add your case details';
           if (statusEl) statusEl.textContent = '';
         }, 3000);
       });

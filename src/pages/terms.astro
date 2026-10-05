@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { currentMonthYear } from '../utils/site-date';
 
 const title = "Terms of Service | AppealAirportPCN";
 const description = "Terms of Service for AppealAirportPCN.co.uk. Please read these terms carefully before using our free appeal resources.";
@@ -7,17 +8,18 @@ const canonical = "https://appealairportpcn.co.uk/terms/";
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical}>
-  <nav class="breadcrumb">
-    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/terms/">Terms of Service</a></div>
-  </nav>
+  <header class="page-banner">
+    <nav class="breadcrumb">
+      <div class="wrap"><a href="/">Home</a><span>›</span><a href="/terms/">Terms of Service</a></div>
+    </nav>
+    <div class="wrap">
+      <h1>Terms of Service</h1>
+      <p class="page-banner-meta">Last Updated: <span data-current-month-year>{currentMonthYear}</span></p>
+    </div>
+  </header>
   <main>
     <div class="wrap">
       <article class="blog-post">
-        <h1>Terms of Service</h1>
-        <p class="post-meta">AppealAirportPCN.co.uk</p>
-
-        <p>Last updated: June 2026</p>
-
         <h2>1. Acceptance of Terms</h2>
         <p>By accessing and using AppealAirportPCN.co.uk (the "Site"), you agree to be bound by these Terms of Service. If you do not agree to these terms, you must not use this Site.</p>
 

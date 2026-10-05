@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AdSlot from '../components/AdSlot.astro';
+import { currentMonthYear } from '../utils/site-date';
 import AppealLetter from '../components/AppealLetter.astro';
 import AirportSidebar from '../components/AirportSidebar.astro';
 
@@ -56,43 +57,26 @@ const tips = [
   schema={[articleSchema, faqSchema]}
 >
 
-  <nav class="breadcrumb">
-    <div class="wrap">
-      <a href="/">Home</a><span>›</span>
-      <a href="/gatwick-drop-off-charge-appeal/">Gatwick</a>
-    </div>
-  </nav>
-
   <section class="hero">
     <div class="wrap">
-      <p class="hero-tag">Gatwick Airport · North &amp; South Terminal · Free PCN Appeal Template · Updated August 2026</p>
+      <nav class="breadcrumb">
+        <div class="wrap"><a href="/">Home</a><span>›</span><a href="/gatwick-drop-off-charge-appeal/">Gatwick</a></div>
+      </nav>
       <h1>Appeal Your Gatwick Airport Drop-Off Charge</h1>
       <p class="hero-sub">Charged for dropping someone off at Gatwick's North or South Terminal? You may have strong grounds to appeal, and our free template takes the guesswork out of the process.</p>
-      <div class="hero-stats">
-        <div class="stat-block"><span class="stat-n">FREE</span><span class="stat-l">To appeal</span></div>
-        <div class="stat-block"><span class="stat-n">28 days</span><span class="stat-l">To appeal</span></div>
-        <div class="stat-block"><span class="stat-n">5 min</span><span class="stat-l">To complete</span></div>
-      </div>
-      </div>
     </div>
   </section>
 
+  <div class="wrap"><AdSlot type="leaderboard" /></div>
+
   <main>
     <div class="wrap">
-      <AdSlot type="leaderboard" />
       <div class="main-content">
         <div class="content-grid">
 
-          <div>
-            <div class="instructions-card">
-              <h2>How to use this appeal template</h2>
-              <div class="step-row"><div class="step-num">1</div><div class="step-text">Click <strong>"Copy template"</strong> below, the full appeal is copied to your clipboard.</div></div>
-              <div class="step-row"><div class="step-num">2</div><div class="step-text">Log into the operator's online appeal system (or open your PCN) and paste the template into the appeal text box.</div></div>
-              <div class="step-row"><div class="step-num">3</div><div class="step-text">Replace every <strong style="color:var(--accent)">highlighted field</strong> (in square brackets) with your details: name, vehicle registration, PCN reference, and incident date.</div></div>
-              <div class="step-row"><div class="step-num">4</div><div class="step-text">Submit and wait for a decision. The operator must respond within 35 days.</div></div>
-              <div class="step-row"><div class="step-num">5</div><div class="step-text">If rejected, request your POPLA code and escalate to the free, independent adjudicator, operators lose the vast majority of cases on these grounds.</div></div>
-            </div>
+          <AirportSidebar current="Gatwick Airport" tips={tips} />
 
+          <div class="airport-main-column">
             <AppealLetter airport="Gatwick Airport">
               <p>I am the registered keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
               <p>1. NCP cannot hold a registered keeper liable for any alleged contravention on land that is under statutory control. Gatwick Airport is not 'relevant land' as defined in Schedule 4 to the Protection of Freedoms Act 2012 ("POFA"). NCP is well aware that the POFA keeper liability provisions do not apply here, and has no lawful basis on which to pursue the registered keeper.</p>
@@ -103,6 +87,15 @@ const tips = [
               <p>The registered keeper cannot be presumed or inferred to have been the driver, nor pursued under any interpretation of agency law. NCP's Notice to Keeper can only hold the driver liable, and that claim also fails for the reasons above. I require this PCN to be cancelled and invite confirmation of cancellation in writing.</p>
             </AppealLetter>
 
+            <div class="instructions-card">
+              <h2>How to use this appeal template</h2>
+              <div class="step-row"><div class="step-num">1</div><div class="step-text">Click <strong>"Copy template"</strong> above, the full appeal is copied to your clipboard.</div></div>
+              <div class="step-row"><div class="step-num">2</div><div class="step-text">Log into the operator's online appeal system (or open your PCN) and paste the template into the appeal text box.</div></div>
+              <div class="step-row"><div class="step-num">3</div><div class="step-text">Submit and wait for a decision. The operator must respond within 35 days.</div></div>
+              <div class="step-row"><div class="step-num">4</div><div class="step-text">If rejected, request your POPLA code and escalate to the free, independent adjudicator, operators lose the vast majority of cases on these grounds.</div></div>
+            </div>
+
+            <div class="airport-info-panel">
             <section class="intro-section">
               <h2>Gatwick drop-off charge appeal</h2>
               <p>Got a PCN for dropping someone off at Gatwick? Use the free template above. It covers both terminals.</p>
@@ -182,12 +175,12 @@ const tips = [
               <p>Gatwick's current published tariff is <strong>£10 for 10 minutes</strong>, then <strong>£1 per additional minute up to 20 minutes</strong>. The maximum charge is <strong>£30</strong>.</p>
             </section>
 
+            </div>
+
             <div class="disclaimer">
               <strong>Disclaimer:</strong> AppealAirportPCN.co.uk is a free information resource for UK drivers. Nothing on this site constitutes legal advice. Templates are provided as a starting point, always review your specific circumstances. For complex cases, consider consulting a solicitor or Citizens Advice.
             </div>
           </div>
-
-          <AirportSidebar current="Gatwick Airport" tips={tips} />
 
         </div>
       </div>

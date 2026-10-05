@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AdSlot from '../components/AdSlot.astro';
+import { currentMonthYear } from '../utils/site-date';
 import AppealLetter from '../components/AppealLetter.astro';
 import AirportSidebar from '../components/AirportSidebar.astro';
 
@@ -61,43 +62,26 @@ const tips = [
   schema={[articleSchema, faqSchema]}
 >
 
-  <nav class="breadcrumb">
-    <div class="wrap">
-      <a href="/">Home</a><span>›</span>
-      <a href="/luton-drop-off-charge-appeal/">Luton</a>
-    </div>
-  </nav>
-
   <section class="hero">
     <div class="wrap">
-      <p class="hero-tag">Luton Airport · Free PCN Appeal Template · Updated August 2026</p>
+      <nav class="breadcrumb">
+        <div class="wrap"><a href="/">Home</a><span>›</span><a href="/luton-drop-off-charge-appeal/">Luton</a></div>
+      </nav>
       <h1>Appeal Your Luton Airport Drop-Off Charge</h1>
       <p class="hero-sub">Luton's drop-off zone has a layout that catches drivers off guard, and a history of signage complaints upheld by independent adjudicators. Our free template gives you the best possible chance of a successful appeal.</p>
-      <div class="hero-stats">
-        <div class="stat-block"><span class="stat-n">FREE</span><span class="stat-l">To appeal</span></div>
-        <div class="stat-block"><span class="stat-n">28 days</span><span class="stat-l">To appeal</span></div>
-        <div class="stat-block"><span class="stat-n">5 min</span><span class="stat-l">To complete</span></div>
-      </div>
-      </div>
     </div>
   </section>
 
+  <div class="wrap"><AdSlot type="leaderboard" /></div>
+
   <main>
     <div class="wrap">
-      <AdSlot type="leaderboard" />
       <div class="main-content">
         <div class="content-grid">
 
-          <div>
-            <div class="instructions-card">
-              <h2>How to use this appeal template</h2>
-              <div class="step-row"><div class="step-num">1</div><div class="step-text">Click <strong>"Copy template"</strong> below, the full appeal is copied to your clipboard.</div></div>
-              <div class="step-row"><div class="step-num">2</div><div class="step-text">Log into the operator's online appeal system (or open your PCN) and paste the template into the appeal text box.</div></div>
-              <div class="step-row"><div class="step-num">3</div><div class="step-text">Replace every <strong style="color:var(--accent)">highlighted field</strong> (in square brackets) with your details: name, vehicle registration, PCN reference, and incident date.</div></div>
-              <div class="step-row"><div class="step-num">4</div><div class="step-text">Submit and wait for a decision. The operator must respond within 35 days.</div></div>
-              <div class="step-row"><div class="step-num">5</div><div class="step-text">If rejected, request your POPLA code and escalate to the free, independent adjudicator, operators lose the vast majority of cases on these grounds.</div></div>
-            </div>
+          <AirportSidebar current="Luton Airport" tips={tips} />
 
+          <div class="airport-main-column">
             <AppealLetter airport="Luton Airport">
               <p>I appeal as the registered keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
               <p>1. The parking charge is not notified until after the contract is entered into. Under the principles established by the Court of Appeal in Thornton v Shoe Lane Parking [1971] 2 QB 163, a term introduced after a contract has been formed does not become part of that contract. The charge therefore forms no part of any contract between the driver and the operator.</p>
@@ -108,6 +92,15 @@ const tips = [
               <p>Any one of the above grounds is sufficient on its own to require cancellation of the PCN. I require this charge to be cancelled and invite the operator to confirm cancellation in writing.</p>
             </AppealLetter>
 
+            <div class="instructions-card">
+              <h2>How to use this appeal template</h2>
+              <div class="step-row"><div class="step-num">1</div><div class="step-text">Click <strong>"Copy template"</strong> above, the full appeal is copied to your clipboard.</div></div>
+              <div class="step-row"><div class="step-num">2</div><div class="step-text">Log into the operator's online appeal system (or open your PCN) and paste the template into the appeal text box.</div></div>
+              <div class="step-row"><div class="step-num">3</div><div class="step-text">Submit and wait for a decision. The operator must respond within 35 days.</div></div>
+              <div class="step-row"><div class="step-num">4</div><div class="step-text">If rejected, request your POPLA code and escalate to the free, independent adjudicator, operators lose the vast majority of cases on these grounds.</div></div>
+            </div>
+
+            <div class="airport-info-panel">
             <section class="intro-section">
               <h2>Luton drop-off charge appeal</h2>
               <p>Got a PCN for dropping someone off at Luton? It's highly likely you can cancel it. Use the free template above.</p>
@@ -179,12 +172,12 @@ const tips = [
               <p>Luton's current published tariff is <strong>£9 for 12 minutes</strong>, then <strong>£1 per minute</strong>, with a <strong>30-minute maximum stay</strong>.</p>
             </section>
 
+            </div>
+
             <div class="disclaimer">
               <strong>Disclaimer:</strong> AppealAirportPCN.co.uk is a free information resource for UK drivers. Nothing on this site constitutes legal advice. Templates are provided as a starting point, always review your specific circumstances. For complex cases, consider consulting a solicitor or Citizens Advice.
             </div>
           </div>
-
-          <AirportSidebar current="Luton Airport" tips={tips} />
 
         </div>
       </div>

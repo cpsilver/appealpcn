@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { currentMonthYear } from '../utils/site-date';
 
 const title = "Privacy Policy | AppealAirportPCN.co.uk";
 const description = "Privacy policy for AppealAirportPCN.co.uk, an independent informational website providing free public information relating to airport drop-off charge appeals.";
@@ -8,19 +9,19 @@ const canonical = "https://appealairportpcn.co.uk/privacy/";
 
 <BaseLayout title={title} description={description} canonical={canonical}>
 
-  <nav class="breadcrumb">
+  <header class="page-banner">
+    <nav class="breadcrumb">
+      <div class="wrap"><a href="/">Home</a><span>›</span><a href="/privacy/">Privacy Policy</a></div>
+    </nav>
     <div class="wrap">
-      <a href="/">Home</a><span>›</span>
-      <a href="/privacy/">Privacy Policy</a>
+      <h1>Privacy Policy</h1>
+      <p class="page-banner-meta">Last Updated: <span data-current-month-year>{currentMonthYear}</span></p>
     </div>
-  </nav>
+  </header>
 
   <main>
     <div class="wrap">
       <div class="privacy-page">
-
-        <h1>Privacy Policy</h1>
-        <p class="privacy-updated">Last updated: 15 June 2026</p>
 
         <p>Appeal Airport PCN is an independent informational website providing free public information relating to airport drop-off charge appeals.</p>
 

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { currentMonthYear } from '../utils/site-date';
 
 const title = "About Us | Free Airport Parking Appeal Templates | AppealAirportPCN";
 const description = "Learn about AppealAirportPCN.co.uk, a free resource providing legal templates and guides to help UK drivers appeal unfair airport drop-off charges. Strong legal grounds, easy to use.";
@@ -16,15 +17,18 @@ const schema = {
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
-  <nav class="breadcrumb">
-    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/about/">About</a></div>
-  </nav>
+  <header class="page-banner about-banner">
+    <nav class="breadcrumb">
+      <div class="wrap"><a href="/">Home</a><span>›</span><a href="/about/">About</a></div>
+    </nav>
+    <div class="wrap">
+      <h1>About Us</h1>
+      <p class="page-banner-meta">Free Parking Appeal Resources for UK Drivers</p>
+    </div>
+  </header>
   <main>
     <div class="wrap">
-      <article class="blog-post">
-        <h1>About AppealAirportPCN.co.uk</h1>
-        <p class="post-meta">Free Parking Appeal Resources for UK Drivers</p>
-
+      <article class="blog-post about-content">
         <p>AppealAirportPCN.co.uk is a free, independent resource dedicated to helping UK drivers challenge unfair airport drop-off charges. We provide legally-grounded appeal templates, step-by-step guides, and expert advice to make the appeals process simple and effective.</p>
 
         <h2>Our Mission</h2>
@@ -66,9 +70,8 @@ const schema = {
         <h2>Contact Us</h2>
         <p>Have questions about our resources or suggestions for improvement? <a href="/contact/">Get in touch</a>. We value user feedback and continuously update our guides based on new case law and operator practices.</p>
 
-        <p><em>Last updated: April 2026</em></p>
+        <p><em>Last updated: <span data-current-month-year>{currentMonthYear}</span></em></p>
       </article>
     </div>
   </main>
-</BaseLayout></content>
-<parameter name="filePath">/Users/cadensilver/Documents/APPEAL PCN SITE/appealpcn/src/pages/about.astro
+</BaseLayout>

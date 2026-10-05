@@ -1,9 +1,10 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { currentMonthYear } from '../../utils/site-date';
 
 const title = "Keeper Liability: The Issue That Decides Many Airport PCNs | AppealAirportPCN";
 const description = "Understand keeper liability, why POFA usually cannot transfer airport parking charges to the registered keeper, and how to raise the issue in an appeal.";
-const canonical = "https://appealairportpcn.co.uk/keeper-liability/";
+const canonical = "https://appealairportpcn.co.uk/blog/keeper-liability/";
 
 const schema = {
   "@context": "https://schema.org",
@@ -20,14 +21,14 @@ const schema = {
 <BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
 
   <nav class="breadcrumb">
-    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Why It Works</a><span>›</span><a href="/keeper-liability/">Keeper liability</a></div>
+    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Why It Works</a><span>›</span><a href="/blog/keeper-liability/">Keeper liability</a></div>
   </nav>
 
   <main>
     <div class="wrap">
       <article class="blog-post">
         <h1>Keeper liability: the issue that decides most airport PCNs</h1>
-        <p class="post-meta">From the AppealAirportPCN team • LAST UPDATED: OCTOBER 2026</p>
+        <p class="post-meta">From the AppealAirportPCN team • LAST UPDATED: <span data-current-month-year data-date-case="upper">{currentMonthYear.toUpperCase()}</span></p>
 
         <p>Keeper liability is the first thing to understand when you get an airport Parking Charge Notice (PCN). It is often one of the strongest points in an appeal.</p>
 

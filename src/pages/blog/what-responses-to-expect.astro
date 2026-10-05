@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { currentMonthYear } from '../../utils/site-date';
 
 const title = "What Response Can You Expect From Your Airport PCN Appeal? | AppealAirportPCN";
 const description = "A plain-English guide to common replies after a parking appeal, what a cancellation or rejection means, and how to check your next steps.";
@@ -25,7 +26,7 @@ const schema = {
     <div class="wrap">
       <article class="blog-post">
         <h1>What responses to expect when you appeal an airport parking charge</h1>
-        <p class="post-meta">From the AppealAirportPCN team • LAST UPDATED: OCTOBER 2026</p>
+        <p class="post-meta">From the AppealAirportPCN team • LAST UPDATED: <span data-current-month-year data-date-case="upper">{currentMonthYear.toUpperCase()}</span></p>
 
         <p>What might a parking company say after you appeal? Here are common replies and what you can do next. The exact wording and process vary by operator.</p>
 

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { currentMonthYear } from '../utils/site-date';
 
 const title = "Beat Your Airport Drop-Off Charge | Free PCN Appeals";
 const description = "Free appeal templates for UK airport drop-off charges. Strong legal grounds, clear guidance, and copy-ready appeal templates you can use in minutes.";
@@ -14,16 +15,16 @@ const schema = {
 };
 
 const airports = [
-  { href: '/heathrow-drop-off-charge-appeal/', tag: 'Heathrow · Terminals 2–5', name: 'Heathrow Drop-Off Charge Appeal', desc: "APCOA cannot establish keeper liability at Heathrow, the drop-off zone is not 'relevant land' under POFA. Full guide and legal grounds." },
-  { href: '/gatwick-drop-off-charge-appeal/',  tag: 'Gatwick · North & South Terminal', name: 'Gatwick Drop-Off Charge Appeal', desc: "NCP cannot hold a registered keeper liable at Gatwick Airport. The land is under statutory control. Full guide and legal grounds." },
-  { href: '/stansted-drop-off-charge-appeal/', tag: 'Stansted · Single Terminal', name: 'Stansted Drop-Off Charge Appeal', desc: "One of the most contested drop-off zones in the UK. Strong signage and POFA arguments apply. Full guide and legal grounds." },
-  { href: '/luton-drop-off-charge-appeal/',    tag: 'Luton', name: 'Luton Drop-Off Charge Appeal', desc: "Luton's road layout makes it impossible to avoid the charge zone, a well-established and frequently upheld appeal argument." },
-  { href: '/manchester-drop-off-charge-appeal/', tag: 'Manchester · Single Terminal', name: 'Manchester Drop-Off Charge Appeal', desc: "One of the UK's busiest regional airports. Strong POFA and signage arguments apply. Full guide and legal grounds." },
-  { href: '/birmingham-drop-off-charge-appeal/', tag: 'Birmingham · Single Terminal', name: 'Birmingham Drop-Off Charge Appeal', desc: "West Midlands' major airport hub. POFA keeper liability rules apply. Full guide and legal grounds." },
+  { href: '/heathrow-drop-off-charge-appeal/', tag: 'Terminals 2–5', name: 'Heathrow Drop-Off Charge Appeal', desc: "APCOA cannot establish keeper liability at Heathrow, the drop-off zone is not 'relevant land' under POFA. Full guide and legal grounds." },
+  { href: '/gatwick-drop-off-charge-appeal/',  tag: 'North & South Terminal', name: 'Gatwick Drop-Off Charge Appeal', desc: "NCP cannot hold a registered keeper liable at Gatwick Airport. The land is under statutory control. Full guide and legal grounds." },
+  { href: '/stansted-drop-off-charge-appeal/', tag: 'Single Terminal', name: 'Stansted Drop-Off Charge Appeal', desc: "One of the most contested drop-off zones in the UK. Strong signage and POFA arguments apply. Full guide and legal grounds." },
+  { href: '/luton-drop-off-charge-appeal/',    tag: 'Single Terminal', name: 'Luton Drop-Off Charge Appeal', desc: "Luton's road layout makes it impossible to avoid the charge zone, a well-established and frequently upheld appeal argument." },
+  { href: '/manchester-drop-off-charge-appeal/', tag: 'Single Terminal', name: 'Manchester Drop-Off Charge Appeal', desc: "One of the UK's busiest regional airports. Strong POFA and signage arguments apply. Full guide and legal grounds." },
+  { href: '/birmingham-drop-off-charge-appeal/', tag: 'Single Terminal', name: 'Birmingham Drop-Off Charge Appeal', desc: "West Midlands' major airport hub. POFA keeper liability rules apply. Full guide and legal grounds." },
 ];
 
 const blogPosts = [
-  { href: '/keeper-liability/', title: "Why keeper liability is the most important issue", desc: "If the operator cannot lawfully pursue the registered keeper, the whole claim is usually much weaker. This is the key issue in airport PCN appeals." },
+  { href: '/blog/keeper-liability/', title: "Keeper liability: the issue that decides most airport PCNs", desc: "Understand when a parking company may pursue the registered keeper and why POFA's relevant-land rule matters for airport PCNs." },
   { href: '/blog/elliott-v-loake-why-it-doesnt-make-you-liable-as-the-keeper/', title: "Elliott v Loake: why it doesn't make you liable as the keeper", desc: "A scare-letter reference to Elliott v Loake does not make the keeper liable at an airport. The company must still prove who was driving." },
   { href: '/blog/what-is-pofa-and-why-it-matters/', title: "What is POFA and why does it matter for parking appeals?", desc: "The Protection of Freedoms Act 2012 is the key piece of legislation that limits when a parking operator can pursue a registered keeper." },
   { href: '/blog/relevant-land-airport-pcns/', title: "Why airport drop-off zones are not 'relevant land' under POFA", desc: "Airport land is subject to statutory control, which means private operators cannot use POFA to transfer liability to the keeper." },
@@ -42,29 +43,11 @@ const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
 <!-- HERO -->
 <section class="home-hero">
   <div class="wrap">
-    <p class="home-hero-tag">Updated August 2026 · Takes 5 Minutes · Used by Thousands of Drivers</p>
+    <p class="home-hero-tag">Updated <span data-current-month-year>{currentMonthYear}</span> · Free to Appeal</p>
     <h1>Beat Your Airport<br/><span>Drop-Off Charge</span></h1>
     <p class="hero-sub">Free appeal templates for UK airports. Strong legal grounds. Copy and send in minutes.</p>
   </div>
 </section>
-
-<!-- STATS, standalone rounded box, 3 items -->
-<div class="wrap">
-  <div class="home-stats">
-    <div class="home-stat">
-      <span class="home-stat-n">FREE</span>
-      <span class="home-stat-sub">To appeal</span>
-    </div>
-    <div class="home-stat">
-      <span class="home-stat-n">5 min</span>
-      <span class="home-stat-sub">To complete</span>
-    </div>
-    <div class="home-stat">
-      <span class="home-stat-n">28 days</span>
-      <span class="home-stat-sub">To appeal</span>
-    </div>
-  </div>
-</div>
 
 <!-- TABS, standalone rounded card -->
 <div class="wrap">
@@ -243,19 +226,9 @@ const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
       </div>
     </section>
 
-    <!-- BLOG -->
-    <section class="seo-section">
-      <h2>Understanding your rights</h2>
-      <div class="blog-grid">
-        {blogPosts.map(({ href, title, desc }) => (
-          <a href={href} class="blog-card">
-            <h3>{title}</h3>
-            <p>{desc}</p>
-            <span class="airport-card-arrow">Read more →</span>
-          </a>
-        ))}
-      </div>
-    </section>
+    <div class="home-blog-cta-wrap">
+      <a href="/blog/" class="home-blog-cta">See why it works <span class="cta-arrow" aria-hidden="true">→</span></a>
+    </div>
 
     <div class="disclaimer" style="margin-bottom:2rem">
       <strong>Disclaimer:</strong> AppealAirportPCN.co.uk is a free information resource for UK drivers. Nothing on this site constitutes legal advice. For complex cases, consider consulting a solicitor or Citizens Advice.

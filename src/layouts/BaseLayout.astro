@@ -82,7 +82,7 @@ const schemas = schema ? (Array.isArray(schema) ? [...schema, defaultOrg] : [sch
         </div>
         <a href="/blog/" class={currentPage === 'blog' ? 'nav-link active' : 'nav-link'}>Why It Works</a>
         <a href="/about/" class={currentPage === 'about' ? 'nav-link active' : 'nav-link'}>About</a>
-        <a href={kofi} class="donate-btn" target="_blank" rel="noopener noreferrer">☕ Support us</a>
+        <a href={kofi} class="donate-btn" target="_blank" rel="noopener noreferrer">☕&nbsp;Support Us</a>
       </nav>
 
       <!-- MOBILE HAMBURGER -->
@@ -106,7 +106,7 @@ const schemas = schema ? (Array.isArray(schema) ? [...schema, defaultOrg] : [sch
       <div class="mobile-drawer-actions">
         <a href="/blog/" class="mobile-action-btn mobile-action-blog">Why It Works</a>
         <a href="/about/" class="mobile-action-btn mobile-action-about">About</a>
-        <a href={kofi} class="mobile-action-btn mobile-action-support" target="_blank" rel="noopener noreferrer">☕ Support us</a>
+        <a href={kofi} class="mobile-action-btn mobile-action-support" target="_blank" rel="noopener noreferrer">☕&nbsp;Support Us</a>
       </div>
     </div>
   </header>
@@ -120,9 +120,7 @@ const schemas = schema ? (Array.isArray(schema) ? [...schema, defaultOrg] : [sch
         <a href="/privacy/">Privacy policy</a>
         <a href="/terms/">Terms of Service</a>
         <a href="/contact/">Contact</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Why It Works</a>
-        <a href={kofi} target="_blank" rel="noopener noreferrer">Support this site</a>
+        <a href={kofi} target="_blank" rel="noopener noreferrer">Support Us</a>
       </p>
     </div>
   </footer>
@@ -131,6 +129,18 @@ const schemas = schema ? (Array.isArray(schema) ? [...schema, defaultOrg] : [sch
 </html>
 
 <script>
+  const currentMonthYear = new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Europe/London',
+    month: 'long',
+    year: 'numeric',
+  }).format(new Date());
+
+  document.querySelectorAll<HTMLElement>('[data-current-month-year]').forEach((element) => {
+    element.textContent = element.dataset.dateCase === 'upper'
+      ? currentMonthYear.toUpperCase()
+      : currentMonthYear;
+  });
+
   // ── Mobile menu toggle ──
   const menuBtn   = document.getElementById('mobile-menu-btn')!;
   const drawer    = document.getElementById('mobile-drawer')!;

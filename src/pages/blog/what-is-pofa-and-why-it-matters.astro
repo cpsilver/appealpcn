@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { currentMonthYear } from '../../utils/site-date';
 
 const title = "What is POFA and Why Does It Matter for Parking Appeals? | AppealAirportPCN";
 const description = "A plain-English guide to POFA, keeper liability and why airport land subject to statutory control may fall outside Schedule 4.";
@@ -25,7 +26,7 @@ const schema = {
     <div class="wrap">
       <article class="blog-post">
         <h1>What is POFA and why does it matter for parking appeals?</h1>
-        <p class="post-meta">From the AppealAirportPCN team • LAST UPDATED: OCTOBER 2026</p>
+        <p class="post-meta">From the AppealAirportPCN team • LAST UPDATED: <span data-current-month-year data-date-case="upper">{currentMonthYear.toUpperCase()}</span></p>
 
         <p>POFA is short for the <strong>Protection of Freedoms Act 2012</strong>. It often comes up when someone challenges an airport Parking Charge Notice (PCN). Here is what it means.</p>
 
@@ -51,7 +52,7 @@ const schema = {
           <li>Include the information required by the Act.</li>
           <li>Follow each relevant time limit and procedural step.</li>
         </ul>
-        <p>If the company misses a requirement, it may not be able to transfer liability to the keeper under POFA. Read the <a href="/keeper-liability/">keeper liability guide</a> for more detail.</p>
+        <p>If the company misses a requirement, it may not be able to transfer liability to the keeper under POFA. Read the <a href="/blog/keeper-liability/">keeper liability guide</a> for more detail.</p>
 
         <h2>Using POFA in your appeal</h2>
         <p>Our <a href="/">airport appeal templates</a> include the relevant-land point where appropriate. Choose your airport, check your notice and send your appeal before its deadline. You can also read <a href="/blog/what-is-popla/">how to appeal to POPLA</a> if the operator rejects your first appeal.</p>
