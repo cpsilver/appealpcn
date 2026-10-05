@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostHeader from '../../components/BlogPostHeader.astro';
 import { currentMonthYear } from '../../utils/site-date';
 
 const title = "Elliott v Loake: Why It Doesn't Make You Liable as the Keeper | AppealAirportPCN";
@@ -19,15 +20,10 @@ const schema = {
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
-  <nav class="breadcrumb">
-    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Why It Works</a><span>›</span><a href="/blog/elliott-v-loake-why-it-doesnt-make-you-liable-as-the-keeper/">Elliott v Loake</a></div>
-  </nav>
+  <BlogPostHeader title="Elliott v Loake: why it doesn't make you liable as the keeper" breadcrumbLabel="Elliott v Loake" breadcrumbHref="/blog/elliott-v-loake-why-it-doesnt-make-you-liable-as-the-keeper/" updatedDate={currentMonthYear.toUpperCase()} />
   <main>
     <div class="wrap">
       <article class="blog-post">
-        <h1>Elliott v Loake: why it doesn't make you liable as the keeper</h1>
-        <p class="post-meta">From the AppealAirportPCN team • LAST UPDATED: <span data-current-month-year data-date-case="upper">{currentMonthYear.toUpperCase()}</span></p>
-
         <p>In trying to prove their case, parking companies often cite the case of <em>Elliott v Loake</em>, 1982. They claim it as a precedent for showing the keeper is most likely the driver of the vehicle in the absence of evidence to the contrary.</p>
         <p>The wording is meant to scare you. Here is why you can ignore it.</p>
 

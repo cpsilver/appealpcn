@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  breadcrumbLabel: string;
+  breadcrumbHref: string;
+  updatedDate: string;
+}
+
+const { title, breadcrumbLabel, breadcrumbHref, updatedDate } = Astro.props;
+---
+
+<header class="page-banner blog-page-banner">
+  <nav class="breadcrumb">
+    <div class="wrap">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Why It Works</a><span>›</span><a href={breadcrumbHref}>{breadcrumbLabel}</a>
+    </div>
+  </nav>
+  <div class="wrap">
+    <h1>{title}</h1>
+    <p class="page-banner-meta blog-page-meta">From the AppealAirportPCN team • LAST UPDATED: <span data-current-month-year data-date-case="upper">{updatedDate}</span></p>
+  </div>
+</header>

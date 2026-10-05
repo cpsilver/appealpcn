@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostHeader from '../../components/BlogPostHeader.astro';
 import { currentMonthYear } from '../../utils/site-date';
 
 const title = "The 5-Minute Consideration Period: What It Means for Your Appeal | AppealAirportPCN";
@@ -19,15 +20,10 @@ const schema = {
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
-  <nav class="breadcrumb">
-    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Why It Works</a><span>›</span><a href="/blog/five-minute-consideration-period/">5-minute grace period</a></div>
-  </nav>
+  <BlogPostHeader title="The 5-minute consideration period: what it means for your appeal" breadcrumbLabel="5-minute grace period" breadcrumbHref="/blog/five-minute-consideration-period/" updatedDate={currentMonthYear.toUpperCase()} />
   <main>
     <div class="wrap">
       <article class="blog-post">
-        <h1>The 5-minute consideration period: what it means for your appeal</h1>
-        <p class="post-meta">From the AppealAirportPCN team • LAST UPDATED: <span data-current-month-year data-date-case="upper">{currentMonthYear.toUpperCase()}</span></p>
-
         <p>If the ANPR record shows your vehicle was in a drop-off zone for five minutes or less, the BPA Code's consideration period may support your appeal. Check your notice first. If the recorded time is longer, you can still raise other points.</p>
 
         <h2>Where the five-minute period comes from</h2>

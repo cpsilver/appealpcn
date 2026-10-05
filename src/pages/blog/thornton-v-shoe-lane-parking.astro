@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostHeader from '../../components/BlogPostHeader.astro';
 import { currentMonthYear } from '../../utils/site-date';
 
 const title = "Thornton v Shoe Lane Parking: Why Late-Notified Charges Are Unenforceable | AppealAirportPCN";
@@ -19,15 +20,10 @@ const schema = {
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
-  <nav class="breadcrumb">
-    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Why It Works</a><span>›</span><a href="/blog/thornton-v-shoe-lane-parking/">Thornton v Shoe Lane Parking</a></div>
-  </nav>
+  <BlogPostHeader title="Thornton v Shoe Lane Parking: why late-notified charges are unenforceable" breadcrumbLabel="Thornton v Shoe Lane Parking" breadcrumbHref="/blog/thornton-v-shoe-lane-parking/" updatedDate={currentMonthYear.toUpperCase()} />
   <main>
     <div class="wrap">
       <article class="blog-post">
-        <h1>Thornton v Shoe Lane Parking: why late-notified charges are unenforceable</h1>
-        <p class="post-meta">From the AppealAirportPCN team • LAST UPDATED: <span data-current-month-year data-date-case="upper">{currentMonthYear.toUpperCase()}</span></p>
-
         <p><em>Thornton v Shoe Lane Parking</em> is a 1971 court case about when parking terms become part of a contract. It may be relevant if a charge or important term was not shown until after a driver entered a parking area.</p>
 
         <h2>What happened in the case?</h2>

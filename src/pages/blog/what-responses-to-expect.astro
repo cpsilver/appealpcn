@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostHeader from '../../components/BlogPostHeader.astro';
 import { currentMonthYear } from '../../utils/site-date';
 
 const title = "What Response Can You Expect From Your Airport PCN Appeal? | AppealAirportPCN";
@@ -19,15 +20,10 @@ const schema = {
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
-  <nav class="breadcrumb">
-    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Why It Works</a><span>›</span><a href="/blog/what-responses-to-expect/">What responses to expect</a></div>
-  </nav>
+  <BlogPostHeader title="What responses to expect when you appeal an airport parking charge" breadcrumbLabel="What responses to expect" breadcrumbHref="/blog/what-responses-to-expect/" updatedDate={currentMonthYear.toUpperCase()} />
   <main>
     <div class="wrap">
       <article class="blog-post">
-        <h1>What responses to expect when you appeal an airport parking charge</h1>
-        <p class="post-meta">From the AppealAirportPCN team • LAST UPDATED: <span data-current-month-year data-date-case="upper">{currentMonthYear.toUpperCase()}</span></p>
-
         <p>What might a parking company say after you appeal? Here are common replies and what you can do next. The exact wording and process vary by operator.</p>
 
         <h2>1. The company cancels the charge</h2>

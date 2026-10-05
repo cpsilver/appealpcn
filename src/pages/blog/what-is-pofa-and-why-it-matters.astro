@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostHeader from '../../components/BlogPostHeader.astro';
 import { currentMonthYear } from '../../utils/site-date';
 
 const title = "What is POFA and Why Does It Matter for Parking Appeals? | AppealAirportPCN";
@@ -19,15 +20,10 @@ const schema = {
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
-  <nav class="breadcrumb">
-    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Why It Works</a><span>›</span><a href="/blog/what-is-pofa-and-why-it-matters/">What is POFA?</a></div>
-  </nav>
+  <BlogPostHeader title="What is POFA and why does it matter for parking appeals?" breadcrumbLabel="What is POFA?" breadcrumbHref="/blog/what-is-pofa-and-why-it-matters/" updatedDate={currentMonthYear.toUpperCase()} />
   <main>
     <div class="wrap">
       <article class="blog-post">
-        <h1>What is POFA and why does it matter for parking appeals?</h1>
-        <p class="post-meta">From the AppealAirportPCN team • LAST UPDATED: <span data-current-month-year data-date-case="upper">{currentMonthYear.toUpperCase()}</span></p>
-
         <p>POFA is short for the <strong>Protection of Freedoms Act 2012</strong>. It often comes up when someone challenges an airport Parking Charge Notice (PCN). Here is what it means.</p>
 
         <h2>What POFA does</h2>

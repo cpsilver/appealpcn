@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostHeader from '../../components/BlogPostHeader.astro';
 import { currentMonthYear } from '../../utils/site-date';
 
 const title = "Why Airport Drop-Off Zones Are Not 'Relevant Land' Under POFA | AppealAirportPCN";
@@ -19,15 +20,10 @@ const schema = {
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
-  <nav class="breadcrumb">
-    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Why It Works</a><span>›</span><a href="/blog/relevant-land-airport-pcns/">Relevant land &amp; airports</a></div>
-  </nav>
+  <BlogPostHeader title="Why airport drop-off zones are not 'relevant land' under POFA" breadcrumbLabel="Relevant land &amp; airports" breadcrumbHref="/blog/relevant-land-airport-pcns/" updatedDate={currentMonthYear.toUpperCase()} />
   <main>
     <div class="wrap">
       <article class="blog-post">
-        <h1>Why airport drop-off zones are not 'relevant land' under POFA</h1>
-        <p class="post-meta">From the AppealAirportPCN team • LAST UPDATED: <span data-current-month-year data-date-case="upper">{currentMonthYear.toUpperCase()}</span></p>
-
         <p>The "relevant land" rule is an important point in many airport parking appeals. It may sound technical, but the basic idea is simple.</p>
         <p>You do not have to become an expert in it. Our <a href="/">airport appeal templates</a> include the argument in plain language.</p>
 

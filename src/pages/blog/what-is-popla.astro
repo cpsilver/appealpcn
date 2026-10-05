@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostHeader from '../../components/BlogPostHeader.astro';
 import { currentMonthYear } from '../../utils/site-date';
 
 const title = "What is POPLA and How Do I Use It? | AppealAirportPCN";
@@ -19,15 +20,10 @@ const schema = {
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
-  <nav class="breadcrumb">
-    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Why It Works</a><span>›</span><a href="/blog/what-is-popla/">What is POPLA?</a></div>
-  </nav>
+  <BlogPostHeader title="What is POPLA and how do I use it?" breadcrumbLabel="What is POPLA?" breadcrumbHref="/blog/what-is-popla/" updatedDate={currentMonthYear.toUpperCase()} />
   <main>
     <div class="wrap">
       <article class="blog-post">
-        <h1>What is POPLA and how do I use it?</h1>
-        <p class="post-meta">From the AppealAirportPCN team • LAST UPDATED: <span data-current-month-year data-date-case="upper">{currentMonthYear.toUpperCase()}</span></p>
-
         <p>If a parking company rejects your first appeal, check the rejection letter before paying. You may be able to make a second appeal through <strong>POPLA</strong>, an independent appeals service. It is free to use.</p>
 
         <h2>What POPLA is</h2>

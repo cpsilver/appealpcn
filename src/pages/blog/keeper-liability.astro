@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostHeader from '../../components/BlogPostHeader.astro';
 import { currentMonthYear } from '../../utils/site-date';
 
 const title = "Keeper Liability: The Issue That Decides Many Airport PCNs | AppealAirportPCN";
@@ -20,16 +21,11 @@ const schema = {
 
 <BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
 
-  <nav class="breadcrumb">
-    <div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Why It Works</a><span>›</span><a href="/blog/keeper-liability/">Keeper liability</a></div>
-  </nav>
+  <BlogPostHeader title="Keeper liability: the issue that decides most airport PCNs" breadcrumbLabel="Keeper liability" breadcrumbHref="/blog/keeper-liability/" updatedDate={currentMonthYear.toUpperCase()} />
 
   <main>
     <div class="wrap">
       <article class="blog-post">
-        <h1>Keeper liability: the issue that decides most airport PCNs</h1>
-        <p class="post-meta">From the AppealAirportPCN team • LAST UPDATED: <span data-current-month-year data-date-case="upper">{currentMonthYear.toUpperCase()}</span></p>
-
         <p>Keeper liability is the first thing to understand when you get an airport Parking Charge Notice (PCN). It is often one of the strongest points in an appeal.</p>
 
         <h2>What is keeper liability?</h2>
