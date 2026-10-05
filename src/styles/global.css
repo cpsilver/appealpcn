@@ -169,8 +169,11 @@ strong { font-weight: 600; }
 /* ── INTRO ── */
 .intro-section { margin-bottom: 2rem; }
 .intro-section h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: .75rem; letter-spacing: -.02em; }
-.intro-section p { font-size: .9rem; color: var(--muted); margin-bottom: .65rem; line-height: 1.7; }
+.intro-section h3 { font-size: 1.05rem; font-weight: 700; margin: 1.25rem 0 .5rem; letter-spacing: -.01em; color: var(--ink); }
+.intro-section p, .intro-section li { font-size: 1rem; color: var(--muted); margin-bottom: .65rem; line-height: 1.75; }
 .intro-section p:last-child { margin-bottom: 0; }
+.intro-section ul { margin: .5rem 0 0 1.25rem; padding-left: .5rem; }
+.intro-section li { margin-bottom: .5rem; }
 
 /* ── INFO CARDS ── */
 .info-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin-bottom: 1.75rem; }
@@ -204,11 +207,14 @@ strong { font-weight: 600; }
 .copy-hint { font-size: .74rem; color: var(--light); }
 
 /* ── GROUNDS ── */
-.grounds-section { margin-bottom: 2rem; }
+.grounds-section { margin: 0 0 2rem; }
 .grounds-section h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -.02em; }
+.grounds-section ul { margin: 0 0 0 1.25rem; padding-left: .5rem; }
+.grounds-section li, .grounds-section p { font-size: 1rem; color: var(--muted); line-height: 1.75; }
+.grounds-section li { margin-bottom: .5rem; }
 .ground-item { border-left: 3px solid var(--accent-mid); padding: .65rem 1rem; margin-bottom: .75rem; background: var(--accent-light); border-radius: 0 8px 8px 0; }
-.ground-item h3 { font-size: .9rem; font-weight: 600; margin-bottom: .2rem; }
-.ground-item p { font-size: .83rem; color: var(--muted); line-height: 1.55; }
+.ground-item h3 { font-size: .95rem; font-weight: 600; margin-bottom: .2rem; }
+.ground-item p { font-size: 1rem; color: var(--muted); line-height: 1.75; }
 
 /* ── SIDEBAR ── */
 .tips-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.25rem; }
@@ -225,20 +231,20 @@ strong { font-weight: 600; }
 .airports-card a.current { color: var(--accent); font-weight: 600; }
 
 /* ── FAQ ── */
-.faq-section { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+.faq-section { margin: 2rem 0 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
 .faq-section h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1.1rem; letter-spacing: -.02em; }
 details { border-top: 1px solid var(--border); }
 details:last-child { border-bottom: 1px solid var(--border); }
-summary { font-size: .92rem; font-weight: 600; padding: .85rem 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+summary { font-size: 1rem; font-weight: 600; padding: .85rem 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink); }
 summary::-webkit-details-marker { display: none; }
 summary::after { content: '+'; font-size: 1rem; color: var(--faint); flex-shrink: 0; font-weight: 400; }
 details[open] summary::after { content: '−'; }
-.faq-answer { font-size: .875rem; color: var(--muted); padding-bottom: 1rem; line-height: 1.7; }
+.faq-answer { font-size: 1rem; color: var(--muted); padding-bottom: 1rem; line-height: 1.75; }
 .faq-answer p { margin-bottom: .6rem; }
 .faq-answer p:last-child { margin-bottom: 0; }
 
 /* ── DISCLAIMER ── */
-.disclaimer { background: var(--accent2-light); border: 1px solid #bfdbfe; border-radius: var(--radius); padding: 1rem 1.25rem; font-size: .78rem; color: #1e40af; margin-top: 2rem; line-height: 1.6; }
+.disclaimer { background: var(--accent2-light); border: 1px solid #bfdbfe; border-radius: var(--radius); padding: 1rem 1.25rem; font-size: 1rem; color: #1e40af; margin-top: 2rem; line-height: 1.7; }
 
 /* ── FOOTER ── */
 .site-footer { background: var(--card); border-top: 1px solid var(--border); padding: 1.5rem 0; text-align: center; font-size: .75rem; color: var(--light); }
