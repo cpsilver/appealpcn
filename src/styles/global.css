@@ -27,6 +27,7 @@
   --callout-bg: #f2f2f2;
   --border: #e5e7eb;
   --accent: #da513d;
+  --accent-hover: #c94634;
   --accent-light: #fff0ed;
   --accent-mid: #e7a399;
   --accent2: #1d4ed8;
@@ -312,10 +313,17 @@ body:has(.rights-hero) main > .wrap { padding-top: 1.25rem !important; }
 .letter-body p { margin-bottom: 1rem; }
 .letter-body p:last-child { margin-bottom: 0; }
 .ph { color: var(--accent); font-style: italic; background: var(--accent-light); padding: 1px 5px; border-radius: 3px; font-size: .82rem; }
-.letter-footer { padding: 1rem 1.5rem; border-top: 1px solid var(--border); background: var(--bg); display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
-.copy-btn { font-family: inherit; font-size: .82rem; font-weight: 600; padding: .5rem 1.25rem; background: var(--accent); color: #fff; border: none; border-radius: 2rem; cursor: pointer; transition: background .2s; }
-.copy-btn:hover { background: #c94634; }
-.copy-hint { font-size: .74rem; color: var(--light); }
+.letter-footer,
+.tab-letter-footer {
+  padding: .9rem 1.5rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  flex-wrap: wrap;
+}
+.copy-hint, .clipboard-hint { font-size: .85rem; color: var(--light); }
 
 /* ── GROUNDS ── */
 .grounds-section { margin: 0 0 2rem; }
@@ -381,7 +389,7 @@ body:has(.rights-hero) main > .wrap.why-works-list { max-width: 780px; padding: 
 .home-blog-cta .cta-arrow {
   display: inline-block; transition: transform .18s ease-out;
 }
-.home-blog-cta:hover { background: #c94634; color: #fff; }
+.home-blog-cta:hover { background: var(--accent-hover); color: #fff; }
 .home-blog-cta:hover .cta-arrow { transform: translateX(4px); }
 
 /* ── BLOG POST PAGE ── */
@@ -453,7 +461,7 @@ body:has(.blog-page-banner) .blog-post a,
   text-decoration: none; letter-spacing: -.01em;
   transition: background .2s;
 }
-.blog-cta:hover { background: #c94634; color: #fff; }
+.blog-cta:hover { background: var(--accent-hover); color: #fff; }
 
 /* ── HOMEPAGE HERO ── */
 .home-hero {
@@ -528,19 +536,16 @@ body:has(.home-hero) .site-header { border-radius: 0; }
 .tab-letter-body p { margin-bottom: .9rem; }
 .tab-letter-body p:last-child { margin-bottom: 0; }
 
-.tab-letter-footer {
-  padding: .9rem 1.5rem; border-top: 0;
-  background: var(--panel); display: flex; align-items: center; gap: .85rem; flex-wrap: wrap;
-}
+.copy-btn,
 .clipboard-btn {
   display: flex; align-items: center; gap: .45rem;
-  font-family: inherit; font-size: .82rem; font-weight: 600; padding: .55rem 1.2rem;
+  font-family: inherit; font-size: .9rem; font-weight: 600; padding: .55rem 1.2rem;
   background: var(--accent); color: #fff;
   border: none; border-radius: 2rem; cursor: pointer;
   transition: background .2s; white-space: nowrap;
 }
-.clipboard-btn:hover { background: #b91c1c; }
-.clipboard-hint { font-size: .73rem; color: var(--light); }
+.copy-btn:hover,
+.clipboard-btn:hover { background: var(--accent-hover); }
 /* Home insights, featured boxes */
 .home-insights {
   display: grid;
@@ -592,7 +597,7 @@ body:has(.home-hero) .site-header { border-radius: 0; }
 }
 .insight-card:hover .read-more { transform: translateX(4px); }
 .insight-card:hover .read-more {
-  color: #b91c1c;
+  color: var(--accent-hover);
 }
 /* How it works */
 .how-section { padding: 2.5rem 0; }

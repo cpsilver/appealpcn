@@ -4,6 +4,8 @@ interface Props {
   letterId?: string;
 }
 const { airport, letterId = 'letter-text' } = Astro.props;
+
+const svgClipboard = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:15px;height:15px;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" /></svg>`;
 ---
 
 <div class="letter-card">
@@ -15,28 +17,30 @@ const { airport, letterId = 'letter-text' } = Astro.props;
     <slot />
   </div>
   <div class="letter-footer">
-    <button class="copy-btn" data-letter-id={letterId}>Copy template</button>
-    <span class="copy-hint">Paste into the online appeal form and fill in your case details</span>
+    <button class="clipboard-btn" data-target={letterId}>
+      <Fragment set:html={svgClipboard} /> Copy to clipboard
+    </button>
+    <span class="clipboard-hint">Paste into your appeal form or email, no editing needed</span>
   </div>
   <span id={"copy-status-" + letterId} aria-live="polite" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;"> </span>
 </div>
 
 <script>
-  document.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach(btn => {
+  document.querySelectorAll<HTMLButtonElement>('.clipboard-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      const id = btn.dataset.letterId!;
+      const id = btn.dataset.target!;
       const el = document.getElementById(id);
       if (!el) return;
       navigator.clipboard.writeText(el.innerText).then(() => {
+        const saved = btn.innerHTML;
         const hint = btn.nextElementSibling as HTMLElement;
-        const original = btn.textContent!;
-        btn.textContent = 'Copied!';
-        if (hint) hint.textContent = 'Now paste it into your appeal and add your details';
+        btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width:15px;height:15px"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg> Copied!`;
+        if (hint) hint.textContent = 'Pasted and ready to send';
         const statusEl = document.getElementById('copy-status-' + id) as HTMLElement | null;
-        if (statusEl) statusEl.textContent = 'Copied template to clipboard';
+        if (statusEl) statusEl.textContent = 'Copied to clipboard';
         setTimeout(() => {
-          btn.textContent = original;
-          if (hint) hint.textContent = 'Paste into your appeal and add your case details';
+          btn.innerHTML = saved;
+          if (hint) hint.textContent = 'Paste into your appeal form or email, no editing needed';
           if (statusEl) statusEl.textContent = '';
         }, 3000);
       });
