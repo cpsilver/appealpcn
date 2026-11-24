@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogPostHeader from '../../components/BlogPostHeader.astro';
+import AppealLetter from '../../components/AppealLetter.astro';
 
 const title = "What to Do if a Parking Company Asks for Your Driving Licence | AppealAirportPCN";
 const description = "After an airport PCN appeal, the operator may ask for a copy of your driving licence. Here is a real example, what the rules say, and a short reply.";
@@ -77,15 +78,16 @@ const schema = {
         </ol>
 
         <h2>A short reply you can send</h2>
-        <blockquote class="reply-template">
-          <p>I am appealing this Parking Charge Notice as the registered keeper.</p>
-          <p>I am not identifying the driver. I will not be sending a copy of a driving licence.</p>
-          <p>As set out in my appeal, [AIRPORT] land is under statutory control. Schedule 4 of the Protection of Freedoms Act 2012 excludes such land from the definition of "relevant land". Keeper liability under Schedule 4 does not arise.</p>
-          <p>The Private Parking Sector Single Code of Practice states that the driver is liable for a parking charge. It says POFA provides the way to transfer liability to a keeper where its conditions are met. It also says charges issued under byelaws may be different.</p>
-          <p>POFA does not apply here. My not naming the driver does not make me liable as keeper.</p>
-          <p>If you hold images of the driver, please send them to me.</p>
+        <AppealLetter airport="Gatwick Airport" letterId="driving-licence-reply">
+          <p>I am appealing this Parking Charge Notice.</p>
+          <p>I will not identify the driver or provide the driver's details. I am not obliged to provide a driving licence. The DVLA and BPA/IPC have told all members that appeals MUST NOT be or appear conditional on disclosing who was driving and further to this it will be reported to both DVLA and the IPC as breach of conduct.</p>
+          <p>The alleged contravention took place on Gatwick Airport land. Gatwick's current published terms confirm that its airport land, buildings and roads are subject to its airport byelaws and other statutory controls.</p>
+          <p>You cannot rely on Elliott v Loake (1982) to presume that the registered keeper was the driver. That criminal case turned on specific forensic evidence and proven falsehoods rather than creating a general civil presumption, and keeper liability in private parking requires strict compliance with Schedule 4 of the Protection of Freedoms Act 2012.</p>
+          <p>Schedule 4 of the Protection of Freedoms Act 2012 excludes land where parking is subject to statutory control from the definition of relevant land. Keeper liability under Schedule 4 therefore does not arise in this case.</p>
+          <p>I note that the current Private Parking Sector Single Code of Practice states that the driver is liable for a parking charge and that POFA provides the mechanism for transferring liability to a keeper where its conditions are met. The Code also expressly recognises that charges issued under byelaws may be different.</p>
+          <p>As POFA keeper liability does not apply to this land, my refusal to identify the driver does not create keeper liability under Schedule 4.</p>
           <p>Please cancel the Parking Charge Notice.</p>
-        </blockquote>
+        </AppealLetter>
         <p>Send it by the portal or email address in the letter. Keep a copy and note the date.</p>
 
         <h2>What happens next</h2>
@@ -136,21 +138,6 @@ const schema = {
     font-size: .85rem;
   }
 
-  .reply-template {
-    margin: 1rem 0;
-    padding: 1.1rem 1.25rem;
-    border-left: 3px solid var(--accent);
-    border-radius: 0 var(--radius) var(--radius) 0;
-    background: var(--callout-bg);
-  }
-
-  .reply-template p {
-    margin-bottom: .75rem;
-  }
-
-  .reply-template p:last-child {
-    margin-bottom: 0;
-  }
 </style>
 
 <script>
