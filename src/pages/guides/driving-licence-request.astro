@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostHeader from '../../components/BlogPostHeader.astro';
+
+const title = "What to Do if a Parking Company Asks for Your Driving Licence | AppealAirportPCN";
+const description = "After an airport PCN appeal, the operator may ask for a copy of your driving licence. Here is a real example, what the rules say, and a short reply.";
+const canonical = "https://appealairportpcn.co.uk/guides/driving-licence-request/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What to do if a parking company asks for your driving licence",
+  "description": description,
+  "image": "https://appealairportpcn.co.uk/images/times24-photo-id-request.png",
+  "mainEntityOfPage": canonical,
+  "author": { "@type": "Organization", "name": "AppealAirportPCN" },
+  "publisher": { "@type": "Organization", "name": "AppealAirportPCN.co.uk" },
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15"
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
+  <BlogPostHeader
+    title="What to do if a parking company asks for your driving licence"
+    breadcrumbLabel="Driving licence requests"
+    breadcrumbHref="/guides/driving-licence-request/"
+    updatedDate="NOVEMBER 2026"
+    fixedUpdatedDate={true}
+  />
+  <main>
+    <div class="wrap">
+      <article class="blog-post">
+        <p>You appealed an airport drop-off PCN. The reply is not a decision. It asks for a copy of your driving licence.</p>
+        <p>Our example comes from Gatwick, where the operator is Times24 UK Limited. Other operators may send similar requests.</p>
+        <p>This guide shows the email, explains what it means, and gives a short reply you can send.</p>
+
+        <h2>The email</h2>
+        <figure class="protected-image">
+          <img
+            src="/images/times24-photo-id-request.png"
+            alt="Redacted example of a Times24 UK Limited email requesting the photo ID section of a driving licence for a Gatwick Airport North Terminal appeal."
+            width="984"
+            height="768"
+            loading="lazy"
+            draggable="false"
+          />
+          <figcaption>Redacted example. Name, PCN number and date removed.</figcaption>
+        </figure>
+
+        <p>The email says three things:</p>
+        <ul>
+          <li>It wants a copy of the photo ID section of your driving licence.</li>
+          <li>It says this is to "verify the driver against unredacted images".</li>
+          <li>It puts the notice on hold for 14 days while you reply. You can use their portal or send an email.</li>
+        </ul>
+        <p>Your letter may differ. Check the deadline in yours.</p>
+
+        <h2>What it means</h2>
+        <p>The operator wants to know who was driving. If you send your licence, you confirm that you were the driver. It can then pursue you as the driver.</p>
+        <p>You do not have to reply. But the hold is short. After it ends, the appeal will probably be decided on what they already have.</p>
+
+        <h2>What the rules say</h2>
+        <p>The Private Parking Sector Single Code of Practice (version 1.1) does not ban an operator from asking for ID. It also does not stop an operator making an appeal depend on naming the driver. So the request is not against the Code.</p>
+        <p>The Code says the driver is liable for a parking charge (Annex C). A keeper who will not name the driver "may be assumed" to be the driver. A note in section 8 says this may be used as evidence. These are notes. They are best practice, not mandatory rules.</p>
+        <p>Keeper liability comes from Schedule 4 of the Protection of Freedoms Act 2012 (POFA). It does not apply to land under statutory control. Our <a href="/guides/relevant-land-airport-pcns/">guide to relevant land</a> explains this.</p>
+        <p>The Code also says charges issued under byelaws "may be different". It says operators must not confuse byelaw enforcement with contractual charges (3.1.3, Note 2).</p>
+
+        <h2>What this means in practice</h2>
+        <p>POFA does not let them pass the charge to you as keeper. But they can still argue that you were the driver. That is why they ask for your licence.</p>
+
+        <h2>Your options</h2>
+        <ol>
+          <li>Send a short reply like the one below. You do not name the driver and you do not send ID.</li>
+          <li>Do not reply. The notice will probably be decided on the existing evidence.</li>
+          <li>If you were the driver, you may choose to say so. Do not say anything untrue.</li>
+        </ol>
+
+        <h2>A short reply you can send</h2>
+        <blockquote class="reply-template">
+          <p>I am appealing this Parking Charge Notice as the registered keeper.</p>
+          <p>I am not identifying the driver. I will not be sending a copy of a driving licence.</p>
+          <p>As set out in my appeal, [AIRPORT] land is under statutory control. Schedule 4 of the Protection of Freedoms Act 2012 excludes such land from the definition of "relevant land". Keeper liability under Schedule 4 does not arise.</p>
+          <p>The Private Parking Sector Single Code of Practice states that the driver is liable for a parking charge. It says POFA provides the way to transfer liability to a keeper where its conditions are met. It also says charges issued under byelaws may be different.</p>
+          <p>POFA does not apply here. My not naming the driver does not make me liable as keeper.</p>
+          <p>If you hold images of the driver, please send them to me.</p>
+          <p>Please cancel the Parking Charge Notice.</p>
+        </blockquote>
+        <p>Send it by the portal or email address in the letter. Keep a copy and note the date.</p>
+
+        <h2>What happens next</h2>
+        <p>The operator will send a decision. It may reject the appeal and rely on Elliott v Loake. Our <a href="/guides/elliott-v-loake-why-it-doesnt-make-you-liable-as-the-keeper/">guide to Elliott v Loake</a> covers it.</p>
+        <p>The rejection letter names the appeals service. POPLA is used for British Parking Association members. The IAS is used for International Parking Community members. Times24 at Gatwick named the IAS. In both cases, you have 28 days from the rejection to appeal.</p>
+
+        <div class="callout">
+          <strong>Key point:</strong> The operator can ask for your licence. You do not have to send it. But declining does not end the case. Expect a rejection and plan your next step.
+        </div>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This article is for information only and does not constitute legal advice. For complex cases, consult a solicitor or Citizens Advice.
+        </div>
+
+        <h2>Sources</h2>
+        <ol>
+          <li>Private Parking Sector Single Code of Practice, version 1.1. Annex C, section 3.1.3 Note 2, and the scope note saying notes are best practice. <strong>Primary.</strong> <a href="https://irp.cdn-website.com/262226a6/files/uploaded/sector+single+Code+of+Practice+Version+1.1+130426-2.pdf" target="_blank" rel="noreferrer">IPC-hosted PDF</a></li>
+          <li>Protection of Freedoms Act 2012, Schedule 4, paragraph 3. <strong>Primary.</strong> <a href="https://www.legislation.gov.uk/cy/ukpga/2012/9/schedule/4/paragraph/3/1" target="_blank" rel="noreferrer">Legislation.gov.uk</a></li>
+          <li>Times24 UK Limited, reply to appeal requesting photo ID, Gatwick North Terminal. <strong>Primary.</strong> Redacted copy on this site.</li>
+          <li>Independent Appeals Service, "Before you appeal". <strong>Primary.</strong> <a href="https://theias.org/before-you-appeal" target="_blank" rel="noreferrer">theias.org/before-you-appeal</a></li>
+          <li>GOV.UK, "Challenging a parking ticket". POPLA for BPA members, IAS for IPC members. <strong>Secondary.</strong> <a href="https://www.gov.uk/parking-tickets/challenging-a-ticket" target="_blank" rel="noreferrer">GOV.UK</a></li>
+          <li>Citizens Advice, "Appealing a parking ticket". 28 days from rejection for BPA members. <strong>Secondary.</strong> <a href="https://www.citizensadvice.org.uk/law-and-courts/parking-tickets/appealing-a-parking-ticket/" target="_blank" rel="noreferrer">Citizens Advice</a></li>
+        </ol>
+      </article>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .blog-post figure {
+    margin: 1.5rem 0;
+  }
+
+  .blog-post figure img,
+  .protected-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .blog-post figcaption {
+    margin-top: .5rem;
+    color: var(--light);
+    font-size: .85rem;
+  }
+
+  .reply-template {
+    margin: 1rem 0;
+    padding: 1.1rem 1.25rem;
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: var(--callout-bg);
+  }
+
+  .reply-template p {
+    margin-bottom: .75rem;
+  }
+
+  .reply-template p:last-child {
+    margin-bottom: 0;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.protected-image img').forEach((image) => {
+    image.addEventListener('contextmenu', (event) => event.preventDefault());
+    image.addEventListener('dragstart', (event) => event.preventDefault());
+  });
+</script>

@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostHeader from '../../components/BlogPostHeader.astro';
+
+const title = "What Is the IAS and How Do I Use It? | AppealAirportPCN";
+const description = "A plain-English guide to the Independent Appeals Service, who can use it, its deadline, what to include and what happens next.";
+const canonical = "https://appealairportpcn.co.uk/guides/what-is-the-ias/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What is the IAS and how do I use it?",
+  "description": description,
+  "author": { "@type": "Organization", "name": "AppealAirportPCN" },
+  "publisher": { "@type": "Organization", "name": "AppealAirportPCN.co.uk" },
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24"
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
+  <BlogPostHeader title="What is the IAS and how do I use it?" breadcrumbLabel="What is the IAS?" breadcrumbHref="/guides/what-is-the-ias/" updatedDate="NOVEMBER 2026" fixedUpdatedDate={true} />
+  <main>
+    <div class="wrap">
+      <article class="blog-post">
+        <p>If a parking company rejects your first appeal, check the rejection letter before paying. You may be able to make a second appeal through the Independent Appeals Service (IAS). It is free to use if you appeal within the standard time limit.</p>
+
+        <h2>What the IAS is</h2>
+        <p>The IAS is the appeals service for the International Parking Community (IPC). An independent adjudicator reviews the evidence from you and the parking company and decides the appeal.</p>
+        <p>The IAS decides whether the charge is lawful. It does not decide on mitigating circumstances, such as running late or an emergency.</p>
+        <p>Once you register an appeal, the operator must show a basic case that you owe the charge. The Code says operators must accept the IAS decision (clause 8.4).</p>
+
+        <h2>Who can use the IAS?</h2>
+        <p>You can use it for charges issued by IPC members. If the operator is a member of the British Parking Association (BPA), the service is <a href="/guides/what-is-popla/">POPLA</a> instead.</p>
+        <p>Your notice and rejection letter should name the trade body and the appeals service. For example, Times24 at Gatwick named the IAS in its rejection letter. You can see it in <a href="/guides/what-responses-to-expect/">what to expect after you appeal</a>.</p>
+
+        <h2>Before you appeal</h2>
+        <ol>
+          <li>You must appeal to the operator first, and the operator must reject it. The IAS cannot take an appeal before that.</li>
+          <li>Do not pay first. Once a charge is paid, it cannot be appealed to the IAS.</li>
+          <li>You will need the Parking Charge number and vehicle registration. Both are on the rejection letter.</li>
+        </ol>
+
+        <h2>The deadline</h2>
+        <p>A standard appeal can be made up to 28 days after the operator rejected your appeal. Some letters say 28 days from the date of the letter. Check yours and use the earlier date.</p>
+
+        <h2>You lose the reduced rate</h2>
+        <p>The Code says the operator's notice must tell you that the discount no longer applies if you appeal to an appeals service (8.1.2). Times24's letter says the same, and says the full amount will apply.</p>
+        <p>Think about this before you appeal. If the appeal fails, you cannot go back to the reduced rate.</p>
+
+        <h2>How to submit</h2>
+        <ol>
+          <li>Go to <a href="https://theias.org/before-you-appeal" target="_blank" rel="noreferrer">theias.org</a>.</li>
+          <li>Enter the Parking Charge number and vehicle registration from your rejection letter.</li>
+          <li>Explain your grounds and upload supporting evidence.</li>
+          <li>Submit your appeal before the deadline.</li>
+        </ol>
+        <p>The IAS also has non-standard appeals. This guide covers standard appeals. Check the current IAS guidance for the process.</p>
+
+        <h2>What to include</h2>
+        <p>Use the points that apply to your case. For example:</p>
+        <ul>
+          <li>The land may not be "relevant land" under POFA Schedule 4. Our <a href="/guides/relevant-land-airport-pcns/">guide on relevant land at airports</a> explains why.</li>
+          <li>The signs may not meet the Single Code of Practice. See our <a href="/guides/bpa-code-of-practice-signage/">signage guide</a>.</li>
+          <li>The charge may not have been shown before the contract was formed. Read about <a href="/guides/thornton-v-shoe-lane-parking/">Thornton v Shoe Lane Parking</a>.</li>
+          <li>The operator may rely on <a href="/guides/elliott-v-loake-why-it-doesnt-make-you-liable-as-the-keeper/">Elliott v Loake</a> to say you were the driver. Forum posts report at least one IAS adjudicator accepting the operator's argument. Do not assume it will fail.</li>
+        </ul>
+        <p>Do not argue that the charge is a penalty or not a genuine pre-estimate of loss. The Supreme Court upheld an £85 charge in <em>ParkingEye v Beavis</em>.</p>
+        <p>Include relevant evidence, such as photos of signs, ANPR images or a map of the approach road. Keep copies of everything you send.</p>
+
+        <h2>How long it takes</h2>
+        <p>The IAS aims to decide most appeals within 28 working days once it has all the evidence. The operator must not start or continue enforcement or debt recovery while the appeal is with the IAS (clause 8.4).</p>
+
+        <h2>If your appeal is not allowed</h2>
+        <p>Read the decision. The operator must allow you 28 days to pay after a decision in its favour (8.4). The IAS is an alternative dispute resolution service, not a court. If you are unsure what to do next, seek advice from a solicitor or Citizens Advice. Our guide explains <a href="/guides/what-responses-to-expect/">what to expect after an appeal</a>.</p>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This article is for information only and does not constitute legal advice. For complex cases, consult a solicitor or Citizens Advice.
+        </div>
+
+        <h2>Sources</h2>
+        <ol>
+          <li>Independent Appeals Service, "Before you appeal" (standard appeal up to 28 days after the operator rejects; operator must reject first; cannot appeal once paid; decides lawfulness, not mitigation). <strong>Primary.</strong> <a href="https://theias.org/before-you-appeal" target="_blank" rel="noreferrer">theias.org/before-you-appeal</a></li>
+          <li>Independent Appeals Service, home page (handles IPC members' charges; free within standard timeframes; must appeal to the operator first). <strong>Primary.</strong> <a href="https://theias.org" target="_blank" rel="noreferrer">theias.org</a></li>
+          <li>Independent Appeals Service, ADR overview (independent adjudicators; operator must show a basic case; aims to decide within 28 working days of complete evidence). <strong>Primary.</strong> <a href="https://theias.org/adr-overview" target="_blank" rel="noreferrer">theias.org/adr-overview</a></li>
+          <li>Private Parking Sector Single Code of Practice, version 1.1. Clauses 8.1.2 and 8.4. <strong>Primary.</strong> <a href="https://irp.cdn-website.com/262226a6/files/uploaded/sector+single+Code+of+Practice+Version+1.1+130426-2.pdf" target="_blank" rel="noreferrer">IPC-hosted PDF</a></li>
+          <li>Times24 UK Limited, rejection letter, Gatwick North Terminal. <strong>Primary.</strong> Redacted copy on this site.</li>
+          <li>GOV.UK, "Challenging a parking ticket" (IAS for IPC members, POPLA for BPA members). <strong>Secondary.</strong> <a href="https://www.gov.uk/parking-tickets/challenging-a-ticket" target="_blank" rel="noreferrer">GOV.UK</a></li>
+          <li><em>ParkingEye Ltd v Beavis</em> [2015] UKSC 67, press summary (£85 charge not a penalty). <strong>Primary.</strong> <a href="https://mta-sts.supremecourt.uk/cases/docs/uksc-2013-0280-press-summary.pdf" target="_blank" rel="noreferrer">Supreme Court press summary (PDF)</a></li>
+          <li>Forum thread quoting an IAS adjudicator who accepted the Elliott v Loake argument. <strong>Community.</strong> <a href="https://forums.moneysavingexpert.com/discussion/6682844/smart-parking-ias-and-drp" target="_blank" rel="noreferrer">MoneySavingExpert forum discussion</a></li>
+        </ol>
+      </article>
+    </div>
+  </main>
+</BaseLayout>

@@ -67,7 +67,7 @@ const schemas = schema ? (Array.isArray(schema) ? [...schema, defaultOrg] : [sch
     <div class="wrap header-wrap">
       <a class="logo" href="/">Appeal<em>AirportPCN</em>.co.uk</a>
 
-      <!-- DESKTOP NAV: Airports hover dropdown, Blog link, Support button -->
+      <!-- DESKTOP NAV: Airports hover dropdown, Guides link, Support button -->
       <nav class="desktop-nav" aria-label="Main navigation">
         <div class="nav-dropdown" id="nav-dropdown">
           <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false" id="nav-dropdown-btn">
@@ -80,7 +80,7 @@ const schemas = schema ? (Array.isArray(schema) ? [...schema, defaultOrg] : [sch
             ))}
           </div>
         </div>
-        <a href="/blog/" class={currentPage === 'blog' ? 'nav-link active' : 'nav-link'}>Why It Works</a>
+        <a href="/guides/" class={currentPage === 'guides' ? 'nav-link active' : 'nav-link'}>Guides</a>
         <a href="/about/" class={currentPage === 'about' ? 'nav-link active' : 'nav-link'}>About</a>
         <a href={kofi} class="donate-btn" target="_blank" rel="noopener noreferrer">☕&nbsp;Support Us</a>
       </nav>
@@ -102,9 +102,9 @@ const schemas = schema ? (Array.isArray(schema) ? [...schema, defaultOrg] : [sch
       {airports.map(({ href, label }) => (
         <a href={href} class="mobile-drawer-link">{label}</a>
       ))}
-      <!-- Blog + Support as a button row -->
+      <!-- Guides + Support as a button row -->
       <div class="mobile-drawer-actions">
-        <a href="/blog/" class="mobile-action-btn mobile-action-blog">Why It Works</a>
+        <a href="/guides/" class="mobile-action-btn mobile-action-blog">Guides</a>
         <a href="/about/" class="mobile-action-btn mobile-action-about">About</a>
         <a href={kofi} class="mobile-action-btn mobile-action-support" target="_blank" rel="noopener noreferrer">☕&nbsp;Support Us</a>
       </div>

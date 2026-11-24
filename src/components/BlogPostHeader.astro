@@ -4,19 +4,20 @@ interface Props {
   breadcrumbLabel: string;
   breadcrumbHref: string;
   updatedDate: string;
+  fixedUpdatedDate?: boolean;
 }
 
-const { title, breadcrumbLabel, breadcrumbHref, updatedDate } = Astro.props;
+const { title, breadcrumbLabel, breadcrumbHref, updatedDate, fixedUpdatedDate = false } = Astro.props;
 ---
 
 <header class="page-banner blog-page-banner">
   <nav class="breadcrumb">
     <div class="wrap">
-      <a href="/">Home</a><span>›</span><a href="/blog/">Why It Works</a><span>›</span><a href={breadcrumbHref}>{breadcrumbLabel}</a>
+      <a href="/">Home</a><span>›</span><a href="/guides/">Guides</a><span>›</span><a href={breadcrumbHref}>{breadcrumbLabel}</a>
     </div>
   </nav>
   <div class="wrap">
     <h1>{title}</h1>
-    <p class="page-banner-meta blog-page-meta">From the AppealAirportPCN team • LAST UPDATED: <span data-current-month-year data-date-case="upper">{updatedDate}</span></p>
+    <p class="page-banner-meta blog-page-meta">From the AppealAirportPCN team • LAST UPDATED: {fixedUpdatedDate ? <span>{updatedDate}</span> : <span data-current-month-year data-date-case="upper">{updatedDate}</span>}</p>
   </div>
 </header>
