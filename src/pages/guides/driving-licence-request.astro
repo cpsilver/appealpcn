@@ -32,9 +32,11 @@ const schema = {
   <main>
     <div class="wrap">
       <article class="blog-post">
-        <p>You appealed an airport drop-off PCN. The reply is not a decision. It asks for a copy of your driving licence.</p>
-        <p>Our example comes from Gatwick, where the operator is Times24 UK Limited. Other operators may send similar requests.</p>
+        <a class="clipboard-btn template-jump" href="#template-driving-licence-reply">Jump to copiable template</a>
+        <p>Asking for the driver's name or photo ID during an appeal is a common tactic used to trick keepers into identifying the driver when the operator otherwise has no legal case.</p>
         <p>This guide shows the email, explains what it means, and gives a short reply you can send.</p>
+        <p>Our example comes from Gatwick, where the operator is Times24 UK Limited. Other operators may send similar requests.</p>
+
 
         <h2>The email</h2>
         <figure class="protected-image">
@@ -46,7 +48,7 @@ const schema = {
             loading="lazy"
             draggable="false"
           />
-          <figcaption>Redacted example. Name, PCN number and date removed.</figcaption>
+          <figcaption>Example.</figcaption>
         </figure>
 
         <p>The email says three things:</p>
@@ -58,17 +60,17 @@ const schema = {
         <p>Your letter may differ. Check the deadline in yours.</p>
 
         <h2>What it means</h2>
-        <p>The operator wants to know who was driving. If you send your licence, you confirm that you were the driver. It can then pursue you as the driver.</p>
-        <p>You do not have to reply. But the hold is short. After it ends, the appeal will probably be decided on what they already have.</p>
+        <p>The operator wants to know who was driving. As always, you do not have to send any drivers license, nor can they pursue you as only the keeper of the vehicle.</p>
 
         <h2>What the rules say</h2>
-        <p>The Private Parking Sector Single Code of Practice (version 1.1) does not ban an operator from asking for ID. It also does not stop an operator making an appeal depend on naming the driver. So the request is not against the Code.</p>
-        <p>The Code says the driver is liable for a parking charge (Annex C). A keeper who will not name the driver "may be assumed" to be the driver. A note in section 8 says this may be used as evidence. These are notes. They are best practice, not mandatory rules.</p>
+        <p>They're allowed to ask for it, they just can't force you to send it.</p>
+        <p>The Code says the driver is liable for a parking charge (Annex C). A keeper who will not name the driver "may be assumed" to be the driver. A note in section 8 says this may be used as evidence. This is an unfortunate recent change.</p>
         <p>Keeper liability comes from Schedule 4 of the Protection of Freedoms Act 2012 (POFA). It does not apply to land under statutory control. Our <a href="/guides/relevant-land-airport-pcns/">guide to relevant land</a> explains this.</p>
         <p>The Code also says charges issued under byelaws "may be different". It says operators must not confuse byelaw enforcement with contractual charges (3.1.3, Note 2).</p>
 
         <h2>What this means in practice</h2>
-        <p>POFA does not let them pass the charge to you as keeper. But they can still argue that you were the driver. That is why they ask for your licence.</p>
+        <p>POFA does not let them pass the charge to you as keeper. But they can still attempt to argue that you were the driver. That is why they ask for your licence.</p>
+        <p>They often cite Elliott v Loake. However, <a href="/guides/elliott-v-loake-why-it-doesnt-make-you-liable-as-the-keeper/">this also does not make you liable</a>.</p>
 
         <h2>Your options</h2>
         <ol>
@@ -77,11 +79,9 @@ const schema = {
           <li>If you were the driver, you may choose to say so. Do not say anything untrue.</li>
         </ol>
 
-        <h2>A short reply you can send</h2>
-        <AppealLetter airport="Gatwick Airport" letterId="driving-licence-reply">
+        <AppealLetter title="A short reply you can send" letterId="driving-licence-reply">
           <p>I am appealing this Parking Charge Notice.</p>
           <p>I will not identify the driver or provide the driver's details. I am not obliged to provide a driving licence. The DVLA and BPA/IPC have told all members that appeals MUST NOT be or appear conditional on disclosing who was driving and further to this it will be reported to both DVLA and the IPC as breach of conduct.</p>
-          <p>The alleged contravention took place on Gatwick Airport land. Gatwick's current published terms confirm that its airport land, buildings and roads are subject to its airport byelaws and other statutory controls.</p>
           <p>You cannot rely on Elliott v Loake (1982) to presume that the registered keeper was the driver. That criminal case turned on specific forensic evidence and proven falsehoods rather than creating a general civil presumption, and keeper liability in private parking requires strict compliance with Schedule 4 of the Protection of Freedoms Act 2012.</p>
           <p>Schedule 4 of the Protection of Freedoms Act 2012 excludes land where parking is subject to statutory control from the definition of relevant land. Keeper liability under Schedule 4 therefore does not arise in this case.</p>
           <p>I note that the current Private Parking Sector Single Code of Practice states that the driver is liable for a parking charge and that POFA provides the mechanism for transferring liability to a keeper where its conditions are met. The Code also expressly recognises that charges issued under byelaws may be different.</p>
@@ -136,6 +136,24 @@ const schema = {
     margin-top: .5rem;
     color: var(--light);
     font-size: .85rem;
+  }
+
+  .template-jump {
+    display: inline-flex;
+    padding: .55rem 1.2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 2rem;
+    background: var(--accent);
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .2s;
+  }
+
+  .template-jump:hover {
+    background: var(--accent-hover);
+    color: #fff;
   }
 
 </style>
