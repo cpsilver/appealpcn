@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostHeader from '../../components/BlogPostHeader.astro';
+import AppealLetter from '../../components/AppealLetter.astro';
+
+const title = "How to Report a Parking Company if You Think It Broke the Code | AppealAirportPCN";
+const description = "If you think Times24 or any other parking company broke the Private Parking Code of Practice, here is who to tell, in what order, and what to include.";
+const canonical = "https://appealairportpcn.co.uk/guides/report-times24-code-breach/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to report a parking company if you think it broke the Code",
+  "description": description,
+  "mainEntityOfPage": canonical,
+  "author": { "@type": "Organization", "name": "AppealAirportPCN" },
+  "publisher": { "@type": "Organization", "name": "AppealAirportPCN.co.uk" },
+  "datePublished": "2026-11-26",
+  "dateModified": "2026-11-26"
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
+  <BlogPostHeader
+    title="How to report a parking company if you think it broke the Code"
+    breadcrumbLabel="Report a Code breach"
+    breadcrumbHref="/guides/report-times24-code-breach/"
+  />
+  <main>
+    <div class="wrap">
+      <article class="blog-post">
+        <p>A complaint about a Code breach is not the same as an appeal. It does not cancel your PCN. Do both, and keep your appeal deadlines running.</p>
+        <p>We think private parking companies should be held to their own rules. This guide shows how to report one when you think it has broken them. Times24 UK Limited, which runs the Gatwick drop-off, is our example.</p>
+
+        <div class="callout">
+          <strong>The new Code applies from 21 December 2026.</strong> It replaces the industry's Single Code, which applied before that date. Check GOV.UK for transitional arrangements if your PCN was issued earlier.
+        </div>
+
+        <h2>What counts as a breach</h2>
+        <p>The IPC only looks at complaints about a specific incident that identify a material breach of the Code. From 21 December 2026, these are examples of requirements in the new Code:</p>
+        <ul>
+          <li>A notice must not state keeper liability under POFA where it does not apply (8.1.2).</li>
+          <li>A notice must say the discount is lost if you appeal to an appeals service (8.1.2).</li>
+          <li>The operator must respond to an appeal within 28 days or say when it will (8.3.1(b)).</li>
+          <li>Enforcement must stop while a second-stage appeal is pending (8.3.7).</li>
+          <li>The operator must accept the appeals service's decision (8.3.8).</li>
+          <li>On byelaw land, the operator must make clear whether it is enforcing a byelaw or a contract (Annex D.1).</li>
+          <li>The parking charge must be shown in a large font on signs (3.1.3(j) and 3.1.4). Temporary notices must go up for 4 months after a material change (3.4).</li>
+        </ul>
+        <p>A complaint should rely on a numbered requirement. The Code also says operators must acknowledge a complaint within 14 days and give a full reply within 28 days (section 11).</p>
+        <p>A disagreement about the facts, such as camera times or where the car was, is an appeal point. The IPC will not decide individual charges.</p>
+
+        <h2>Step 1: Check who regulates the operator</h2>
+        <p>Times24's letters carry the IPC logo and name the Independent Appeals Service, which the IPC provides. Check Times24 against the IPC's list of members. The IPC's <a href="https://www.theipc.info/motorist-complaints" target="_blank" rel="noreferrer">motorist complaints guidance</a> explains the process.</p>
+
+        <h2>Step 2: Complain to Times24 first</h2>
+        <p>The IPC says you must first complain to the operator using its own process. The operator has 28 days to reply. Under the new Code, it must acknowledge your complaint within 14 days and give a full reply within 28 days.</p>
+        <ul>
+          <li>Write down the Code clause you think was broken, and the facts.</li>
+          <li>Ask for a complaint reference number.</li>
+          <li>Keep copies of everything.</li>
+        </ul>
+
+        <h3>A short complaint</h3>
+        <AppealLetter title="A short complaint you can copy" letterId="code-breach-complaint">
+          <p>I am making a complaint about the conduct of Times24 UK Limited in relation to Parking Charge [number].</p>
+          <p>I believe it breached the Private Parking Code of Practice, clause [number], because [one or two sentences of facts].</p>
+          <p>Please reply within 28 days and give me a complaint reference number.</p>
+        </AppealLetter>
+
+        <h2>Step 3: Complain to the IPC</h2>
+        <p>If you are not satisfied, complain to the IPC through its <a href="https://www.theipc.info/motorist-complaints" target="_blank" rel="noreferrer">online complaints portal</a>. You will need to create an account. Choose the operator and enter the parking charge number, the subject and the basis of your complaint. You will be asked for a copy of your complaint and the operator's reply.</p>
+        <p>The IPC says it acknowledges complaints within 10 working days and concludes them within 20. It does not reply to complaints by email.</p>
+
+        <h2>Step 4: Tell the DVLA</h2>
+        <p>Times24 can get keeper details from the DVLA because it belongs to an accredited trade association. The DVLA says it provides keeper details only to members. If the DVLA has concerns about a company's conduct, it can suspend access.</p>
+        <p>You can make a complaint through the <a href="https://www.gov.uk/government/organisations/driver-and-vehicle-licensing-agency/about/complaints-procedure" target="_blank" rel="noreferrer">DVLA complaints process</a>. It may pass your complaint to the IPC.</p>
+
+        <h2>Step 5: Other routes</h2>
+        <ul>
+          <li><strong>The CMA</strong> if you think a practice breaches consumer law. In July 2026 it said it is considering enforcement against certain operators. It can only act on specific breaches, so include your facts. <a href="https://www.gov.uk/government/publications/open-letter-to-the-private-parking-sector" target="_blank" rel="noreferrer">Read the CMA's open letter</a>.</li>
+          <li><strong>The ICO</strong> if you are worried about how your number plate data was used. The ICO says to complain to the organisation first and wait one month. <a href="https://ico.org.uk/make-a-complaint/personal-information-complaint/" target="_blank" rel="noreferrer">Read the ICO's complaint guidance</a>.</li>
+          <li><strong>Your MP.</strong> Our <a href="/guides/fight-back-airport-drop-off-charges/">guide on writing to the government</a> has a template.</li>
+          <li><strong>Gatwick Airport.</strong> The Code requires the landowner to confirm the operator's authority in writing. The landowner chooses the operator. You can ask the airport how it handles complaints.</li>
+        </ul>
+
+        <h2>An example from a forum case</h2>
+        <p>A forum user reported that Times24's camera times did not match a hotel car park ticket. They also said Times24 told the IAS they were the driver, while elsewhere saying it did not know who the driver was. We have not seen the documents. If your evidence shows a similar mismatch, raise it with the IAS in your appeal. Include it in a complaint only if you can point to a Code clause.</p>
+
+        <div class="callout">
+          <strong>Key point:</strong> Be specific. Name the clause, give the facts and keep the paperwork. Complaints without a clause are usually sent back.
+        </div>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This article is for information only and does not constitute legal advice. For complex cases, consult a solicitor or Citizens Advice.
+        </div>
+
+        <h2>Sources</h2>
+        <ol>
+          <li>IPC, "Motorist Complaints". <strong>Primary.</strong> <a href="https://www.theipc.info/motorist-complaints" target="_blank" rel="noreferrer">theipc.info/motorist-complaints</a></li>
+          <li>IPC, "Motorist Advice". <strong>Primary.</strong> <a href="https://www.theipc.info/motorist-advice" target="_blank" rel="noreferrer">theipc.info/motorist-advice</a></li>
+          <li>IPC, "Compliance Monitoring and Complaints". <strong>Primary.</strong> <a href="https://portal.theipc.info/membership-types" target="_blank" rel="noreferrer">portal.theipc.info/membership-types</a></li>
+          <li>MHCLG, Private Parking Code of Practice (as laid), clauses 3.1.3(j), 3.1.4, 3.4, 8.1.2, 8.3.1(b), 8.3.7, 8.3.8, 11 and Annex D.1. <strong>Primary.</strong> <a href="https://assets.publishing.service.gov.uk/media/6ad7343784361ce7947cd7c7/Private_Parking_Code_of_Practice.pdf" target="_blank" rel="noreferrer">GOV.UK PDF</a></li>
+          <li>Private Parking Sector Single Code of Practice, version 1.1 (the industry code that applied before 21 December 2026). <strong>Primary.</strong> <a href="https://irp.cdn-website.com/262226a6/files/uploaded/sector+single+Code+of+Practice+Version+1.1+130426-2.pdf" target="_blank" rel="noreferrer">IPC-hosted PDF</a></li>
+          <li>DVLA, "Release of information from DVLA's registers" (INF266). <strong>Primary.</strong> <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/861052/inf266-release-of-information-from-dvlas-registers.pdf" target="_blank" rel="noreferrer">GOV.UK PDF</a></li>
+          <li>ICO decision notice FS50693758, paragraphs 14 and 15 (DVLA can suspend access). <strong>Primary.</strong> <a href="https://ico.org.uk/media/action-weve-taken/decision-notices/2018/2173189/fs50693758.pdf" target="_blank" rel="noreferrer">ICO decision notice</a></li>
+          <li>CMA, open letter to the private parking sector, 16 July 2026. <strong>Primary.</strong> <a href="https://www.gov.uk/government/publications/open-letter-to-the-private-parking-sector" target="_blank" rel="noreferrer">GOV.UK</a></li>
+          <li>ICO, "Make a complaint about your personal information". <strong>Primary.</strong> <a href="https://ico.org.uk/make-a-complaint/personal-information-complaint" target="_blank" rel="noreferrer">ICO</a></li>
+          <li>UK Parliament, written statement on the Private Parking Code of Practice, 20 October 2026. <strong>Primary.</strong> <a href="https://questions-statements.parliament.uk/written-statements/detail/2026-10-20/hlws400" target="_blank" rel="noreferrer">questions-statements.parliament.uk</a></li>
+          <li>Times24 UK Limited, rejection letter, Gatwick North Terminal. <strong>Primary.</strong> Redacted copy on this site.</li>
+          <li>MoneySavingExpert forum, "Times24 Gatwick AIS Appeal". <strong>Community.</strong> <a href="https://forums.moneysavingexpert.com/discussion/6683453/times24-gatwick-ais-appeal" target="_blank" rel="noreferrer">MoneySavingExpert forum discussion</a></li>
+          <li>Parking Cowboys, "How to complain about private parking companies" (the DVLA often passes complaints to the trade association). <strong>Community.</strong> <a href="https://www.parkingcowboys.co.uk/complaints/" target="_blank" rel="noreferrer">Parking Cowboys</a></li>
+        </ol>
+      </article>
+    </div>
+  </main>
+</BaseLayout>

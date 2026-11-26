@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostHeader from '../../components/BlogPostHeader.astro';
+import AppealLetter from '../../components/AppealLetter.astro';
+
+const title = "Fight Back: Tell the Government About Airport Drop-Off Charges | AppealAirportPCN";
+const description = "Appealing helps you. Writing to the government helps everyone. Who to write to about airport drop-off charges and £100 notices, and a short message you can send.";
+const canonical = "https://appealairportpcn.co.uk/guides/fight-back-airport-drop-off-charges/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Fight back: tell the government what airport drop-off charges do to drivers",
+  "description": description,
+  "mainEntityOfPage": canonical,
+  "author": { "@type": "Organization", "name": "AppealAirportPCN" },
+  "publisher": { "@type": "Organization", "name": "AppealAirportPCN.co.uk" },
+  "datePublished": "2026-11-26",
+  "dateModified": "2026-11-26"
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
+  <BlogPostHeader
+    title="Fight back: tell the government what airport drop-off charges do to drivers"
+    breadcrumbLabel="Tell the government"
+    breadcrumbHref="/guides/fight-back-airport-drop-off-charges/"
+  />
+  <main>
+    <div class="wrap">
+      <article class="blog-post">
+        <p>Appealing a PCN helps you. It does not change the rules.</p>
+        <p>We think airport drop-off charges, and £100 notices for getting them wrong, are unfair. That is our opinion. You can share yours with the people who can change the rules.</p>
+        <p>Now is a good time. The government is looking at drop-off charges and at private parking rules.</p>
+        <p>If you think a parking company broke a rule in the Code, see <a href="/guides/report-times24-code-breach/">how to report a Code breach</a>.</p>
+
+        <h2>What is happening now</h2>
+        <ul>
+          <li>The Department for Transport (DfT) has said it will review airport drop-off charges. It says it is vital that passengers are treated fairly.</li>
+          <li>The new Private Parking Code of Practice was laid before Parliament on 20 October 2026 and comes into force on 21 December 2026. It keeps the £100 maximum, with £60 if paid within 14 days.</li>
+          <li>In July 2026 the Competition and Markets Authority (CMA) told private parking operators to follow consumer law. It said it is considering enforcement against some operators. It said it can only act where it finds specific breaches.</li>
+        </ul>
+        <p>The £100 limit is not changing. That is why it is worth writing.</p>
+
+        <h2>Do it alongside your appeal</h2>
+        <p>Do not skip your appeal. The deadlines still apply. See <a href="/guides/what-responses-to-expect/">what response you can expect from your appeal</a>.</p>
+
+        <h2>Who to write to</h2>
+        <ol>
+          <li><strong>Your MP.</strong> <a href="https://members.parliament.uk/FindYourMP" target="_blank" rel="noreferrer">Find your MP on the Parliament website</a>. An MP can pass your case to a minister.</li>
+          <li><strong>The Department for Transport.</strong> It is running the drop-off charge review. Use the <a href="https://www.gov.uk/government/organisations/department-for-transport/about/access-and-opening" target="_blank" rel="noreferrer">contact details on its GOV.UK page</a>.</li>
+          <li><strong>The parking team at the Ministry of Housing, Communities and Local Government.</strong> It runs the private parking code: <a href="mailto:parking@communities.gov.uk">parking@communities.gov.uk</a>.</li>
+          <li><strong>The CMA.</strong> It deals with competition, consumer and market problems. <a href="https://www.gov.uk/guidance/tell-the-cma-about-a-competition-or-market-problem" target="_blank" rel="noreferrer">Use its GOV.UK page to report a problem</a>. The CMA says it cannot step in or advise on individual complaints.</li>
+          <li><strong>The Information Commissioner's Office (ICO).</strong> Use this if you are worried about how your number plate data was used. The ICO says to complain to the organisation first and give it one month to reply. If it does not, you can complain to the ICO: <a href="mailto:icocasework@ico.org.uk">icocasework@ico.org.uk</a>.</li>
+        </ol>
+
+        <h2>What to put in your message</h2>
+        <ul>
+          <li>The airport, the date and the amount.</li>
+          <li>A copy of your PCN. Send it only to the people you are writing to. Do not post it publicly. It has your name and address on it.</li>
+          <li>What you did. Say if you dropped someone off, or if you drove through without stopping.</li>
+          <li>What you want them to do.</li>
+        </ul>
+        <p>Keep it polite and short. Stick to what happened to you. Officials and regulators act on specific cases.</p>
+
+        <h2>A short message you can send</h2>
+        <AppealLetter title="A short message you can send" letterId="government-message">
+          <p>Subject: Airport drop-off charge: please review</p>
+          <p>Dear [name],</p>
+          <p>I received a Parking Charge Notice for £[amount] at the [airport] drop-off on [date]. A copy is attached.</p>
+          <p>[One or two sentences on what happened. If you drove through without stopping, say so.]</p>
+          <p>I think this charge is unfair. I ask you to:</p>
+          <p>1. Include barrierless, camera-run drop-off zones, and £100 notices for them, in the government's review of airport drop-off charges.</p>
+          <p>2. Look at whether a barrier or kiosk should be required. Drivers could then pay by card, or speak to someone, before a charge is issued.</p>
+          <p>3. Look at whether keepers of vehicles that drove through without stopping should be sent notices at all. If cameras are used, they should be able to show whether a vehicle stopped.</p>
+          <p>Please tell me what you will do, or who I should write to.</p>
+          <p>Yours faithfully,<br />[name]</p>
+        </AppealLetter>
+        <p>Delete request 3 if you did stop.</p>
+
+        <h3>Add this line if you write to the CMA</h3>
+        <blockquote>
+          <p>I ask the CMA to consider whether sending notices to keepers of vehicles that drove through without stopping is consistent with consumer protection law.</p>
+        </blockquote>
+
+        <h3>Add this line if you write to the ICO</h3>
+        <p>Use this after you have written to the operator and waited a month.</p>
+        <blockquote>
+          <p>I ask the ICO to consider whether it is fair and proportionate to collect and use number plate camera data about vehicles that drove through without stopping, and to use it to find the keeper.</p>
+        </blockquote>
+
+        <div class="callout">
+          <strong>Key point:</strong> Writing to the government does not replace your appeal. Do both.
+        </div>
+
+        <div class="disclaimer">
+          <strong>Disclaimer:</strong> This article is for information only and does not constitute legal advice. For complex cases, consult a solicitor or Citizens Advice.
+        </div>
+
+        <h2>Sources</h2>
+        <ol>
+          <li>UK Parliament, written statement on the Private Parking Code of Practice, 20 October 2026. <strong>Primary.</strong> <a href="https://questions-statements.parliament.uk/written-statements/detail/2026-10-20/hlws400" target="_blank" rel="noreferrer">questions-statements.parliament.uk</a></li>
+          <li>MHCLG, Private Parking Code of Practice (as laid), clauses 8.2.1 and 8.1.3. <strong>Primary.</strong> <a href="https://assets.publishing.service.gov.uk/media/6ad7343784361ce7947cd7c7/Private_Parking_Code_of_Practice.pdf" target="_blank" rel="noreferrer">GOV.UK PDF</a></li>
+          <li>MHCLG, Private Parking Code of Practice consultation, including the parking team contact. <strong>Primary.</strong> <a href="https://www.gov.uk/government/consultations/private-parking-code-of-practice/private-parking-code-of-practice" target="_blank" rel="noreferrer">GOV.UK</a></li>
+          <li>Transport Xtra, "Airport drop-off charges to be reviewed", 1 November 2026. <strong>Secondary.</strong> <a href="https://www.transportxtra.com/publications/local-transport-today/news/82022/airport--off-charges-to-be-reviewed" target="_blank" rel="noreferrer">Transport Xtra</a></li>
+          <li>CMA, open letter to the private parking sector, 16 July 2026. <strong>Primary.</strong> <a href="https://www.gov.uk/government/publications/open-letter-to-the-private-parking-sector" target="_blank" rel="noreferrer">GOV.UK</a></li>
+          <li>MoneySavingExpert, report on the CMA letter. <strong>Secondary.</strong> <a href="https://www.moneysavingexpert.com/news/2026/07/cma-private-parking-charges/" target="_blank" rel="noreferrer">MoneySavingExpert</a></li>
+          <li>ICO, "Make a complaint about how an organisation has used your personal information". <strong>Primary.</strong> <a href="https://ico.org.uk/make-a-complaint/personal-information-complaint/" target="_blank" rel="noreferrer">ICO complaint guidance</a>.</li>
+        </ol>
+      </article>
+    </div>
+  </main>
+</BaseLayout>

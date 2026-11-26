@@ -3,14 +3,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogPostHeader from '../../components/BlogPostHeader.astro';
 import { currentMonthYear } from '../../utils/site-date';
 
-const title = "BPA Code of Practice: Signage Rules Operators Must Follow | AppealAirportPCN";
-const description = "Learn what the BPA Code of Practice says about parking signs, what to check at an airport drop-off zone, and how unclear terms may support an appeal.";
+const title = "Private Parking Code of Practice: Signage Rules Operators Must Follow | AppealAirportPCN";
+const description = "What the Private Parking Code of Practice requires for signs, what to check at an airport drop-off, and how unclear terms may support an appeal.";
 const canonical = "https://appealairportpcn.co.uk/guides/bpa-code-of-practice-signage/";
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "BPA Code of Practice: the signage rules operators must follow",
+  "headline": "Private Parking Code of Practice: the signage rules operators must follow",
   "description": description,
   "author": { "@type": "Organization", "name": "AppealAirportPCN" },
   "publisher": { "@type": "Organization", "name": "AppealAirportPCN.co.uk" },
@@ -20,21 +20,21 @@ const schema = {
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical} schema={schema}>
-  <BlogPostHeader title="BPA Code of Practice: the signage rules operators must follow" breadcrumbLabel="BPA signage rules" breadcrumbHref="/guides/bpa-code-of-practice-signage/" updatedDate={currentMonthYear.toUpperCase()} />
+  <BlogPostHeader title="Private Parking Code of Practice: the signage rules operators must follow" breadcrumbLabel="Parking signs" breadcrumbHref="/guides/bpa-code-of-practice-signage/" updatedDate={currentMonthYear.toUpperCase()} />
   <main>
     <div class="wrap">
       <article class="blog-post">
-        <p>Many private parking companies belong to the British Parking Association (BPA). Members must follow its <a href="https://www.britishparking.co.uk/Code-of-Practice" target="_blank" rel="noreferrer">Code of Practice</a>. Its rules about signs can be relevant when you challenge an airport PCN.</p>
+        <p>The Private Parking Code of Practice sets minimum sign standards for private parking operators. These rules can be relevant when you challenge an airport PCN.</p>
         <p>Signage is usually one point to raise alongside others. Our <a href="/">appeal templates</a> include it where it may apply.</p>
 
         <h2>What the Code asks for</h2>
-        <p>Paragraph 18 covers signs. In general, signs should be:</p>
+        <p>Section 3 and Annex A cover signs. In general, signs should be:</p>
         <ul>
-          <li><strong>Prominent:</strong> easy to see and not hidden.</li>
-          <li><strong>Legible:</strong> readable in the conditions where drivers approach.</li>
-          <li><strong>At the entrance:</strong> displayed before drivers enter or commit to the area.</li>
-          <li><strong>Clear about the price:</strong> the charge and main terms should be easy to find.</li>
-          <li><strong>Frequent enough:</strong> placed around the site where drivers need the information.</li>
+          <li><strong>At the entrance:</strong> entrance signs must meet clauses 3.1.1 to 3.1.2 and Annex A.</li>
+          <li><strong>Clear about the charge:</strong> the parking charge must be shown as required by clause 3.1.3(j).</li>
+          <li><strong>Legible:</strong> clause 3.1.4 sets the font requirements.</li>
+          <li><strong>Clear about byelaws:</strong> signs must say whether enforcement is under a byelaw or a contract (3.1.3(k)(i)).</li>
+          <li><strong>Updated after changes:</strong> temporary notices must remain in place for 4 months after a material change (3.4).</li>
         </ul>
         <p>A parking charge is usually claimed under a contract. If important terms were not clearly shown before a driver entered, that may support an argument that the terms were not agreed.</p>
 
@@ -61,8 +61,8 @@ const schema = {
 
         <h2>Sources</h2>
         <ol>
-          <li>The Single Code of Practice (27 June 2024), section 3 (Signs and surface markings): paragraphs 3.1.1 to 3.1.7 and 3.4. <strong>Primary.</strong> <a href="https://www.britishparking.co.uk/write/Documents/AOS/NEW%20Redesigned%20Documents/sectorsingleCodeofPractice.pdf" target="_blank" rel="noreferrer">Single Code of Practice (PDF)</a></li>
-          <li>British Parking Association, Single Code published (in force 1 October 2024; existing sites updated by December 2026). <strong>Secondary (trade body).</strong> <a href="https://www.britishparking-media.co.uk/news/private-parking-sector-single-code-of-practice-published" target="_blank" rel="noreferrer">BPA announcement</a></li>
+          <li>MHCLG, Private Parking Code of Practice (as laid), clauses 3.1.1 to 3.1.4, 3.1.3(k)(i), 3.4 and Annex A. <strong>Primary.</strong> <a href="https://assets.publishing.service.gov.uk/media/6ad7343784361ce7947cd7c7/Private_Parking_Code_of_Practice.pdf" target="_blank" rel="noreferrer">GOV.UK PDF</a></li>
+          <li>Private Parking Sector Single Code of Practice, the industry code that applied before 21 December 2026. <strong>Primary.</strong> <a href="https://irp.cdn-website.com/262226a6/files/uploaded/sector+single+Code+of+Practice+Version+1.1+130426-2.pdf" target="_blank" rel="noreferrer">IPC-hosted PDF</a></li>
           <li>POPLA, information for MPs (POPLA considers disputes about unclear or inadequate signage). <strong>Primary.</strong> <a href="https://www.popla.co.uk/parliament" target="_blank" rel="noreferrer">POPLA</a></li>
           <li><em>ParkingEye Ltd v Beavis</em> [2015] UKSC 67, press summary. <strong>Primary.</strong> <a href="https://mta-sts.supremecourt.uk/cases/docs/uksc-2013-0280-press-summary.pdf" target="_blank" rel="noreferrer">Supreme Court press summary (PDF)</a></li>
         </ol>
