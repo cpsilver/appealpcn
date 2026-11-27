@@ -5,19 +5,36 @@ interface Props {
   breadcrumbHref: string;
   updatedDate?: string;
   fixedUpdatedDate?: boolean;
+  metaBelowTitle?: boolean;
+  metaHeaderStyle?: "card" | "coral";
 }
 
-const { title, breadcrumbLabel, breadcrumbHref, updatedDate, fixedUpdatedDate = false } = Astro.props;
+const { title, breadcrumbLabel, breadcrumbHref, updatedDate, fixedUpdatedDate = false, metaBelowTitle = true, metaHeaderStyle = "card" } = Astro.props;
 ---
 
-<header class="page-banner blog-page-banner">
-  <nav class="breadcrumb">
+<header class:list={["page-banner", "blog-page-banner", { "blog-page-meta-below": metaBelowTitle, "blog-page-meta-coral": metaBelowTitle && metaHeaderStyle === "coral" }]}>
+  {!metaBelowTitle && <nav class="breadcrumb">
     <div class="wrap">
       <a href="/">Home</a><span>›</span><a href="/guides/">Guides</a><span>›</span><a href={breadcrumbHref}>{breadcrumbLabel}</a>
     </div>
-  </nav>
+  </nav>}
   <div class="wrap">
     <h1>{title}</h1>
-    {updatedDate && <p class="page-banner-meta blog-page-meta">From the AppealAirportPCN team • LAST UPDATED: {fixedUpdatedDate ? <span>{updatedDate}</span> : <span data-current-month-year data-date-case="upper">{updatedDate}</span>}</p>}
+    {updatedDate && !metaBelowTitle && <p class="page-banner-meta blog-page-meta">From the AppealAirportPCN team • LAST UPDATED: {fixedUpdatedDate ? <span>{updatedDate}</span> : <span data-current-month-year data-date-case="upper">{updatedDate}</span>}</p>}
   </div>
+  {updatedDate && metaBelowTitle && <div class="wrap blog-page-meta-row">
+    <span class="blog-page-meta-item">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3.5" width="12" height="10.5" rx="1.5" /><path d="M5 2v3M11 2v3M2 6.5h12" /></svg>
+      <span>Updated {fixedUpdatedDate ? <time>{updatedDate.charAt(0) + updatedDate.slice(1).toLowerCase()}</time> : <time data-current-month-year>{updatedDate}</time>}</span>
+    </span>
+    <span class="blog-page-meta-item">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="5" r="2.5" /><path d="M2.5 14c.4-2.7 2.5-4.2 5.5-4.2s5.1 1.5 5.5 4.2" /></svg>
+      <a href="/about/">By the Team</a>
+    </span>
+    <nav class="blog-page-meta-item blog-page-meta-breadcrumb" aria-label="Breadcrumb">
+      <svg class="blog-page-meta-folder-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 3.8a1 1 0 0 1 1-1h3.8l1.6 1.8h6.6v7.7a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1z" /></svg>
+      <a href="/guides/">Guides</a><span class="blog-page-meta-separator">›</span><span aria-current="page">{breadcrumbLabel}</span>
+    </nav>
+  </div>}
+  {metaBelowTitle && <hr class="blog-page-meta-divider" />}
 </header>

@@ -4,9 +4,10 @@ import AdSlot from './AdSlot.astro';
 interface Props {
   current: string;
   tips: { heading: string; body: string }[];
+  sticky?: boolean;
 }
 
-const { current, tips } = Astro.props;
+const { current, tips, sticky = false } = Astro.props;
 
 const airports = [
   { label: 'Heathrow Airport', href: '/heathrow-drop-off-charge-appeal/' },
@@ -18,7 +19,7 @@ const airports = [
 ];
 ---
 
-<aside class="sidebar">
+<aside class:list={["sidebar", { "sidebar-sticky": sticky }]}>
 
   <div class="airports-card">
     <h3>Other airports</h3>

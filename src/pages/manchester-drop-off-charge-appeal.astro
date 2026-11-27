@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AdSlot from '../components/AdSlot.astro';
-import { currentMonthYear } from '../utils/site-date';
+import AirportPageHeader from '../components/AirportPageHeader.astro';
 import AppealLetter from '../components/AppealLetter.astro';
 import AirportSidebar from '../components/AirportSidebar.astro';
 
@@ -62,23 +62,20 @@ const tips = [
   schema={[articleSchema, faqSchema]}
 >
 
-  <section class="hero">
-    <div class="wrap">
-      <nav class="breadcrumb">
-        <div class="wrap"><a href="/">Home</a><span>›</span><a href="/manchester-drop-off-charge-appeal/">Manchester</a></div>
-      </nav>
-      <h1>Appeal Your Manchester Airport Drop-Off Charge</h1>
-      <p class="hero-sub">Received an unexpected parking charge notice after dropping someone off at Manchester? You may well have grounds to challenge it, and our free template makes the process straightforward.</p>
-  </section>
-
   <main>
     <div class="wrap">
       <div class="main-content">
         <div class="content-grid">
 
-          <AirportSidebar current="Manchester Airport" tips={tips} />
+          <AirportSidebar current="Manchester Airport" tips={tips} sticky />
 
           <div class="airport-main-column">
+            <AirportPageHeader
+              title="Appeal Your Manchester Airport Drop-Off Charge"
+              description="Received an unexpected parking charge notice after dropping someone off at Manchester? You may well have grounds to challenge it, and our free template makes the process straightforward."
+              airport="Manchester"
+              integrated
+            />
             <AppealLetter airport="Manchester Airport">
               <p>I appeal as the registered keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
               <p>1. APCOA cannot hold the registered keeper liable for this charge. The drop-off zone at Manchester Airport is on land under statutory control, including the Manchester Airport byelaws (in force since 12 June 2024) made under section 63 of the Airports Act 1986. The land is therefore not "relevant land" under paragraph 3(1)(c) of Schedule 4 to the Protection of Freedoms Act 2012 ("POFA"). The POFA keeper liability provisions do not apply, and APCOA has no lawful basis to pursue the registered keeper.</p>
@@ -156,8 +153,9 @@ const tips = [
               </ul>
             </section>
 
-            <section class="grounds-section sources-section">
-              <h2>Sources</h2>
+            <section class="grounds-section">
+              <details class="sources-section">
+                <summary>Sources</summary>
               <ul>
                 <li>Manchester Airport, <strong>Pick Up and Drop Off</strong>: <a href="https://www.manchesterairport.co.uk/getting-to-and-from/pick-up-and-drop-off/" target="_blank" rel="noreferrer">https://www.manchesterairport.co.uk/getting-to-and-from/pick-up-and-drop-off/</a></li>
                 <li>Manchester Airport, <strong>Fees and Charges</strong>: <a href="https://www.manchesterairport.co.uk/about-us/publications/fees-and-charges/" target="_blank" rel="noreferrer">https://www.manchesterairport.co.uk/about-us/publications/fees-and-charges/</a></li>
@@ -167,6 +165,7 @@ const tips = [
                 <li>GOV.UK, <strong>CCJs and your credit rating</strong>: <a href="https://www.gov.uk/county-court-judgments-ccj-for-debt/ccjs-and-your-credit-rating" target="_blank" rel="noreferrer">https://www.gov.uk/county-court-judgments-ccj-for-debt/ccjs-and-your-credit-rating</a></li>
               </ul>
               <p>Manchester's current published Terminal 2 tariff is <strong>£5.50 for 5 minutes</strong>, <strong>£6.50 for 10 minutes</strong> and <strong>£25 for up to 30 minutes</strong>.</p>
+              </details>
             </section>
 
             </div>

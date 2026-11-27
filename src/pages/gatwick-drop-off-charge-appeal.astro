@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AdSlot from '../components/AdSlot.astro';
-import { currentMonthYear } from '../utils/site-date';
+import AirportPageHeader from '../components/AirportPageHeader.astro';
 import AppealLetter from '../components/AppealLetter.astro';
 import AirportSidebar from '../components/AirportSidebar.astro';
 
@@ -57,24 +57,20 @@ const tips = [
   schema={[articleSchema, faqSchema]}
 >
 
-  <section class="hero">
-    <div class="wrap">
-      <nav class="breadcrumb">
-        <div class="wrap"><a href="/">Home</a><span>›</span><a href="/gatwick-drop-off-charge-appeal/">Gatwick</a></div>
-      </nav>
-      <h1>Appeal Your Gatwick Airport Drop-Off Charge</h1>
-      <p class="hero-sub">Charged for dropping someone off at Gatwick's North or South Terminal? You may have strong grounds to appeal, and our free template takes the guesswork out of the process.</p>
-    </div>
-  </section>
-
   <main>
     <div class="wrap">
       <div class="main-content">
         <div class="content-grid">
 
-          <AirportSidebar current="Gatwick Airport" tips={tips} />
+          <AirportSidebar current="Gatwick Airport" tips={tips} sticky />
 
           <div class="airport-main-column">
+            <AirportPageHeader
+              title="Appeal Your Gatwick Airport Drop-Off Charge"
+              description="Charged for dropping someone off at Gatwick's North or South Terminal? You may have strong grounds to appeal, and our free template takes the guesswork out of the process."
+              airport="Gatwick"
+              integrated
+            />
             <AppealLetter airport="Gatwick Airport">
               <p>I appeal as the registered keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
               <p>1. Times Parking cannot hold the registered keeper liable for this charge. The land is under statutory control, including the Gatwick Airport byelaws made under section 63 of the Airports Act 1986 [and Gatwick Airport Limited's traffic regulation orders]. It is therefore not "relevant land" under paragraph 3(1)(c) of Schedule 4 to the Protection of Freedoms Act 2012 ("POFA"). The POFA keeper liability provisions do not apply, and Times Parking has no lawful basis to pursue the registered keeper.</p>
@@ -137,8 +133,9 @@ const tips = [
               <p>You can drop off or pick up passengers at the long-stay car parks with two hours free parking and a free shuttle bus to the terminals.</p>
             </section>
 
-            <section class="grounds-section sources-section">
-              <h2>Sources</h2>
+            <section class="grounds-section">
+              <details class="sources-section">
+                <summary>Sources</summary>
               <ul>
                 <li>Gatwick, <strong>Drop-off Charges</strong>: <a href="https://www.gatwickairport.com/transport-options/drop-off.html" target="_blank" rel="noreferrer">https://www.gatwickairport.com/transport-options/drop-off.html</a></li>
                 <li>Gatwick, <strong>Drop-off Terms and Conditions</strong>: <a href="https://www.gatwickairport.com/transport-options/drop-off/drop-off-terms-and-conditions.html" target="_blank" rel="noreferrer">https://www.gatwickairport.com/transport-options/drop-off/drop-off-terms-and-conditions.html</a></li>
@@ -147,6 +144,7 @@ const tips = [
                 <li>Protection of Freedoms Act 2012, <strong>Schedule 4</strong>: <a href="https://www.legislation.gov.uk/ukpga/2012/9/schedule/4" target="_blank" rel="noreferrer">https://www.legislation.gov.uk/ukpga/2012/9/schedule/4</a></li>
                 <li>POPLA, <strong>Appeal guide</strong>: <a href="https://www.popla.co.uk/appeal-guide" target="_blank" rel="noreferrer">https://www.popla.co.uk/appeal-guide</a></li>
               </ul>
+              </details>
             </section>
 
             </div>

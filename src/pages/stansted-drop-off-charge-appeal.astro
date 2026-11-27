@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AdSlot from '../components/AdSlot.astro';
-import { currentMonthYear } from '../utils/site-date';
+import AirportPageHeader from '../components/AirportPageHeader.astro';
 import AppealLetter from '../components/AppealLetter.astro';
 import AirportSidebar from '../components/AirportSidebar.astro';
 
@@ -62,24 +62,20 @@ const tips = [
   schema={[articleSchema, faqSchema]}
 >
 
-  <section class="hero">
-    <div class="wrap">
-      <nav class="breadcrumb">
-        <div class="wrap"><a href="/">Home</a><span>›</span><a href="/stansted-drop-off-charge-appeal/">Stansted</a></div>
-      </nav>
-      <h1>Appeal Your Stansted Airport Drop-Off Charge</h1>
-      <p class="hero-sub">Stansted's drop-off zone is one of the most contested in the country, you have strong grounds to appeal. Our free template shows you exactly how.</p>
-    </div>
-  </section>
-
   <main>
     <div class="wrap">
       <div class="main-content">
         <div class="content-grid">
 
-          <AirportSidebar current="Stansted Airport" tips={tips} />
+          <AirportSidebar current="Stansted Airport" tips={tips} sticky />
 
           <div class="airport-main-column">
+            <AirportPageHeader
+              title="Appeal Your Stansted Airport Drop-Off Charge"
+              description="Stansted's drop-off zone is one of the most contested in the country, you have strong grounds to appeal. Our free template shows you exactly how."
+              airport="Stansted"
+              integrated
+            />
             <AppealLetter airport="Stansted Airport">
               <p>I appeal as the registered keeper of the vehicle. I am not obliged to identify the driver and decline to do so.</p>
               <p>1. APCOA cannot hold the registered keeper liable for this charge. The drop-off zone at Stansted Airport is on land under statutory control, including the Stansted Airport byelaws made under section 63 of the Airports Act 1986. The land is therefore not "relevant land" under paragraph 3(1)(c) of Schedule 4 to the Protection of Freedoms Act 2012 ("POFA"). The POFA keeper liability provisions do not apply, and APCOA has no lawful basis to pursue the registered keeper.</p>
@@ -127,8 +123,9 @@ const tips = [
               <p>You can park for free for up to 60 minutes at the Mid Stay car park, with a shuttle to the terminal.</p> 
             </section>
 
-            <section class="grounds-section sources-section">
-              <h2>Sources</h2>
+            <section class="grounds-section">
+              <details class="sources-section">
+                <summary>Sources</summary>
               <ul>
                 <li>Stansted, <strong>Express Set Down Terms and Conditions</strong>: <a href="https://www.stanstedairport.com/terms-and-conditions/express-set-down/" target="_blank" rel="noreferrer">https://www.stanstedairport.com/terms-and-conditions/express-set-down/</a></li>
                 <li>Stansted, <strong>Changes to Express Set Down</strong>: <a href="https://www.stanstedairport.com/communication-ticker-page/ticker-notice-4/" target="_blank" rel="noreferrer">https://www.stanstedairport.com/communication-ticker-page/ticker-notice-4/</a></li>
@@ -137,6 +134,7 @@ const tips = [
                 <li>Protection of Freedoms Act 2012, <strong>Schedule 4</strong>: <a href="https://www.legislation.gov.uk/ukpga/2012/9/schedule/4" target="_blank" rel="noreferrer">https://www.legislation.gov.uk/ukpga/2012/9/schedule/4</a></li>
                 <li>POPLA, <strong>Appeal guide</strong>: <a href="https://www.popla.co.uk/appeal-guide" target="_blank" rel="noreferrer">https://www.popla.co.uk/appeal-guide</a></li>
               </ul>
+              </details>
             </section>
 
             </div>

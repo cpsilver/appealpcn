@@ -1,0 +1,34 @@
+---
+import { currentMonthYear } from '../utils/site-date';
+
+interface Props {
+  title: string;
+  description: string;
+  airport: string;
+  integrated?: boolean;
+}
+
+const { title, description, airport, integrated = false } = Astro.props;
+---
+
+<section class:list={["hero", "airport-page-header", { "airport-page-header-integrated": integrated }]}>
+  <div class="wrap">
+    <h1>{title}</h1>
+    <p class="hero-sub">{description}</p>
+    <div class="airport-page-meta-row">
+      <span class="airport-page-meta-item">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3.5" width="12" height="10.5" rx="1.5" /><path d="M5 2v3M11 2v3M2 6.5h12" /></svg>
+        <span>Updated <time data-current-month-year>{currentMonthYear}</time></span>
+      </span>
+      <span class="airport-page-meta-item">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="5" r="2.5" /><path d="M2.5 14c.4-2.7 2.5-4.2 5.5-4.2s5.1 1.5 5.5 4.2" /></svg>
+        <a href="/about/">By the Team</a>
+      </span>
+      <nav class="airport-page-meta-item airport-page-breadcrumb" aria-label="Breadcrumb">
+        <svg class="airport-page-folder-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 3.8a1 1 0 0 1 1-1h3.8l1.6 1.8h6.6v7.7a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1z" /></svg>
+        <a href="/">Home</a><span>›</span><span aria-current="page">{airport}</span>
+      </nav>
+    </div>
+  </div>
+  {integrated && <hr class="airport-page-header-divider" />}
+</section>
